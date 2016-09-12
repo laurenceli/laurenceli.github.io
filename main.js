@@ -1,7 +1,7 @@
 var navbarWidth = 50;
 var navbarColor = "#000000";
 
-body.append('<div id="navbar"></div>');
+$('body').append('<div id="navbar"></div>');
 var navbar = $('#navbar');
 
 navbar
