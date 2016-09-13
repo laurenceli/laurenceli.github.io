@@ -3,11 +3,87 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="main.js"></script>
+		<!--<script src="main.js"></script>-->
 	<title>Laurence Li</title>
 	</head>
 
 	<body>
+		<div id="navContainer">
+		</div>
 	</body>
 
+	<script>
+		var navbarWidth = 80;
+		var navbarColor = "#000000";
+
+		$(document.body).append('<div id="mainContainer"></div>');
+
+		var mainContainer = $('#mainContainer');
+
+		mainContainer
+			.css("width", "100%")
+			.css("height", "100%")
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("left", "0px")
+			.css("padding-left", "80px")
+			;
+
+		$("#navContainer").append("<div id='navbar'></div>");
+
+		var navbar = $('#navbar');
+
+		navbar
+			.css("width", navbarWidth)
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("left", "0px")
+			;
+
+		navbar.append('<div id="navHamburgerContainer"></div>');
+
+		var navHamburgerContainer = $('#navHamburgerContainer');
+
+		var isOpen = false;
+		$('#navHamburgerContainer')
+			.click(function(){
+				if(!isOpen){
+					navbar.animate({
+						width: "250px"
+					}, 500);
+
+					$(this).animate({
+						left: "170px"
+					}, 500);
+
+					isOpen = true;
+				}
+				else{
+					navbar.animate({
+						width: "80px"
+					}, 500);
+
+					$(this).animate({
+						left: "0px"
+					}, 500);
+
+					isOpen = false;
+				}
+			});
+
+			navHamburgerContainer.append('<div id="navIcon"></div>');
+
+			var navIcon = $('#navIcon');
+
+			for(var i = 0; i < 4; i++){
+				navIcon.append('<span></span>')
+			}
+
+			navIcon.click(function(){
+				navIcon.toggleClass('open')
+			})
+
+
+
+	</script>
 </html>

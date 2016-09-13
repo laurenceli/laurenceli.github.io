@@ -1,10 +1,106 @@
-body{
+html{
 	padding: 0px;
 	margin: 0px;
 }
 
+#navContainer{
+	height: 100%;
+	width: 80px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
 #navbar{
 	height: 100%;
-	width: 50px;
-	background-color: red;
+	width: 100px;
+	background-color: #4c4c4c;
+}
+
+#navHamburgerContainer{
+	width: 80px;
+	height: 80px;
+	/*background-color: red;*/
+	background-color: #4c4c4c;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	cursor: pointer;
+  	z-index: 2;
+}
+
+
+#navIcon{
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#navIcon span{
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: #818181;
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+/* Icon 3 */
+
+#navIcon span:nth-child(1) {
+  top: 0px;
+}
+
+#navIcon span:nth-child(2), #navIcon span:nth-child(3) {
+  top: 18px;
+}
+
+#navIcon span:nth-child(4) {
+  top: 36px;
+}
+
+#navIcon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#navIcon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#navIcon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#navIcon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
