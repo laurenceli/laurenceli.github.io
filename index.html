@@ -3,6 +3,10 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet">
 		<!--<script src="main.js"></script>-->
 	<title>Laurence Li</title>
 	</head>
@@ -13,10 +17,12 @@
 	</body>
 
 	<script>
+		var body = $(document.body);
+
 		var navbarWidth = 80;
 		var navbarColor = "#000000";
 
-		$(document.body).append('<div id="mainContainer"></div>');
+		body.append('<div id="mainContainer"></div>');
 
 		var mainContainer = $('#mainContainer');
 
@@ -26,7 +32,7 @@
 			.css("position", "absolute")
 			.css("top", "0px")
 			.css("left", "0px")
-			.css("padding-left", "80px")
+			.css("margin-left", "80px")
 			;
 
 		$("#navContainer").append("<div id='navbar'></div>");
@@ -40,6 +46,54 @@
 			.css("left", "0px")
 			;
 
+		navbar.append('<div id="workButton"></div>');
+
+		var workButton = $('#workButton')
+
+		workButton
+			.addClass("navButton")
+			.css("position", "absolute")
+			.css("top", "50px")
+			.css("left", "-240px")
+			.text("Work")
+			; 
+
+		navbar.append('<div id="aboutButton"></div>');
+
+		var aboutButton = $('#aboutButton')
+
+		aboutButton
+			.addClass("navButton")
+			.css("position", "absolute")
+			.css("top", "120px")
+			.css("left", "-240px")
+			.text("About")
+			; 
+
+		navbar.append('<div id="resumeButton"></div>');
+
+		var resumeButton = $('#resumeButton')
+
+		resumeButton
+			.addClass("navButton")
+			.css("position", "absolute")
+			.css("top", "190px")
+			.css("left", "-240px")
+			.text("Resume")
+			; 
+
+		navbar.append('<div id="contactButton"></div>');
+
+		var contactButton = $('#contactButton')
+
+		contactButton
+			.addClass("navButton")
+			.css("position", "absolute")
+			.css("top", "260px")
+			.css("left", "-240px")
+			.text("Contact")
+			; 
+
 		navbar.append('<div id="navHamburgerContainer"></div>');
 
 		var navHamburgerContainer = $('#navHamburgerContainer');
@@ -49,23 +103,48 @@
 			.click(function(){
 				if(!isOpen){
 					navbar.animate({
-						width: "250px"
-					}, 500);
+						width: "300px"
+					}, 300);
 
-					$(this).animate({
-						left: "170px"
-					}, 500);
+					workButton.animate({
+						left: "20px"
+					}, 300);
+
+					aboutButton.animate({
+						left: "20px"
+					}, 300);
+
+					resumeButton.animate({
+						left: "20px"
+					}, 300);
+
+					contactButton.animate({
+						left: "20px"
+					}, 300);
+
 
 					isOpen = true;
 				}
 				else{
 					navbar.animate({
-						width: "80px"
-					}, 500);
+						width: "80px",
+					}, 300);
 
-					$(this).animate({
-						left: "0px"
-					}, 500);
+					workButton.animate({
+						left: "-240px"
+					}, 300);
+
+					aboutButton.animate({
+						left: "-240px"
+					}, 300);
+
+					resumeButton.animate({
+						left: "-240px"
+					}, 300);
+
+					contactButton.animate({
+						left: "-240px"
+					}, 300);
 
 					isOpen = false;
 				}
@@ -79,9 +158,24 @@
 				navIcon.append('<span></span>')
 			}
 
-			navIcon.click(function(){
+			navHamburgerContainer
+			.hover(
+				function(){
+					navIcon.find("span").css("background", "#b7b7b7");
+				},
+				function(){
+					navIcon.find("span").css("background", "#818181")
+				}
+			)
+				.click(function(){
 				navIcon.toggleClass('open')
 			})
+
+			mainContainer.append('<div id="centerBanner"></div>')
+
+			var centerBanner = $('#centerBanner');
+
+			centerBanner.text("Laurence Li")
 
 
 
