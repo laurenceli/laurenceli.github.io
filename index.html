@@ -51,9 +51,10 @@
 		var workButton = $('#workButton')
 
 		workButton
+			.addClass("navText")
 			.addClass("navButton")
 			.css("position", "absolute")
-			.css("top", "50px")
+			.css("top", "30px")
 			.css("left", "-240px")
 			.text("Work")
 			; 
@@ -63,9 +64,10 @@
 		var aboutButton = $('#aboutButton')
 
 		aboutButton
+			.addClass("navText")
 			.addClass("navButton")
 			.css("position", "absolute")
-			.css("top", "120px")
+			.css("top", "100px")
 			.css("left", "-240px")
 			.text("About")
 			; 
@@ -75,9 +77,10 @@
 		var resumeButton = $('#resumeButton')
 
 		resumeButton
+			.addClass("navText")
 			.addClass("navButton")
 			.css("position", "absolute")
-			.css("top", "190px")
+			.css("top", "170px")
 			.css("left", "-240px")
 			.text("Resume")
 			; 
@@ -87,11 +90,66 @@
 		var contactButton = $('#contactButton')
 
 		contactButton
-			.addClass("navButton")
+			.addClass("navText")
+			.addClass("navTitle")
 			.css("position", "absolute")
-			.css("top", "260px")
+			.css("top", "420px")
 			.css("left", "-240px")
-			.text("Contact")
+			.text("Contact // Social")
+			; 
+
+		navbar.append('<div id="contactPhone"></div>');
+
+		var contactPhone = $('#contactPhone')
+
+		contactPhone
+			.addClass("navSubtitle")
+			.addClass("navText")
+			.css("position", "absolute")
+			.css("top", "470px")
+			.css("left", "-240px")
+			.text("613 794 4859")
+			; 
+
+		navbar.append('<div id="contactEmail"></div>');
+
+		var contactEmail = $('#contactEmail')
+
+		contactEmail
+			.addClass("navSubtitle")
+			.addClass("navText")
+			.css("position", "absolute")
+			.css("top", "490px")
+			.css("left", "-240px")
+			.text("li.laurence55@gmail.com")
+			; 
+
+		navbar.append('<div id="socialGithub"></div>');
+
+		var socialGithub = $('#socialGithub')
+
+		socialGithub
+			.addClass("navSubtitle")
+			.addClass("navText")
+			.addClass("clickableLink")
+			.css("position", "absolute")
+			.css("top", "530px")
+			.css("left", "-240px")
+			.text("github.com/laurenceli")
+			; 
+
+		navbar.append('<div id="socialLinked"></div>');
+
+		var socialLinked = $('#socialLinked')
+
+		socialLinked
+			.addClass("navSubtitle")
+			.addClass("navText")
+			.addClass("clickableLink")
+			.css("position", "absolute")
+			.css("top", "550px")
+			.css("left", "-240px")
+			.text("linkedin.com/in/laurenceli")
 			; 
 
 		navbar.append('<div id="navHamburgerContainer"></div>');
@@ -122,6 +180,21 @@
 						left: "20px"
 					}, 300);
 
+					contactPhone.animate({
+						left: "20px"
+					}, 300);
+
+					contactEmail.animate({
+						left: "20px"
+					}, 300);
+
+					socialGithub.animate({
+						left: "113px"
+					}, 300);
+
+					socialLinked.animate({
+						left: "85px"
+					}, 300);
 
 					isOpen = true;
 				}
@@ -143,6 +216,22 @@
 					}, 300);
 
 					contactButton.animate({
+						left: "-240px"
+					}, 300);
+
+					contactPhone.animate({
+						left: "-240px"
+					}, 300);
+
+					contactEmail.animate({
+						left: "-240px"
+					}, 300);
+
+					socialGithub.animate({
+						left: "-240px"
+					}, 300);
+
+					socialLinked.animate({
 						left: "-240px"
 					}, 300);
 
@@ -175,7 +264,23 @@
 
 			var centerBanner = $('#centerBanner');
 
-			centerBanner.text("Laurence Li")
+			centerBanner
+				.css("position", "absolute")
+				.css("top", "400px")
+				.css("left", "0px")
+				.text("Laurence Li")
+				;
+
+			centerBanner.append('<div id="bannerSubtitle"></div>')
+
+			var bannerSubtitle = $('#bannerSubtitle')
+
+			bannerSubtitle
+				.addClass("subtitle")
+				.css("position", "absolute")
+				.css("left", "50px")
+				.css("top", "90px")
+				.text("Student // University of Ottawa, Computer Science");
 
 
 
