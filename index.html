@@ -46,6 +46,18 @@
 			.css("left", "0px")
 			;
 
+		$("#navContainer").append("<div id='navExpand'></div>");
+
+		var navExpand = $('#navExpand');
+
+		navExpand
+			.css("width", "300px")
+			.css("height", "100%")
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("left", "-220px")
+			;
+
 		navbar.append('<div id="workButton"></div>');
 
 		var workButton = $('#workButton')
@@ -250,7 +262,7 @@
 			navHamburgerContainer
 			.hover(
 				function(){
-					navIcon.find("span").css("background", "#b7b7b7");
+					navIcon.find("span").css("background", "#50FFB1");
 				},
 				function(){
 					navIcon.find("span").css("background", "#818181")
