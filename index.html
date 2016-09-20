@@ -123,7 +123,19 @@
 			.text("Resume")
 			; 
 
-		navbar.append('<div id="contactButton"></div>');
+		navbar.append('<div id="socialContainer"></div>')
+
+		var socialContainer = $('#socialContainer');
+
+		socialContainer
+			.css("position", "absolute")
+			.css("bottom", "0px")
+			.css("right", "240px")
+			.css("width", "220px")
+			.css("height", "170px")
+			.css("z-index", 10);
+
+		socialContainer.append('<div id="contactButton"></div>');
 
 		var contactButton = $('#contactButton')
 
@@ -131,12 +143,12 @@
 			.addClass("navText")
 			.addClass("navTitle")
 			.css("position", "absolute")
-			.css("top", "420px")
-			.css("left", "-240px")
+			.css("bottom", "170px")
+			.css("right", "0px")
 			.text("Contact // Social")
 			; 
 
-		navbar.append('<div id="contactPhone"></div>');
+		socialContainer.append('<div id="contactPhone"></div>');
 
 		var contactPhone = $('#contactPhone')
 
@@ -144,12 +156,12 @@
 			.addClass("navSubtitle")
 			.addClass("navText")
 			.css("position", "absolute")
-			.css("top", "470px")
-			.css("left", "-240px")
+			.css("bottom", "130px")
+			.css("right", "0px")
 			.text("613 794 4859")
 			; 
 
-		navbar.append('<div id="contactEmail"></div>');
+		socialContainer.append('<div id="contactEmail"></div>');
 
 		var contactEmail = $('#contactEmail')
 
@@ -157,12 +169,12 @@
 			.addClass("navSubtitle")
 			.addClass("navText")
 			.css("position", "absolute")
-			.css("top", "490px")
-			.css("left", "-240px")
+			.css("bottom", "105px")
+			.css("right", "0px")
 			.text("li.laurence55@gmail.com")
 			; 
 
-		navbar.append('<div id="socialGithub"></div>');
+		socialContainer.append('<div id="socialGithub"></div>');
 
 		var socialGithub = $('#socialGithub')
 
@@ -171,15 +183,15 @@
 			.addClass("navText")
 			.addClass("clickableLink")
 			.css("position", "absolute")
-			.css("top", "530px")
-			.css("left", "-240px")
+			.css("bottom", "65px")
+			.css("right", "30px")
 			.text("github.com/laurenceli")
 			.on("click", function(){
 				window.open('https://github.com/laurenceli', '_blank' );
 			})
 			; 
 
-		navbar.append('<div id="socialLinked"></div>');
+		socialContainer.append('<div id="socialLinked"></div>');
 
 		var socialLinked = $('#socialLinked')
 
@@ -188,8 +200,8 @@
 			.addClass("navText")
 			.addClass("clickableLink")
 			.css("position", "absolute")
-			.css("top", "550px")
-			.css("left", "-240px")
+			.css("bottom", "40px")
+			.css("right", "30px")
 			.text("linkedin.com/in/laurenceli")
 			.on("click", function(){
 				window.open('https://www.linkedin.com/in/laurenceli', '_blank');
@@ -220,24 +232,8 @@
 						left: "163px"
 					}, 300);
 
-					contactButton.animate({
-						left: "20px"
-					}, 300);
-
-					contactPhone.animate({
-						left: "20px"
-					}, 300);
-
-					contactEmail.animate({
-						left: "20px"
-					}, 300);
-
-					socialGithub.animate({
-						left: "113px"
-					}, 300);
-
-					socialLinked.animate({
-						left: "85px"
+					socialContainer.animate({
+						left: "80px"
 					}, 300);
 
 					isOpen = true;
@@ -259,23 +255,7 @@
 						left: "-240px"
 					}, 300);
 
-					contactButton.animate({
-						left: "-240px"
-					}, 300);
-
-					contactPhone.animate({
-						left: "-240px"
-					}, 300);
-
-					contactEmail.animate({
-						left: "-240px"
-					}, 300);
-
-					socialGithub.animate({
-						left: "-240px"
-					}, 300);
-
-					socialLinked.animate({
+					socialContainer.animate({
 						left: "-240px"
 					}, 300);
 
