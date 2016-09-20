@@ -35,6 +35,28 @@
 			.css("margin-left", "80px")
 			;
 
+		mainContainer.append('<div id="workPanel1"></div>')
+
+		var workPanel1 = $('#workPanel1');
+
+		workPanel1
+		.css("position", "relative")
+		.css("float", "left")
+		.css("height", "400px")
+		.css("width", "60%")
+		;
+
+		mainContainer.append('<div id="workPanel2"></div>')
+
+		var workPanel2 = $('#workPanel2');
+
+		workPanel2
+		.css("position", "relative")
+		.css("float", "left")
+		.css("height", "400px")
+		.css("width", "40%")
+		;
+
 		$("#navContainer").append("<div id='navbar'></div>");
 
 		var navbar = $('#navbar');
@@ -63,11 +85,12 @@
 		var workButton = $('#workButton')
 
 		workButton
+			.addClass("clickableLink")
 			.addClass("navText")
-			.addClass("navButton")
 			.css("position", "absolute")
-			.css("top", "30px")
+			.css("top", "50px")
 			.css("left", "-240px")
+			.css("font-size", "180%")
 			.text("Work")
 			; 
 
@@ -76,11 +99,12 @@
 		var aboutButton = $('#aboutButton')
 
 		aboutButton
+			.addClass("clickableLink")
 			.addClass("navText")
-			.addClass("navButton")
 			.css("position", "absolute")
-			.css("top", "100px")
+			.css("top", "120px")
 			.css("left", "-240px")
+			.css("font-size", "180%")
 			.text("About")
 			; 
 
@@ -89,11 +113,12 @@
 		var resumeButton = $('#resumeButton')
 
 		resumeButton
+			.addClass("clickableLink")
 			.addClass("navText")
-			.addClass("navButton")
 			.css("position", "absolute")
-			.css("top", "170px")
+			.css("top", "190px")
 			.css("left", "-240px")
+			.css("font-size", "180%")
 			.text("Resume")
 			; 
 
@@ -177,15 +202,15 @@
 					}, 300);
 
 					workButton.animate({
-						left: "20px"
+						left: "203px"
 					}, 300);
 
 					aboutButton.animate({
-						left: "20px"
+						left: "193px"
 					}, 300);
 
 					resumeButton.animate({
-						left: "20px"
+						left: "163px"
 					}, 300);
 
 					contactButton.animate({

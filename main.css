@@ -51,10 +51,7 @@ html{
 }
 
 .navButton{
-	width: 240px;
-	height: 90px;
 	font-size: 180%;
-	line-height: 90px;
 }
 
 .navTitle{
@@ -200,7 +197,7 @@ html{
 #centerBanner{
 	width: 100%;
 	height: 200px;
-  	background: rgba(138,176,171, 1);
+  	background: #48e59f;
   	font-size: 400%;
   	font-family: 'Hind', sans-serif;
   	color: #ffffff;
