@@ -31,8 +31,7 @@
 			.css("height", "100%")
 			.css("position", "absolute")
 			.css("top", "0px")
-			.css("left", "0px")
-			.css("margin-left", "80px")
+			.css("left", "80px")
 			;
 
 		mainContainer.append('<div id="workPanel1"></div>')
@@ -302,11 +301,22 @@
 			var centerBanner = $('#centerBanner');
 
 			centerBanner
+				.css("width", mainContainer.width() + "px")
 				.css("position", "absolute")
 				.css("top", "400px")
 				.css("left", "0px")
-				.text("Laurence Li")
 				;
+
+			centerBanner.append('<div id="bannerTitle"></div>')
+
+			var bannerTitle = $('#bannerTitle')
+
+			bannerTitle
+				.addClass("bannerTitle")
+				.css("position", "absolute")
+				.css("left", "50px")
+				.css("top", "50px")
+				.text("Laurence Li");
 
 			centerBanner.append('<div id="bannerSubtitle"></div>')
 
@@ -315,11 +325,9 @@
 			bannerSubtitle
 				.addClass("subtitle")
 				.css("position", "absolute")
-				.css("left", "50px")
+				.css("left", "53px")
 				.css("top", "90px")
 				.text("Student // University of Ottawa, Computer Science");
-
-
 
 	</script>
 </html>
