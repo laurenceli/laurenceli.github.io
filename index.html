@@ -31,7 +31,9 @@
 			.css("height", "100%")
 			.css("position", "absolute")
 			.css("top", "0px")
-			.css("left", "80px")
+			.css("left", "0px")
+			.css("padding-left", "80px")
+			.css("box-sizing", "border-box")
 			;
 
 		mainContainer.append('<div id="workPanel1"></div>')
@@ -301,8 +303,8 @@
 			var centerBanner = $('#centerBanner');
 
 			centerBanner
-				.css("width", mainContainer.width() + "px")
-				.css("position", "absolute")
+				.css("width", "100%")
+				.css("position", "relative")
 				.css("top", "400px")
 				.css("left", "0px")
 				;
