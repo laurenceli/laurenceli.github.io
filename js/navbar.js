@@ -7,15 +7,10 @@ var navbar;
 var navHamburgerContainer;
 var navIcon;
 
-var workButton;
-var aboutButton;
-var resumeButton;
+var linksContainer;
 var socialContainer;
-var contactButton;
-var contactPhone;
-var contactEmail;
-var socialGithub;
-var socialLinked;
+var contactTItle;
+var linked = [];
 
 drawNavBar();
 drawNavBarElements();
@@ -26,7 +21,8 @@ function drawNavBar(){
 	navbar = $('#navbar');
 
 	navbar
-		.css("width", navbarWidth)
+		.css("width", navbarWidth + "px")
+		.css("height", "100%")
 		.css("position", "absolute")
 		.css("top", "0px")
 		.css("left", "0px")
@@ -39,7 +35,7 @@ function drawNavBar(){
 	navIcon = $('#navIcon');
 
 	for(var i = 0; i < 4; i++){
-		navIcon.append('<span></span>')
+		navIcon.append('<span></span>') //loop to create hamburger menu lines
 	}
 
 	navHamburgerContainer
@@ -48,134 +44,91 @@ function drawNavBar(){
 			navIcon.find("span").css("background", "#50FFB1");
 		},
 		function(){
-			navIcon.find("span").css("background", "#818181")
+			navIcon.find("span").css("background", "#818181");
 		}
 	)
 	.click(function(){
-		navIcon.toggleClass('open')
+		navIcon.toggleClass('open');
 	})
 	;
 }
 
 function drawNavBarElements(){
+	var linksText = ["About", "Work", "Resume"];
+	var socialText = ["613 794 4859", "laurncl.li@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];
 
-navbar.append('<div id="workButton"></div>');
-workButton = $('#workButton')
+	navbar.append('<div id="linksContainer"></div>');
+	linksContainer = $('#linksContainer');
 
-workButton
-	.addClass("clickableLink")
-	.addClass("navText")
-	.css("position", "absolute")
-	.css("top", "50px")
-	.css("left", "-240px")
-	.css("font-size", "180%")
-	.text("Work")
-	; 
+	linksContainer
+		.css("position", "absolute")
+		.css("top", "0px")
+		.css("right", "80px")
+		.css("width", "150px")
+		.css("height", "230px")
+		.css("z-index", 10)
+		;
 
-navbar.append('<div id="aboutButton"></div>');
-aboutButton = $('#aboutButton')
+	linksContainer.append('<ul id="links"></ul>')
+	var links = $('#links');
 
-aboutButton
-	.addClass("clickableLink")
-	.addClass("navText")
-	.css("position", "absolute")
-	.css("top", "120px")
-	.css("left", "-240px")
-	.css("font-size", "180%")
-	.text("About")
-	; 
+	for(var i = 0; i < linksText.length; i++){
+		links.append('<li class="navLink clickableLink" style="list-style-type:none">' + linksText[i] + '</li>');
+	}
 
-navbar.append('<div id="resumeButton"></div>');
-resumeButton = $('#resumeButton')
+	navbar.append('<div id="socialContainer"></div>')
+	socialContainer = $('#socialContainer');
 
-resumeButton
-	.addClass("clickableLink")
-	.addClass("navText")
-	.css("position", "absolute")
-	.css("top", "190px")
-	.css("left", "-240px")
-	.css("font-size", "180%")
-	.text("Resume")
-	; 
+	socialContainer
+		.css("position", "absolute")
+		.css("bottom", "0px")
+		.css("right", "240px")
+		.css("width", "220px")
+		.css("height", "180px")
+		.css("z-index", 10);
 
-navbar.append('<div id="socialContainer"></div>')
-socialContainer = $('#socialContainer');
+	socialContainer.append('<div id="contactTitle"></div>');
+	contactTitle = $('#contactTitle')
 
-socialContainer
-	.css("position", "absolute")
-	.css("bottom", "0px")
-	.css("right", "240px")
-	.css("width", "220px")
-	.css("height", "170px")
-	.css("z-index", 10);
+	contactTitle
+		.addClass("navTitle")
+		.css("position", "absolute")
+		.css("top", "0px")
+		.css("right", "0px")
+		.text("Contact // Social")
+		; 
 
-socialContainer.append('<div id="contactButton"></div>');
-contactButton = $('#contactButton')
+	socialContainer.append('<ul id="social"></ul>')
+	var social = $('#social');
+	social
+		.css("position", "absolute")
+		.css("top", "50px")
+		.css("right", "0px");
 
-contactButton
-	.addClass("navText")
-	.addClass("navTitle")
-	.css("position", "absolute")
-	.css("bottom", "170px")
-	.css("right", "0px")
-	.text("Contact // Social")
-	; 
+	var linkCounter = 2;
 
-socialContainer.append('<div id="contactPhone"></div>');
-contactPhone = $('#contactPhone')
+	for(var i = 0; i < socialText.length; i++){
+		if(i < 2){
+			social.append('<li class="navSocial notClickable" id="socialItem' + i + '" style="list-style-type:none">' + socialText[i] + '</li>');
+		}
+		else{ 
+			social.append('<li class="navSocial clickableLink" id="socialItem' + i + '" style="list-style-type:none">' + socialText[i] + '</li>');
+		}
+	}
 
-contactPhone
-	.addClass("navSubtitle")
-	.addClass("navText")
-	.css("position", "absolute")
-	.css("bottom", "130px")
-	.css("right", "0px")
-	.text("613 794 4859")
-	; 
+	var socialItem2 = $('#socialItem2');
+	socialItem2
+		.on("click", function(){
+			console.log(linkCounter)
+				window.open('https://www.github.com/laurenceli' , '_blank' );
+			});
 
-socialContainer.append('<div id="contactEmail"></div>');
-var contactEmail = $('#contactEmail')
-
-contactEmail
-	.addClass("navSubtitle")
-	.addClass("navText")
-	.css("position", "absolute")
-	.css("bottom", "105px")
-	.css("right", "0px")
-	.text("li.laurence55@gmail.com")
-	; 
-
-socialContainer.append('<div id="socialGithub"></div>');
-socialGithub = $('#socialGithub')
-
-socialGithub
-	.addClass("navSubtitle")
-	.addClass("navText")
-	.addClass("clickableLink")
-	.css("position", "absolute")
-	.css("bottom", "65px")
-	.css("right", "30px")
-	.text("github.com/laurenceli")
-	.on("click", function(){
-		window.open('https://github.com/laurenceli', '_blank' );
-	})
-	; 
-
-socialContainer.append('<div id="socialLinked"></div>');
-socialLinked = $('#socialLinked')
-
-socialLinked
-	.addClass("navSubtitle")
-	.addClass("navText")
-	.addClass("clickableLink")
-	.css("position", "absolute")
-	.css("bottom", "40px")
-	.css("right", "30px")
-	.text("linkedin.com/in/laurenceli")
-	.on("click", function(){
-		window.open('https://www.linkedin.com/in/laurenceli', '_blank');
-	})
-	; 
+	var socialItem3 = $('#socialItem3');
+	socialItem2
+		.on("click", function(){
+			console.log(linkCounter)
+				window.open('https://www.linkedin.com/in/laurenceli' , '_blank' );
+			});
 }
 
 var isOpen = false;
@@ -186,16 +139,8 @@ $('#navHamburgerContainer')
 				width: "300px"
 			}, 300);
 
-			workButton.animate({
-				left: "203px"
-			}, 300);
-
-			aboutButton.animate({
-				left: "193px"
-			}, 300);
-
-			resumeButton.animate({
-				left: "163px"
+			linksContainer.animate({
+				right: "0px"
 			}, 300);
 
 			socialContainer.animate({
@@ -209,16 +154,8 @@ $('#navHamburgerContainer')
 				width: "80px",
 			}, 300);
 
-			workButton.animate({
-				left: "-240px"
-			}, 300);
-
-			aboutButton.animate({
-				left: "-240px"
-			}, 300);
-
-			resumeButton.animate({
-				left: "-240px"
+			linksContainer.animate({
+				right: "80px"
 			}, 300);
 
 			socialContainer.animate({
