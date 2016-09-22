@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
@@ -15,12 +15,8 @@
 		<div id="navContainer">
 		</div>
 	</body>
-
 	<script>
 		var body = $(document.body);
-
-		var navbarWidth = 80;
-		var navbarColor = "#000000";
 
 		body.append('<div id="mainContainer"></div>');
 
@@ -58,264 +54,40 @@
 		.css("width", "40%")
 		;
 
-		$("#navContainer").append("<div id='navbar'></div>");
 
-		var navbar = $('#navbar');
+		mainContainer.append('<div id="centerBanner"></div>')
 
-		navbar
-			.css("width", navbarWidth)
-			.css("position", "absolute")
-			.css("top", "0px")
+		var centerBanner = $('#centerBanner');
+
+		centerBanner
+			.css("width", "100%")
+			.css("position", "relative")
+			.css("top", "400px")
 			.css("left", "0px")
 			;
 
-		$("#navContainer").append("<div id='navExpand'></div>");
+		centerBanner.append('<div id="bannerTitle"></div>')
 
-		var navExpand = $('#navExpand');
+		var bannerTitle = $('#bannerTitle')
 
-		navExpand
-			.css("width", "300px")
-			.css("height", "100%")
+		bannerTitle
+			.addClass("bannerTitle")
 			.css("position", "absolute")
-			.css("top", "0px")
-			.css("left", "-220px")
-			;
-
-		navbar.append('<div id="workButton"></div>');
-
-		var workButton = $('#workButton')
-
-		workButton
-			.addClass("clickableLink")
-			.addClass("navText")
-			.css("position", "absolute")
+			.css("left", "50px")
 			.css("top", "50px")
-			.css("left", "-240px")
-			.css("font-size", "180%")
-			.text("Work")
-			; 
+			.text("Laurence Li");
 
-		navbar.append('<div id="aboutButton"></div>');
+		centerBanner.append('<div id="bannerSubtitle"></div>')
 
-		var aboutButton = $('#aboutButton')
+		var bannerSubtitle = $('#bannerSubtitle')
 
-		aboutButton
-			.addClass("clickableLink")
-			.addClass("navText")
+		bannerSubtitle
+			.addClass("subtitle")
 			.css("position", "absolute")
-			.css("top", "120px")
-			.css("left", "-240px")
-			.css("font-size", "180%")
-			.text("About")
-			; 
-
-		navbar.append('<div id="resumeButton"></div>');
-
-		var resumeButton = $('#resumeButton')
-
-		resumeButton
-			.addClass("clickableLink")
-			.addClass("navText")
-			.css("position", "absolute")
-			.css("top", "190px")
-			.css("left", "-240px")
-			.css("font-size", "180%")
-			.text("Resume")
-			; 
-
-		navbar.append('<div id="socialContainer"></div>')
-
-		var socialContainer = $('#socialContainer');
-
-		socialContainer
-			.css("position", "absolute")
-			.css("bottom", "0px")
-			.css("right", "240px")
-			.css("width", "220px")
-			.css("height", "170px")
-			.css("z-index", 10);
-
-		socialContainer.append('<div id="contactButton"></div>');
-
-		var contactButton = $('#contactButton')
-
-		contactButton
-			.addClass("navText")
-			.addClass("navTitle")
-			.css("position", "absolute")
-			.css("bottom", "170px")
-			.css("right", "0px")
-			.text("Contact // Social")
-			; 
-
-		socialContainer.append('<div id="contactPhone"></div>');
-
-		var contactPhone = $('#contactPhone')
-
-		contactPhone
-			.addClass("navSubtitle")
-			.addClass("navText")
-			.css("position", "absolute")
-			.css("bottom", "130px")
-			.css("right", "0px")
-			.text("613 794 4859")
-			; 
-
-		socialContainer.append('<div id="contactEmail"></div>');
-
-		var contactEmail = $('#contactEmail')
-
-		contactEmail
-			.addClass("navSubtitle")
-			.addClass("navText")
-			.css("position", "absolute")
-			.css("bottom", "105px")
-			.css("right", "0px")
-			.text("li.laurence55@gmail.com")
-			; 
-
-		socialContainer.append('<div id="socialGithub"></div>');
-
-		var socialGithub = $('#socialGithub')
-
-		socialGithub
-			.addClass("navSubtitle")
-			.addClass("navText")
-			.addClass("clickableLink")
-			.css("position", "absolute")
-			.css("bottom", "65px")
-			.css("right", "30px")
-			.text("github.com/laurenceli")
-			.on("click", function(){
-				window.open('https://github.com/laurenceli', '_blank' );
-			})
-			; 
-
-		socialContainer.append('<div id="socialLinked"></div>');
-
-		var socialLinked = $('#socialLinked')
-
-		socialLinked
-			.addClass("navSubtitle")
-			.addClass("navText")
-			.addClass("clickableLink")
-			.css("position", "absolute")
-			.css("bottom", "40px")
-			.css("right", "30px")
-			.text("linkedin.com/in/laurenceli")
-			.on("click", function(){
-				window.open('https://www.linkedin.com/in/laurenceli', '_blank');
-			})
-			; 
-
-		navbar.append('<div id="navHamburgerContainer"></div>');
-
-		var navHamburgerContainer = $('#navHamburgerContainer');
-
-		var isOpen = false;
-		$('#navHamburgerContainer')
-			.click(function(){
-				if(!isOpen){
-					navbar.animate({
-						width: "300px"
-					}, 300);
-
-					workButton.animate({
-						left: "203px"
-					}, 300);
-
-					aboutButton.animate({
-						left: "193px"
-					}, 300);
-
-					resumeButton.animate({
-						left: "163px"
-					}, 300);
-
-					socialContainer.animate({
-						left: "80px"
-					}, 300);
-
-					isOpen = true;
-				}
-				else{
-					navbar.animate({
-						width: "80px",
-					}, 300);
-
-					workButton.animate({
-						left: "-240px"
-					}, 300);
-
-					aboutButton.animate({
-						left: "-240px"
-					}, 300);
-
-					resumeButton.animate({
-						left: "-240px"
-					}, 300);
-
-					socialContainer.animate({
-						left: "-240px"
-					}, 300);
-
-					isOpen = false;
-				}
-			});
-
-			navHamburgerContainer.append('<div id="navIcon"></div>');
-
-			var navIcon = $('#navIcon');
-
-			for(var i = 0; i < 4; i++){
-				navIcon.append('<span></span>')
-			}
-
-			navHamburgerContainer
-			.hover(
-				function(){
-					navIcon.find("span").css("background", "#50FFB1");
-				},
-				function(){
-					navIcon.find("span").css("background", "#818181")
-				}
-			)
-				.click(function(){
-				navIcon.toggleClass('open')
-			})
-
-			mainContainer.append('<div id="centerBanner"></div>')
-
-			var centerBanner = $('#centerBanner');
-
-			centerBanner
-				.css("width", "100%")
-				.css("position", "relative")
-				.css("top", "400px")
-				.css("left", "0px")
-				;
-
-			centerBanner.append('<div id="bannerTitle"></div>')
-
-			var bannerTitle = $('#bannerTitle')
-
-			bannerTitle
-				.addClass("bannerTitle")
-				.css("position", "absolute")
-				.css("left", "50px")
-				.css("top", "50px")
-				.text("Laurence Li");
-
-			centerBanner.append('<div id="bannerSubtitle"></div>')
-
-			var bannerSubtitle = $('#bannerSubtitle')
-
-			bannerSubtitle
-				.addClass("subtitle")
-				.css("position", "absolute")
-				.css("left", "53px")
-				.css("top", "90px")
-				.text("Student // University of Ottawa, Computer Science");
+			.css("left", "53px")
+			.css("top", "90px")
+			.text("Student // University of Ottawa, Computer Science");
 
 	</script>
+	<script src="js/navbar.js"></script>
 </html>
