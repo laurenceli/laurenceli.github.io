@@ -54,6 +54,7 @@ function drawNavBar(){
 }
 
 function drawNavBarElements(){
+
 	var linksText = ["About", "Work", "Resume"];
 	var socialText = ["613 794 4859", "laurncl.li@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];
 
@@ -124,7 +125,7 @@ function drawNavBarElements(){
 			});
 
 	var socialItem3 = $('#socialItem3');
-	socialItem2
+	socialItem3
 		.on("click", function(){
 			console.log(linkCounter)
 				window.open('https://www.linkedin.com/in/laurenceli' , '_blank' );
