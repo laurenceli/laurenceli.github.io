@@ -1,7 +1,6 @@
 var body = $(document.body);
 
 var navbarWidth = 80;
-var navbarColor = "#000000";
 
 var navbar;
 var navHamburgerContainer;
@@ -106,8 +105,6 @@ function drawNavBarElements(){
 		.css("top", "50px")
 		.css("right", "0px");
 
-	var linkCounter = 2;
-
 	for(var i = 0; i < socialText.length; i++){
 		if(i < 2){
 			social.append('<li class="navSocial notClickable" id="socialItem' + i + '" style="list-style-type:none">' + socialText[i] + '</li>');
@@ -120,16 +117,16 @@ function drawNavBarElements(){
 	var socialItem2 = $('#socialItem2');
 	socialItem2
 		.on("click", function(){
-			console.log(linkCounter)
 				window.open('https://www.github.com/laurenceli' , '_blank' );
-			});
+			})
+		;
 
 	var socialItem3 = $('#socialItem3');
 	socialItem3
 		.on("click", function(){
-			console.log(linkCounter)
 				window.open('https://www.linkedin.com/in/laurenceli' , '_blank' );
-			});
+			})
+		;
 }
 
 var isOpen = false;

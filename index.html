@@ -61,32 +61,68 @@
 
 		centerBanner
 			.css("width", "100%")
+			.css("height", "200px")
 			.css("position", "relative")
 			.css("top", "400px")
 			.css("left", "0px")
 			;
 
-		centerBanner.append('<div id="bannerTitle"></div>')
+		centerBanner.append('<div id="bannerTitlesContainer"></div>');
+		var bannerTitlesContainer = $('#bannerTitlesContainer');
 
-		var bannerTitle = $('#bannerTitle')
-
-		bannerTitle
-			.addClass("bannerTitle")
+		bannerTitlesContainer
 			.css("position", "absolute")
-			.css("left", "50px")
-			.css("top", "50px")
-			.text("Laurence Li");
+			.css("top", "0px")
+			.css("left", "0px")
+			.css("background-color", "#48e59f")
+			.css("z-index", 10)
+			.css("height", "100%")
+			.css("width", "400px")
+			;
 
-		centerBanner.append('<div id="bannerSubtitle"></div>')
+		bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
+		var bannerTitle = $('#bannerTitle');
 
+		bannerTitle.addClass("bannerElement").css("top", "40px").css("left", "30px").css("color", "#fff");
+
+		bannerTitlesContainer.append('<h2 id="bannerSubtitle">Student // University of Ottawa, Computer Science</h2>')
 		var bannerSubtitle = $('#bannerSubtitle')
 
-		bannerSubtitle
-			.addClass("subtitle")
+		bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "33px").css("color", "#fff");
+
+		centerBanner.append('<div id="blurbText"></div>');
+		var blurbText = $('#blurbText');
+		blurbText			
 			.css("position", "absolute")
-			.css("left", "53px")
-			.css("top", "90px")
-			.text("Student // University of Ottawa, Computer Science");
+			.css("z-index", 9)
+			.css("background-color", "#ffffff")
+			.css("top", "0px")
+			.css("left", "0px")
+			.css("height", "100%")
+			.css("width", "400px")
+			;
+
+		centerBanner.append('<div id="expandButton"></div>');
+		var expandButton = $('#expandButton');
+
+		expandButton
+			.css("z-index", 10)
+			.css("width", "30px")
+			.css("height", "30px")
+			.css("background-color", "white")
+			.css("position", "absolute")
+			.css("border-radius", 20)
+			.css("top", "85px")
+			.css("left", "400px")
+			.on("click", function(){
+				blurbText.animate({
+					left: "400px"
+				}, 100);
+
+				$(this).animate({
+					left: "815px"
+				}, 100);
+			});
 
 	</script>
 	<script src="js/navbar.js"></script>

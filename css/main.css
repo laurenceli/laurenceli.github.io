@@ -203,24 +203,21 @@ html{
   z-index: 0;
 }
 
-.bannerTitle{
-  width: auto;
-  height: auto;
-  font-size: 400%;
-  font-family: 'Hind', sans-serif;
-  color: #ffffff;
-  text-align: left;
-  line-height: 103px;
+.bannerElement{
+  position: absolute;
 }
 
-.subtitle{
-  width: auto;
-  height: auto;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 200;
-	font-size: 100%;
-	text-align: left;
-	line-height: 90px;
-	color: #ffffff;
-	z-index: 1;
+h1{
+  margin: 0px;
+  font-family: 'Hind', sans-serif;
+  font-size: 400%;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+h2{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  font-size: 100%;
+  letter-spacing: 1px;
 }
