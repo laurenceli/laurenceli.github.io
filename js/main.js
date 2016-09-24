@@ -4,8 +4,8 @@ var workPanel1 = $('#workPanel1');
 workPanel1
 	.css("position", "relative")
 	.css("float", "left")
-	.css("height", "400px")
-	.css("width", "60%")
+	.css("height", "450px")
+	.css("width", "50%")
 ;
 
 mainContainer.append('<div id="workPanel2"></div>')
@@ -14,8 +14,8 @@ var workPanel2 = $('#workPanel2');
 workPanel2
 	.css("position", "relative")
 	.css("float", "left")
-	.css("height", "400px")
-	.css("width", "40%")
+	.css("height", "450px")
+	.css("width", "50%")
 ;
 
 
@@ -26,7 +26,7 @@ centerBanner
 	.css("width", "100%")
 	.css("height", "200px")
 	.css("position", "relative")
-	.css("top", "400px")
+	.css("top", "450px")
 	.css("left", "0px")
 	;
 
@@ -46,12 +46,12 @@ bannerTitlesContainer
 bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
 var bannerTitle = $('#bannerTitle');
 
-bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "35px").css("color", "#fff");
+bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "40px").css("color", "#fff");
 
 bannerTitlesContainer.append('<h2 id="bannerSubtitle">Student // University of Ottawa, Computer Science</h2>')
 var bannerSubtitle = $('#bannerSubtitle')
 
-bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "38px").css("color", "#fff");
+bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "43px").css("color", "#fff");
 
 centerBanner.append('<div id="blurbText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>');
 var blurbText = $('#blurbText');

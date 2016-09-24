@@ -3,6 +3,7 @@ html{
 	margin: 0px;
 }
 
+/*
 @font-face{
 	font-family: 'Kollektif';
 	src: url('fonts/Kollektif.ttf') format('truetype');
@@ -12,10 +13,21 @@ html{
 	font-family: 'Norwester';
 	src: url('fonts/norwester.otf') format('opentype');
 }
+*/
 
 #mainContainer{
 	background-color: #f7f7f7;
 	z-index: 0;
+}
+
+#workPanel1{
+  background: url("../images/cherrypicker-mockup.jpg") no-repeat;
+  background-size: cover;
+}
+
+#workPanel2{
+  background: url("../images/friendmap-mockup.jpg") no-repeat;
+  background-size: cover;
 }
 
 #expandButton span{
