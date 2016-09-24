@@ -77,7 +77,7 @@
 			.css("background-color", "#48e59f")
 			.css("z-index", 10)
 			.css("height", "100%")
-			.css("width", "400px")
+			.css("width", "500px")
 			;
 
 		bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
@@ -99,8 +99,26 @@
 			.css("top", "0px")
 			.css("left", "0px")
 			.css("height", "100%")
-			.css("width", "400px")
+			.css("width", "500px")
 			;
+
+		var isExpanded = false;
+
+		centerBanner.append('<div id="verticalLine"></div>');
+		var verticalLine = $('#verticalLine');
+
+		verticalLine
+			.css("height", "100%")
+			.css("width", "1px")
+			.css("background-color", "white")
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("left", "515px")
+			.css("opacity", "0.4")
+			.css("z-index", 9)
+			;
+
+
 
 		centerBanner.append('<div id="expandButton"></div>');
 		var expandButton = $('#expandButton');
@@ -109,20 +127,45 @@
 			.css("z-index", 10)
 			.css("width", "30px")
 			.css("height", "30px")
-			.css("background-color", "white")
+			.css("background-color", "#48e59f")
 			.css("position", "absolute")
 			.css("border-radius", 20)
+			.css("border", "1px solid white")
 			.css("top", "85px")
-			.css("left", "400px")
+			.css("left", "500px")
 			.on("click", function(){
-				blurbText.animate({
-					left: "400px"
-				}, 100);
+				if(!isExpanded){
+					blurbText.animate({
+						left: "500px"
+					}, 100);
 
-				$(this).animate({
-					left: "815px"
-				}, 100);
+					$(this)
+						.animate({
+							left: "985px",
+							backgroundColor: "#48e59f"
+						}, 100)
+						.toggleClass('expanded');
+
+					isExpanded = true;
+				}
+				else{
+					blurbText.animate({
+						left: "0px"
+					}, 100);
+
+					$(this)
+						.animate({
+						left: "500px",
+							backgroundColor: "white"
+						}, 100)
+						.toggleClass('expanded');;
+
+					isExpanded = false;
+				}
 			});
+
+			expandButton.append('<span></span>');
+			expandButton.append('<span></span>');
 
 	</script>
 	<script src="js/navbar.js"></script>
