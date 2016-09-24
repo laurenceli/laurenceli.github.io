@@ -23,22 +23,22 @@ html{
   position: absolute;
   height: 1px;
   width: 35%;
-  background: white;
+  background: #48e59f;
   border-radius: 1px;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 #expandButton span:nth-child(1) {
   bottom: 17px;
-  left: 11px;
+  left: 10px;
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   -o-transform: rotate(30deg);
@@ -47,7 +47,7 @@ html{
 
 #expandButton span:nth-child(2){
   top: 17px;
-  left: 11px;
+  left: 10px;
   -webkit-transform: rotate(-30deg);
   -moz-transform: rotate(-30deg);
   -o-transform: rotate(-30deg);
