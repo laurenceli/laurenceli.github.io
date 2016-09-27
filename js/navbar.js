@@ -55,6 +55,8 @@ function drawNavBar(){
 function drawNavBarElements(){
 
 	var linksText = ["About", "Work", "Resume"];
+	var linkElements = [];
+	var linkElementsCounter = 0;
 	var socialText = ["613 794 4859", "laurncl.li@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];
 
 	navbar.append('<div id="linksContainer"></div>');
@@ -73,8 +75,21 @@ function drawNavBarElements(){
 	var links = $('#links');
 
 	for(var i = 0; i < linksText.length; i++){
-		links.append('<li class="navLink clickableLink" style="list-style-type:none">' + linksText[i] + '</li>');
+		links.append('<li class="navLink clickableLink" id="' + linksText[i] + '" style="list-style-type:none">' + linksText[i] + '</li>');
+		linkElements[i] = $('#' + linksText[i]);
 	}
+
+
+	linkElements[0].on("click", function(){
+		currentPage.hide();
+		showMainPage();
+	})
+
+	linkElements[2].on("click", function(){
+		currentPage.hide();
+		showResumePage();
+	})
+
 
 	navbar.append('<div id="socialContainer"></div>')
 	socialContainer = $('#socialContainer');

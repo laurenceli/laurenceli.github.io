@@ -14,6 +14,11 @@
 		</div>
 	</body>
 	<script>
+		$( document ).ready(function() {
+		    drawMainPage();
+		    drawResumePage();
+		});
+
 		var body = $(document.body);
 
 		body.append('<div id="mainContainer"></div>');
@@ -30,7 +35,25 @@
 			.css("box-sizing", "border-box")
 			;
 
+		body.append('<div id="resumeContainer"></div>');
+
+		var resumeContainer = $('#resumeContainer');
+
+		resumeContainer
+			.css("width", "100%")
+			.css("height", "100%")
+			.css("position", "absolute")
+			.css("top", "0px")
+			.css("left", "0px")
+			.css("padding-left", "80px")
+			.css("box-sizing", "border-box")
+			.css("background-color", "#f7f7f7")
+			;
+
+		var currentPage =  mainContainer;
+		resumeContainer.hide();
 	</script>
 	<script src="js/main.js"></script>
+	<script src="js/resume.js"></script>
 	<script src="js/navbar.js"></script>
 </html>

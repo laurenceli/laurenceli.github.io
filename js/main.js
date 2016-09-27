@@ -1,4 +1,12 @@
+function showMainPage(){
+	mainContainer.show();
+	currentPage = mainContainer;
+}
+
+function drawMainPage(){
+
 mainContainer.append('<div id="workPanel1"></div>')
+
 var workPanel1 = $('#workPanel1');
 
 workPanel1
@@ -158,3 +166,4 @@ expandButton
 
 	expandButton.append('<span></span>');
 	expandButton.append('<span></span>');
+}
