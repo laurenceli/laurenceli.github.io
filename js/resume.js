@@ -1,6 +1,7 @@
 function showResumePage(){
 	resumeContainer.show();
 	currentPage = resumeContainer;
+	changeURL("#resume");
 
 }
 

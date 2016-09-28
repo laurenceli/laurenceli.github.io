@@ -22,7 +22,7 @@ function drawNavBar(){
 	navbar
 		.css("width", navbarWidth + "px")
 		.css("height", "100%")
-		.css("position", "absolute")
+		.css("position", "fixed")
 		.css("top", "0px")
 		.css("left", "0px")
 		;

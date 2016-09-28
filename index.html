@@ -28,6 +28,7 @@
 		mainContainer
 			.css("width", "100%")
 			.css("height", "100%")
+			//.css("min-height", "100%")
 			.css("position", "absolute")
 			.css("top", "0px")
 			.css("left", "0px")
@@ -50,7 +51,17 @@
 			.css("background-color", "#f7f7f7")
 			;
 
+
+		function changeURL(url) {
+			if (typeof (history.pushState) != "undefined") {
+					var obj = { Title: url, Url: url };
+					history.pushState(obj, null, obj.Url);
+			} else {
+					alert("Browser does not support HTML5.");
+			}
+		}
 		var currentPage =  mainContainer;
+		changeURL("#about");
 		resumeContainer.hide();
 	</script>
 	<script src="js/main.js"></script>

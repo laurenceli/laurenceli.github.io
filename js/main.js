@@ -1,7 +1,26 @@
+var infoSection;
+var programmingSkills;
+var skillsTitleContainer;
+
+var programmingArray = ["JavaScript", "Java"];
+var webArray = ["HTML/CSS", "jQuery", "React", "SASS", "D3"];
+var mobileArray = ["React Native"];
+var infraArray = [""];
+var otherArray = ["Git/Github", "Windows", "MacOS", "Linux", "Adobe Creative Suite"];
+var languageArray = ["English", "French"];
+
 function showMainPage(){
 	mainContainer.show();
 	currentPage = mainContainer;
+	changeURL("#about");
+
 }
+
+
+$( window ).resize(function() {
+	mainContainer.css("height", "100%");
+})
+
 
 function drawMainPage(){
 
@@ -156,7 +175,7 @@ expandButton
 			$(this)
 				.animate({
 				left: "500px",
-					backgroundColor: "48e59f"
+					backgroundColor: "#48e59f"
 				}, 300)
 				.toggleClass('expanded');;
 
@@ -166,4 +185,89 @@ expandButton
 
 	expandButton.append('<span></span>');
 	expandButton.append('<span></span>');
+
+	mainContainer.append('<div id="infoSection"></div>')
+	infoSection = $('#infoSection');
+
+	infoSection
+		.css("width", "100%")
+		.css("height", "200px")
+		.css("position", "absolute")
+		.css("top", "650px")
+		.css("left", "0px")
+		.css("background-color", "#f7f7f7")
+		;
+
+
+	// infoSection.append('<h3 id="programmingSkills">Programming<h3>');
+
+	// programmingSkills = $('#programmingSkills');
+
+	// programmingSkills
+	// 	.css("position", "absolute")
+	// 	.css("top", "30px")
+	// 	.css("left", "120px")
+	// 	.css("color", "#8AB0AB");
+
+	drawSkills(programmingArray, "Programming");
+	drawSkills(webArray, "Web");
+	drawSkills(mobileArray, "Mobile");
+	drawSkills(otherArray, "Other");
+	drawSkills(languageArray, "Language");
+
+}
+
+var skillsCounter = 0;
+
+function drawSkills(targetArray, ID){
+	var positionTop = 0;
+	var positionLeft = 0;
+	var stringLength = 0;
+
+	positionTop = 37 + (50 * skillsCounter);
+	infoSection.append('<div id="skillsTitleContainer' + skillsCounter + '"></div>')
+	skillsTitleContainer = $('#skillsTitleContainer' + skillsCounter);
+
+	skillsTitleContainer
+		.css("width", "200px")
+		.css("height", "50px")
+		.css("position", "absolute")
+		.css("top", positionTop + "px")
+		.css("left", "95px")
+		.css("color", "#8AB0AB")
+		.css("text-align", "right")
+		;
+
+	skillsTitleContainer.append('<h3 id="skillsTitle' + skillsCounter + '" >' + ID + '<h3>');
+	// skillsTitle = $('#skillsTitle' + skillsCounter);
+
+	// skillsTitle
+	// 	.css("position", "absolute")
+	// 	.css("top", positionTop + "px")
+	// 	.css("left", "120px")
+	// 	.css("color", "#8AB0AB");
+
+	for(var i = 0; i < targetArray.length; i++){
+		if(i == 0){
+			stringLength = 0;
+		}
+		else{
+			stringLength = getStringLength(targetArray[i-1]);
+		}
+		positionLeft = 330 + ((120 + stringLength) * (i));
+		infoSection.append('<h4 id="skills' + ID + i + '">' + targetArray[i] + '</h4>');
+		$('#skills' + ID + i)
+			.css("overflow", "visible")
+			.css("position", "absolute")
+			.css("top", positionTop + 5 + "px")
+			.css("left", positionLeft + "px")
+			;
+	}
+
+	skillsCounter++;
+
+}
+
+function getStringLength(string){
+	return string.length * 3;
 }
