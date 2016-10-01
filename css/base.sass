@@ -1,0 +1,79 @@
+$fontTitle: Hind, sans-serif;
+$fontSubtitle: Work Sans, sans-serif
+
+$highlightGreen: #48e59f;
+$menuGrey: #323232;
+$subtitleTeal: #8AB0AB;
+$backgroundWhite: #f7f7f7;
+
+@mixin rotation($angle){
+	-webkit-transform: rotate($angle);
+	-moz-transform: rotate($angle);
+	-o-transform: rotate($angle);
+	transform: rotate($angle);
+}
+
+@mixin easeAnimation($duration){
+	-webkit-transition: $duration ease-in-out;
+	-moz-transition: $duration ease-in-out;
+	-o-transition: $duration ease-in-out;
+	transition: $duration ease-in-out;
+}
+
+html{
+	padding: 0px;
+	margin: 0px;
+	min-height:100%;
+	position:relative;
+}
+
+body{
+	min-height: 100%;
+}
+
+#mainContainer{
+	background-color: #f7f7f7;
+	z-index: 1;
+  	overflow: scroll;
+}
+
+#workPanel1{
+	background: url("../images/cherrypicker-mockup.jpg") no-repeat;
+	background-size: cover;
+}
+
+#workPanel2{
+	background: url("../images/friendmap-mockup.jpg") no-repeat;
+	background-size: cover;
+}
+
+
+.menuList{
+	margin: 0 30px 30px 0;
+	font-family: $fontSubtitle
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #ffffff;
+
+	.links{
+		font-size: 180%;
+		margin: 30px 0 0 0;
+
+		li{
+			float: right;
+			display: inline-block;
+		}
+	}
+	.social{
+		font-size: 80%;
+		margin: 10px 0 0 0;
+
+		li{
+			float: right;
+			display: inline-block;
+		}
+	}
+}
+
+
+

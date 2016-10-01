@@ -33,7 +33,7 @@ body{
 }
 
 #workPanel2{
-  background: url("../images/friendmap-mockup.jpg") no-repeat;
+  background: url("../images/friendmap-mockup.jpg") no-repeat;*/
   background-size: cover;
 }
 
@@ -177,8 +177,6 @@ body{
   font-weight: 200;
   letter-spacing: 1px;
   color: #ffffff;
-  
-  
 }
 
 #links li{
@@ -186,7 +184,6 @@ body{
   margin: 30px 0 0 0;
   float: right;
   display: inline-block;
-
 }
 
 #social li{

@@ -7,7 +7,7 @@ var programmingArray = ["JavaScript", "Java"];
 var webArray = ["HTML/CSS", "jQuery", "React", "D3", "SASS"];
 var mobileArray = ["React Native"];
 var infraArray = [""];
-var otherArray = ["Git/Github", "Windows", "MacOS", "Linux", "Adobe Creative Suite"];
+var otherArray = ["Git/Github",  "Adobe Creative Suite", "Windows", "MacOS", "Linux"];
 var languageArray = ["English", "French"];
 
 $( window ).resize(function() {
@@ -21,6 +21,10 @@ function showMainPage(){
 
 }
 
+function drawModal(){
+
+}
+
 function drawMainPage(){
 
 	mainContainer.append('<div id="workPanel1"></div>')
@@ -30,6 +34,41 @@ function drawMainPage(){
 		.css("position", "relative")
 		.css("float", "left")
 		.css("height", "450px")
+		.css("width", "50%")
+		// .hover(
+		// 	function(){
+		// 		workPanel1Overlay.animate({
+		// 			top: "0px"
+		// 		}, 300)
+		// 	},
+		// 	function(){
+		// 		workPanel1Overlay.animate({
+		// 			top: "450px"
+		// 		}, 300)
+		// 	}
+		// )
+		.on("mouseenter", function(){
+			workPanel1Overlay.animate({
+				top: "0px"
+			}, 500)
+		})
+		.on("mouseleave", function(){
+			workPanel1Overlay.animate({
+				top: "-450px"
+			}, 500)
+		})
+		;
+	;
+
+	mainContainer.append('<div id="workPanel1Overlay"></div>')
+	var workPanel1Overlay = $('#workPanel1Overlay');
+
+	workPanel1Overlay
+		.css("position", "absolute")
+		.css("left", workPanel1.position().left + "px")
+		.css("top", "-450px")
+		.css("height", "450px")
+		.css("background-color", "red")
 		.css("width", "50%")
 	;
 
@@ -250,8 +289,4 @@ function drawSkills(targetArray, ID){
 
 	skillsCounter++;
 
-}
-
-function getStringLength(string){
-	return string.length * 4;
 }
