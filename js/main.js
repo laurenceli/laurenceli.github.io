@@ -50,15 +50,14 @@ function drawMainPage(){
 		.on("mouseenter", function(){
 			workPanel1Overlay.animate({
 				top: "0px"
-			}, 500)
+			}, 200)
 		})
 		.on("mouseleave", function(){
 			workPanel1Overlay.animate({
 				top: "-450px"
-			}, 500)
+			}, 200)
 		})
 		;
-	;
 
 	mainContainer.append('<div id="workPanel1Overlay"></div>')
 	var workPanel1Overlay = $('#workPanel1Overlay');
@@ -68,7 +67,7 @@ function drawMainPage(){
 		.css("left", workPanel1.position().left + "px")
 		.css("top", "-450px")
 		.css("height", "450px")
-		.css("background-color", "red")
+		.css("background-color", "rgba(255,255,255,0.3)")
 		.css("width", "50%")
 	;
 

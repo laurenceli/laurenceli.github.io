@@ -20,19 +20,24 @@ $backgroundWhite: #f7f7f7;
 	transition: $duration ease-in-out;
 }
 
+@mixin scaleX($ratio){
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+}
+
 html{
 	padding: 0px;
 	margin: 0px;
 	min-height:100%;
 	position:relative;
-}
 
-body{
-	min-height: 100%;
+	body{
+		min-height: 100%;
+	}
 }
 
 #mainContainer{
-	background-color: #f7f7f7;
+	background-color: $backgroundWhite;
 	z-index: 1;
   	overflow: scroll;
 }
@@ -53,7 +58,7 @@ body{
 	font-family: $fontSubtitle
 	font-weight: 200;
 	letter-spacing: 1px;
-	color: #ffffff;
+	color: white;
 
 	.links{
 		font-size: 180%;
@@ -73,6 +78,37 @@ body{
 			display: inline-block;
 		}
 	}
+}
+
+.clickableLink {
+	width: auto;
+	padding-right: 0px;
+	position: relative;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: -5%;
+		left: 0;
+		background-color: $highlightGreen;
+		visibility: hidden;
+		@include scaleX(0);
+		@include easeAnimation(0.3s)
+	}
+	
+    &:hover {
+        color: white;
+
+        &:before {
+        	visibility: visible;
+        	@include scaleX(1);
+        }
+    }
 }
 
 
