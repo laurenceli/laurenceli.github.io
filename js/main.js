@@ -47,11 +47,6 @@ function drawMainPage(){
 		// 		}, 300)
 		// 	}
 		// )
-		.on("mouseenter", function(){
-			workPanel1Overlay.animate({
-				top: "0px"
-			}, 300)
-		})
 		;
 
 	mainContainer.append('<div id="workPanel1Overlay"></div>')
@@ -60,15 +55,10 @@ function drawMainPage(){
 	workPanel1Overlay
 		.css("position", "absolute")
 		.css("left", workPanel1.position().left + "px")
-		.css("top", "-450px")
+		.css("top", "0px")
 		.css("height", "450px")
 		.css("background-color", "rgba(255,255,255,0.3)")
 		.css("width", "50%")
-		.on("mouseleave", function(){
-			workPanel1Overlay.animate({
-				top: "-450px"
-			}, 300)
-		})
 	;
 
 	workPanel1Overlay.append('<div id="panel1Banner"><div>');
@@ -117,11 +107,6 @@ function drawMainPage(){
 		.css("float", "left")
 		.css("height", "450px")
 		.css("width", "50%")
-		.on("mouseenter", function(){
-			workPanel2Overlay.animate({
-				top: "0px"
-			}, 300)
-		})
 	;
 
 	mainContainer.append('<div id="workPanel2Overlay"></div>')
@@ -130,15 +115,10 @@ function drawMainPage(){
 	workPanel2Overlay
 		.css("position", "absolute")
 		.css("left", workPanel2.position().left + "px")
-		.css("top", "-450px")
+		.css("top", "0px")
 		.css("height", "450px")
 		.css("background-color", "rgba(255,255,255,0.3)")
 		.css("width", "50%")
-		.on("mouseleave", function(){
-			workPanel2Overlay.animate({
-				top: "-450px"
-			}, 300)
-		})
 	;
 
 	workPanel2Overlay.append('<div id="panel2Banner"><div>');
