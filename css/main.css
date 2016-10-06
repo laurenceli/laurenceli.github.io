@@ -24,11 +24,21 @@ body{
 #mainContainer{
 	background-color: #f7f7f7;
 	z-index: 1;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 #workPanel1{
   background: url("../images/cherrypicker-mockup.jpg") no-repeat;
+  background-size: cover;
+}
+
+#panel1LinkIcon{
+  background: url("../images/link_icon.png") no-repeat;
+  background-size: cover;
+}
+
+#panel2LinkIcon{
+  background: url("../images/link_icon.png") no-repeat;
   background-size: cover;
 }
 

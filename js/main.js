@@ -50,12 +50,7 @@ function drawMainPage(){
 		.on("mouseenter", function(){
 			workPanel1Overlay.animate({
 				top: "0px"
-			}, 200)
-		})
-		.on("mouseleave", function(){
-			workPanel1Overlay.animate({
-				top: "-450px"
-			}, 200)
+			}, 300)
 		})
 		;
 
@@ -69,7 +64,50 @@ function drawMainPage(){
 		.css("height", "450px")
 		.css("background-color", "rgba(255,255,255,0.3)")
 		.css("width", "50%")
+		.on("mouseleave", function(){
+			workPanel1Overlay.animate({
+				top: "-450px"
+			}, 300)
+		})
 	;
+
+	workPanel1Overlay.append('<div id="panel1Banner"><div>');
+
+	var panel1Banner = $('#panel1Banner');
+	panel1Banner
+		.css("width", "100%")
+		.css("height", "70px")
+		.css("position", "absolute")
+		.css("left", "0px")
+		.css("bottom", "0px")
+		.css("background-color", "rgba(255,255,255,0.6)")
+		;
+
+	panel1Banner.append('<h2 id="cpLabel">Cherrypicker.io // Web Application</h2>');
+	var cpLabel = $('#cpLabel');
+
+	cpLabel
+		.css("position", "absolute")
+		.css("top", "12px")
+		.css("left", "30px")
+		.css("color", "#323232")
+		;
+
+	panel1Banner.append('<div id="panel1LinkIcon"></div>');
+	var panel1LinkIcon = $('#panel1LinkIcon');
+
+	panel1LinkIcon
+		.css("width", "15px")
+		.css("height", "15px")
+		.css("position", "absolute")
+		.css("top", "28px")
+		.css("right", "80px")
+		.css("cursor", "pointer")
+		.on("click", function(){
+				window.open('http://cherrypicker.io' , '_blank' );
+			})
+		;
+
 
 	mainContainer.append('<div id="workPanel2"></div>')
 	var workPanel2 = $('#workPanel2');
@@ -79,8 +117,66 @@ function drawMainPage(){
 		.css("float", "left")
 		.css("height", "450px")
 		.css("width", "50%")
+		.on("mouseenter", function(){
+			workPanel2Overlay.animate({
+				top: "0px"
+			}, 300)
+		})
 	;
 
+	mainContainer.append('<div id="workPanel2Overlay"></div>')
+	var workPanel2Overlay = $('#workPanel2Overlay');
+
+	workPanel2Overlay
+		.css("position", "absolute")
+		.css("left", workPanel2.position().left + "px")
+		.css("top", "-450px")
+		.css("height", "450px")
+		.css("background-color", "rgba(255,255,255,0.3)")
+		.css("width", "50%")
+		.on("mouseleave", function(){
+			workPanel2Overlay.animate({
+				top: "-450px"
+			}, 300)
+		})
+	;
+
+	workPanel2Overlay.append('<div id="panel2Banner"><div>');
+
+	var panel2Banner = $('#panel2Banner');
+	panel2Banner
+		.css("width", "100%")
+		.css("height", "70px")
+		.css("position", "absolute")
+		.css("left", "0px")
+		.css("bottom", "0px")
+		.css("background-color", "rgba(255,255,255,0.6)")
+		;
+
+	panel2Banner.append('<h2 id="fmLabel">Friendmap // Mobile Application</h2>');
+	var fmLabel = $('#fmLabel');
+
+	fmLabel
+		.css("position", "absolute")
+		.css("top", "12px")
+		.css("left", "30px")
+		.css("color", "#323232")
+		;
+
+	panel2Banner.append('<div id="panel2LinkIcon"></div>');
+	var panel2LinkIcon = $('#panel2LinkIcon');
+
+	panel2LinkIcon
+		.css("width", "15px")
+		.css("height", "15px")
+		.css("position", "absolute")
+		.css("top", "28px")
+		.css("right", "80px")
+		.css("cursor", "pointer")
+		.on("click", function(){
+				window.open('https://github.com/VictorThibert/friendmap' , '_blank' );
+			})
+		;
 
 	mainContainer.append('<div id="centerBanner"></div>')
 	var centerBanner = $('#centerBanner');
