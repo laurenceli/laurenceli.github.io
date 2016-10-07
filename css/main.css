@@ -1,12 +1,13 @@
 html{
 	padding: 0px;
 	margin: 0px;
-  min-height:100%;/* make sure it is at least as tall as the viewport */
-  position:relative;
+  height:100%;/* make sure it is at least as tall as the viewport */
 }
 
 body{
-  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
 }
 
 /*
@@ -24,7 +25,7 @@ body{
 #mainContainer{
 	background-color: #f7f7f7;
 	z-index: 1;
-  /*overflow: scroll;*/
+  overflow: auto;
 }
 
 .projectPanel{
@@ -44,7 +45,12 @@ body{
 }
 
 .linkIcon{
-  background: url("../images/link_icon.png") no-repeat;
+  background: url("../images/link-symbol.png") no-repeat;
+  background-size: cover;
+}
+
+.githubIcon{
+  background: url("../images/github-logo.png") no-repeat;
   background-size: cover;
 }
 
@@ -94,10 +100,8 @@ body{
 #navContainer{
 	height: 100%;
 	width: 80px;
-	position: absolute;
+  float: left;
 	background-color: #323232;
-	top: 0px;
-	left: 0px;
 	z-index: 2;
 }
 
@@ -293,7 +297,7 @@ body{
 
 h1{
   margin: 0px;
-  font-family: 'Hind', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 400%;
   font-weight: normal;
   letter-spacing: 2px;
@@ -323,3 +327,10 @@ h4{
   padding: 0;
   margin: 0;
   }
+
+h5{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 200%;
+  letter-spacing: 2px;
+}
