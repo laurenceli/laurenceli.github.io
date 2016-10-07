@@ -54,7 +54,7 @@ function drawNavBar(){
 
 function drawNavBarElements(){
 
-	var linksText = ["About", "Work", "Resume"];
+	var linksText = ["About", "Projects", "Resume"];
 	var linkElements = [];
 	var linkElementsCounter = 0;
 	var socialText = ["613 794 4859", "laurncl.li@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];

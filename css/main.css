@@ -27,12 +27,7 @@ body{
   /*overflow: scroll;*/
 }
 
-#workPanel1{
-  background: url("../images/cherrypicker-mockup.jpg") no-repeat;
-  background-size: cover;
-}
-
-#workPanel1Overlay{
+.projectPanel{
   opacity: 0;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -40,7 +35,7 @@ body{
   transition: all 0.2s ease-in-out;
 }
 
-#workPanel1Overlay:hover{
+.projectPanel:hover{
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -48,36 +43,8 @@ body{
   transition: all 0.2s ease-in-out;
 }
 
-#workPanel2Overlay{
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-#workPanel2Overlay:hover{
-  opacity: 1;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-
-
-#panel1LinkIcon{
+.linkIcon{
   background: url("../images/link_icon.png") no-repeat;
-  background-size: cover;
-}
-
-#panel2LinkIcon{
-  background: url("../images/link_icon.png") no-repeat;
-  background-size: cover;
-}
-
-#workPanel2{
-  background: url("../images/friendmap-mockup.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -308,6 +275,20 @@ body{
 
 .bannerElement{
   position: absolute;
+}
+
+.aCTitles{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  color: #8AB0AB;
+  text-align: right;
+}
+
+.aCText{
+  width: auto;
+  position: absolute;
+  text-align: left;
 }
 
 h1{
