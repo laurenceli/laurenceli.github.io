@@ -10,6 +10,7 @@ body{
   padding: 0px;
   height: 100%;
   width: 100%;
+  background-color: #f7f7f7;
 }
 
 /*
@@ -103,13 +104,14 @@ body{
 	height: 100%;
 	width: 80px;
   float: left;
-	background-color: #323232;
-	z-index: 2;
 }
 
 #navbar{
-	background-color: #323232;
-	z-index: 2;
+  height: 100%;
+  width: 80px;
+  float: left;
+  background-color: #323232;
+  z-index: 2;
 }
 
 #navIcon{
@@ -277,6 +279,10 @@ body{
 	height: 200px;
   background: #48e59f;
   z-index: 0;
+}
+
+#bannerTitlesContainer, #centerBanner{
+    background: #f7f7f7;
 }
 
 .bannerElement{

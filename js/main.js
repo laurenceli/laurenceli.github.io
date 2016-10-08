@@ -10,6 +10,9 @@ var mobileArray = ["React Native"];
 var infraArray = [""];
 var otherArray = ["Git/Github",  "Adobe Creative Suite", "Windows", "MacOS", "Linux"];
 var languageArray = ["English", "French"];
+var dls1Array = ["Junior Developer (May 2016 - August 2016)"];
+var dls2Array = ["Technical Support Coordinator (May 2014 - August 2014)"];
+var emptyArray = [""];
 
 var cherrypicker = {
 	ID: "Cherrypicker",
@@ -56,6 +59,7 @@ function drawMainPage(){
 		.css("width", "100%")
 		.css("height", "200px")
 		.css("position", "relative")
+		//.css("margin-top", "2%")
 		.css("top", "450px")
 		.css("left", "0px")
 		;
@@ -67,7 +71,7 @@ function drawMainPage(){
 		.css("position", "absolute")
 		.css("top", "0px")
 		.css("left", "0px")
-		.css("background-color", "#48e59f")
+		//.css("background-color", "#DF9A57")
 		.css("z-index", 10)
 		.css("height", "100%")
 		.css("width", "700px")
@@ -76,30 +80,45 @@ function drawMainPage(){
 	bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
 	var bannerTitle = $('#bannerTitle');
 
-	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "40px").css("color", "#fff");
+	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "37px").css("color", "#8AB0AB");
 
 	bannerTitlesContainer.append('<h2 id="bannerSubtitle">Student // University of Ottawa, Candidate for B.Sc in Computer Science</h2>')
 	var bannerSubtitle = $('#bannerSubtitle')
 
-	bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "43px").css("color", "#fff");
+	bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "43px").css("color", "#999999");
 
 	mainContainer.append('<div id="infoSection"></div>')
 	infoSection = $('#infoSection');
 
 	infoSection
 		.css("width", "100%")
-		.css("height", "300px")
+		.css("height", "400px")
 		.css("position", "absolute")
 		.css("top", "650px")
 		.css("left", "0px")
 		.css("background-color", "#f7f7f7")
 		;
 
+	drawSkills(emptyArray, "SKILLS");
 	drawSkills(programmingArray, "PROGRAMMING");
 	drawSkills(webArray, "WEB");
 	drawSkills(mobileArray, "MOBILE");
 	drawSkills(otherArray, "OTHER");
 	drawSkills(languageArray, "LANGUAGE");
+
+	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
+	drawExperience(dls1Array, "DLS1", "DLS TECHNOLOGY");
+	drawExperience(dls2Array, "DLS2", "DLS TECHNOLOGY");
+
+	$('#skillsTitle0')
+		.css("top", "0px")
+		.css("font-size", "100%")
+		.css("font-family", "Montserrat, sans-serif")
+
+	$('#expTitle0')
+		.css("top", "0px")
+		.css("font-size", "100%")
+		.css("font-family", "Montserrat, sans-serif")
 
 }
 
@@ -112,6 +131,9 @@ function drawProjectPanel(project, ID, hasLink){
 		.css("float", "left")
 		.css("height", "450px")
 		.css("width", "50%")
+		//.css("width", "48.5%")
+		//.css("margin", "1% 0 1% 1%")
+		//.css("border-radius", "2px")
 		.css("background", "url(" + project.image + ") no-repeat")
 		.css("background-size", "cover")
 		;
@@ -126,20 +148,9 @@ function drawProjectPanel(project, ID, hasLink){
 		.css("height", "450px")
 		.css("background-color", "rgba(0,0,0,0.4)")
 		.css("width", "100%")
+		.css("border-radius", "2px")
 		.css("text-align", "center")
 	;
-
-	// pPanel.append('<div class=projectPanelBanner id="pPanelBanner' + ID + '"><div>');
-
-	// var pPanelBanner = $('#pPanelBanner' + ID);
-	// pPanelBanner
-	// 	.css("width", "100%")
-	// 	.css("height", "70px")
-	// 	.css("position", "absolute")
-	// 	.css("left", "0px")
-	// 	.css("bottom", "0px")
-	// 	.css("background-color", "rgba(255,255,255,0.6)")
-	// 	;
 
 	pPanel.append('<h5 id="pLabel' + ID + '">' + project.title + '</h5>');
 	var pLabel = $('#pLabel' + ID);
@@ -163,7 +174,7 @@ function drawProjectPanel(project, ID, hasLink){
 
 	pSubtitle
 		.css("position", "absolute")
-		.css("top", "0px")
+		.css("top", "10px")
 		.css("left", "35px")
 		.css("color", "#FFFFFF")
 		.css("font-size", "60%")
@@ -210,20 +221,20 @@ var skillsCounter = 0;
 function drawSkills(targetArray, ID){
 	var positionTop, positionLeft;
 
-	positionTop = 35 + (50 * skillsCounter);
+	positionTop = (40 * skillsCounter);
 
 	infoSection.append('<div class="aCTitles" id="skillsTitleContainer' + skillsCounter + '"></div>')
 	skillsTitleContainer = $('#skillsTitleContainer' + skillsCounter);
 
 	skillsTitleContainer
-		.css("left", "55px")
+		.css("left", "75px")
 		.css("top", positionTop + "px")
 		;
 
 	skillsTitleContainer.append('<h3 id="skillsTitle' + skillsCounter + '" >' + ID + '<h3>');
 
 	for(var i = 0; i < targetArray.length; i++){
-		positionLeft = (i == 0) ? 280 : $('#skillsContainer' + ID + (i - 1)).position().left + $('#skillsContainer' + ID + (i - 1)).width() + 30;
+		positionLeft = (i == 0) ? 300 : $('#skillsContainer' + ID + (i - 1)).position().left + $('#skillsContainer' + ID + (i - 1)).width() + 30;
 
 		infoSection.append('<div class="aCText" id="skillsContainer' + ID + i + '"></div>');
 		skillsContainer = $('#skillsContainer' + ID + i);
@@ -236,6 +247,40 @@ function drawSkills(targetArray, ID){
 	}
 
 	skillsCounter++;
+
+}
+
+var expCounter = 0;
+
+function drawExperience(targetArray, ID, text){
+	var positionTop, positionLeft;
+
+	positionTop = 280 + (40 * expCounter);
+
+	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
+	expTitleContainer = $('#expTitleContainer' + expCounter);
+
+	expTitleContainer
+		.css("left", "75px")
+		.css("top", positionTop + "px")
+		;
+
+	expTitleContainer.append('<h3 id="expTitle' + expCounter + '" >' + text + '<h3>');
+
+	for(var i = 0; i < targetArray.length; i++){
+		positionLeft = (i == 0) ? 300 : $('#expContainer' + ID + (i - 1)).position().left + $('#expContainer' + ID + (i - 1)).width() + 30;
+
+		infoSection.append('<div class="aCText" id="expContainer' + ID + i + '"></div>');
+		expContainer = $('#expContainer' + ID + i);
+		expContainer			
+			.css("top", positionTop + "px")
+			.css("left", positionLeft + "px")
+			;
+
+		expContainer.append('<h4 id="exp' + ID + i + '">' + targetArray[i] + '</h4>');
+	}
+
+	expCounter++;
 
 }
 

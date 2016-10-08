@@ -16,7 +16,7 @@ drawNavBarElements();
 
 function drawNavBar(){
 
-	$("#navContainer").append("<div id='navbar'></div>");
+	body.append("<div id='navbar'></div>");
 	navbar = $('#navbar');
 
 	navbar

@@ -1,5 +1,5 @@
-$fontTitle: Hind, sans-serif;
-$fontSubtitle: Work Sans, sans-serif
+$hind: Hind, sans-serif;
+$workSans: Work Sans, sans-serif
 
 $highlightGreen: #48e59f;
 $menuGrey: #323232;
@@ -28,34 +28,59 @@ $backgroundWhite: #f7f7f7;
 html{
 	padding: 0px;
 	margin: 0px;
-	min-height:100%;
-	position:relative;
-
+  	height:100%;
+  	width: 100%;
 	body{
-		min-height: 100%;
+		padding: 0px;
+		margin: 0px;
+		height:100%;
+		width: 100%;
+		background-color: $backgroundWhite;
 	}
+}
+
+.verticallyCenter{
+	top: 50%;
+	transform: translateY(-50%); 
+}
+
+.horizontallyCenter{
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 #mainContainer{
 	background-color: $backgroundWhite;
 	z-index: 1;
-  	overflow: scroll;
+  	overflow: auto;
 }
 
-#workPanel1{
-	background: url("../images/cherrypicker-mockup.jpg") no-repeat;
+.projectPanel{
+  opacity: 0;
+  @include easeAnimation(0.3s);
+  &:hover{
+  	opacity: 1;
+  	@include easeAnimation(0.2s)
+  }
+}
+
+.image{
 	background-size: cover;
 }
 
-#workPanel2{
-	background: url("../images/friendmap-mockup.jpg") no-repeat;
-	background-size: cover;
+.linkIcon{
+	@extend .image;
+	background: url("../images/link-symbol.png") no-repeat;
 }
 
+.githubIcon{
+	@extend .image;
+  	background: url("../images/github-logo.png") no-repeat;
+}
 
 .menuList{
 	margin: 0 30px 30px 0;
-	font-family: $fontSubtitle
+	font-family: $workSans;
 	font-weight: 200;
 	letter-spacing: 1px;
 	color: white;
@@ -87,7 +112,6 @@ html{
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
-
 	&:before {
 		content: "";
 		position: absolute;
@@ -109,6 +133,76 @@ html{
         	@include scaleX(1);
         }
     }
+}
+
+#navContainer{
+	width: 80px;
+	height: 100%;
+  	float: left;
+}
+
+#navbar{
+	width: 80px;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: $menuGrey;
+	z-index: 2;
+}
+
+#navIcon{
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  cursor: pointer;
+  @include rotation(0deg);
+  @include easeAnimation(0.5s);
+  span{
+	display: block;
+	position: absolute;
+	height: 3px;
+	width: 60%;
+	background: #818181;
+	border-radius: 1px;
+	opacity: 1;
+	left: 0;
+	&:nth-child(1){
+		top: 0px;
+		left: 12px;
+	}
+	&:nth-child(2) , &:nth-child(3){
+		top: 12px;
+		left: 12px;
+	}
+
+	&:nth-child(4){
+		top: 24px;
+		left: 12px;
+	}
+  }
+  .open{
+  	span{
+  		&:nth-child(1){
+			top: 18px;
+			width: 0%;
+			left: 50%;
+  		}
+
+  		&:nth-child(2){
+  			@include rotation(45deg);
+  		}
+  		&:nth-child(3){
+  			@include rotation(-45deg);
+  		}
+  		&:nth-child(4){
+			top: 18px;
+			width: 0%;
+			left: 50%;
+  		}
+  	}
+  }
 }
 
 
