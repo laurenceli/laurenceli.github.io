@@ -2,6 +2,7 @@ var infoSection;
 var programmingSkills;
 var skillsTitleContainer;
 var skillsContainer;
+var pModal;
 
 var programmingArray = ["JavaScript", "Java"];
 var webArray = ["HTML/CSS", "jQuery", "React", "D3", "SASS"];
@@ -11,19 +12,21 @@ var otherArray = ["Git/Github",  "Adobe Creative Suite", "Windows", "MacOS", "Li
 var languageArray = ["English", "French"];
 
 var cherrypicker = {
+	ID: "Cherrypicker",
 	title: "CHERRYPICKER.IO", 
 	subtitle: "Web Application", 
 	link: "http://cherrypicker.io", 
 	image: "images/cherrypicker-mockup.jpg",
-	github: "https://github.com/VictorThibert/cherrypicker.io" 
+	github: "https://github.com/laurenceli/cherrypicker.io" 
 };
 
 var friendmap = {
+	ID: "Friendmap",
 	title: "FRIENDMAP", 
 	subtitle: "Mobile Application", 
 	link: "", 
 	image: "images/friendmap-mockup.jpg",
-	github: "https://github.com/VictorThibert/friendmap"
+	github: "https://github.com/laurenceli/friendmap"
 };
 
 var projectInfo = [cherrypicker, friendmap];
@@ -67,7 +70,7 @@ function drawMainPage(){
 		.css("background-color", "#48e59f")
 		.css("z-index", 10)
 		.css("height", "100%")
-		.css("width", "500px")
+		.css("width", "700px")
 		;
 
 	bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
@@ -75,7 +78,7 @@ function drawMainPage(){
 
 	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "40px").css("color", "#fff");
 
-	bannerTitlesContainer.append('<h2 id="bannerSubtitle">Student // University of Ottawa, Computer Science</h2>')
+	bannerTitlesContainer.append('<h2 id="bannerSubtitle">Student // University of Ottawa, Candidate for B.Sc in Computer Science</h2>')
 	var bannerSubtitle = $('#bannerSubtitle')
 
 	bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "43px").css("color", "#fff");
@@ -144,9 +147,15 @@ function drawProjectPanel(project, ID, hasLink){
 	pLabel
 		.css("position", "relative")
 		.css("display", "inline-block")
-		.css("margin", "auto")
+		.css("margin", "0px")
+		.css("padding", "0px")
 		.css("color", "#FFFFFF")
-		.css("line-height", "400px")
+		.css("top", "50%")
+		.css("transform", "translateY(-50%)")
+		.css("cursor", "pointer")
+		.on('click', function(){
+			drawModal(project);
+		})
 		;
 
 	pPanel.append('<h5 id="pSubtitle' + ID + '">' + project.subtitle + '</h5>');
@@ -155,7 +164,7 @@ function drawProjectPanel(project, ID, hasLink){
 	pSubtitle
 		.css("position", "absolute")
 		.css("top", "0px")
-		.css("left", "30px")
+		.css("left", "35px")
 		.css("color", "#FFFFFF")
 		.css("font-size", "60%")
 		;
@@ -228,4 +237,70 @@ function drawSkills(targetArray, ID){
 
 	skillsCounter++;
 
+}
+
+function drawModal(project){
+	body.append('<div class="projectModalBG" id="pModalBG' + project.ID + '"></div>');
+	var pModalBG = $('#pModalBG' + project.ID);
+
+	pModalBG
+		.on('click', function(){
+			$(this).remove();
+			pModal.remove();
+		})
+		.css("z-index", 3)
+		;
+
+	body.append('<div class="projectModal" id="pModal' + project.ID + '"></div>');
+	pModal = $('#pModal' + project.ID);
+
+	pModal.css("z-index", 4);
+
+	pModal.append('<h5 id="modalTitle' + project.ID + '">' + project.title + '</h5>');
+	var modalTitle = $('#modalTitle' + project.ID);
+	modalTitle
+		.css("color", "#323232")
+		.css("font-size", "150%")
+		.css("letter-spacing", "1px")
+		;
+
+	//drawCarousel();
+
+}
+
+function drawCarousel(){
+	pModal.append('<div id="carouselContainer"></div>')
+	var carouselContainer = $('#carouselContainer');
+
+	carouselContainer
+		.css("width", "450px")
+		.css("height", "280px")
+		.css("background-color", "white")
+		.css("border-radius", "3px")
+		;
+
+	carouselContainer.append('<div id="first"></div>');
+	var first = $('#first');
+	first
+		.css("width", "440px")
+		.css("height", "270px")
+		.css("position", "absolute")
+		.css("top", "5px")
+		.css("left", "5px")
+		.css("border-radius", "3px")
+		.css("background", "url(images/cherrypicker-mockup.jpg) no-repeat")
+		.css("background-size", "cover")
+		;
+
+	// carouselContainer.append('<div>Lol</div>');
+	// carouselContainer.append('<div>asdf</div>');
+	// carouselContainer.append('<div>Hadsfljno</div>');
+
+	$('#carouselContainer').slick({
+		dots: true,
+		infinite: true,
+		speed: 500,
+		fade: true,
+		cssEase: 'linear'
+  	});
 }
