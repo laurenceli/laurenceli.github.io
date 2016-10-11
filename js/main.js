@@ -14,13 +14,34 @@ var dls1Array = ["Junior Developer (May 2016 - August 2016)"];
 var dls2Array = ["Technical Support Coordinator (May 2014 - August 2014)"];
 var emptyArray = [""];
 
+var cherrypickerModallInfo = {
+	modalSub: "Basketball Statistics Visualization",
+	date: "Ongoing",
+	collabs: ["Laurence Li", "Victor Thibert" ],
+	collabsLinks: ["laurenceli", "VictorThibert"],
+	tech: ["JavaScript", "jQuery", "D3", "HTML", "CSS", "PHP"],
+	description: "We take confusing NBA statistics data and turn them into something fun, interesting and accessible."
+}
+
+var FriendmapModallInfo = {
+	modalSub: "Reviews on a Map",
+	date: "Ongoing",
+	collabs: ["Laurence Li", "Victor Thibert", "Ahmed Khan", "Brandon Baksh" ],
+	collabsLinks: ["laurenceli", "VictorThibert", "AhmedAKhan", "bbaksh"],
+	tech: ["JavaScript", "React Native", "Objective-C", "Python", "Java"],
+	description: "Tag and review places you've been. Follow your friends to see where they've been and what they recommend."
+}
+
+var links = ["laurenceli", "VictorThibert"];
+
 var cherrypicker = {
 	ID: "Cherrypicker",
 	title: "CHERRYPICKER.IO", 
 	subtitle: "Web Application", 
 	link: "http://cherrypicker.io", 
 	image: "images/cherrypicker-mockup.jpg",
-	github: "https://github.com/laurenceli/cherrypicker.io" 
+	github: "https://github.com/VictorThibert/cherrypicker.io", 
+	modalInfo: cherrypickerModallInfo
 };
 
 var friendmap = {
@@ -29,7 +50,8 @@ var friendmap = {
 	subtitle: "Mobile Application", 
 	link: "", 
 	image: "images/friendmap-mockup.jpg",
-	github: "https://github.com/laurenceli/friendmap"
+	github: "https://github.com/VictorThibert/friendmap",
+	modalInfo: FriendmapModallInfo
 };
 
 var projectInfo = [cherrypicker, friendmap];
@@ -152,7 +174,7 @@ function drawProjectPanel(project, ID, hasLink){
 		.css("text-align", "center")
 	;
 
-	pPanel.append('<h5 id="pLabel' + ID + '">' + project.title + '</h5>');
+	pPanel.append('<h5 class="clickableLink" id="pLabel' + ID + '">' + project.title + '</h5>');
 	var pLabel = $('#pLabel' + ID);
 
 	pLabel
@@ -307,9 +329,125 @@ function drawModal(project){
 		.css("color", "#323232")
 		.css("font-size", "150%")
 		.css("letter-spacing", "1px")
+		.css("margin", "0px")
 		;
 
-	//drawCarousel();
+	pModal.append('<h5 id="modalSubtitle' + project.ID + '">' + project.modalInfo.modalSub + ' - ' + project.subtitle + '</h5>');
+	var modalSubtitle = $('#modalSubtitle' + project.ID);
+	modalSubtitle
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin-top", "5px")
+		;
+
+	pModal.append('<div id="mInfoContainer' + project.ID + '"></div>');
+	var mInfoContainer = $('#mInfoContainer' + project.ID);
+	mInfoContainer
+		.css("width", "100%")
+		.css("height", "80%")
+		.css("position", "absolute")
+		.css("top", "110px")
+		.css("left", "0px")
+		.css("padding-left", "30px")
+		.css("padding-right", "30px")
+		.css("text-align", "left")
+		.css("box-sizing", "border-box")
+		;
+
+	var lowestCollab = 0;
+	var collabTop = 0;
+
+	mInfoContainer.append('<h5 id="collabs' + project.ID + '">Collaborators: </h5>');
+	var collabs = $('#collabs' + project.ID);
+	collabs
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin", "0px")
+		;
+
+	for(var i = 0; i < project.modalInfo.collabs.length; i++){
+		collabTop = collabs.position().top - 2 + (22 * i);
+
+		mInfoContainer.append('<h4  class="clickableLink collabSubtitle" id="' + project.modalInfo.collabsLinks[i] + '">' + project.modalInfo.collabs[i] + '</h4>');
+		var collabsSub = $('#' + project.modalInfo.collabsLinks[i]);
+
+		collabsSub		
+		.css("margin", "0px")
+		.css("position", "absolute")
+		.css("top", collabs.position().top - 2 + (22 * i) + "px")
+		.css("left", "150px")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.on('click', function(){
+			window.open("https://github.com/" + ($(this).attr('id')) + "", '_blank' );
+		})
+		;
+	}
+
+	lowestCollab = collabTop;
+
+	var lowestTech = 0;
+	var techTop = 0;
+
+	mInfoContainer.append('<h5 id="tech' + project.ID + '">Technologies Used: </h5>');
+	var tech = $('#tech' + project.ID);
+	tech
+		.css("position", "absolute")
+		.css("top", collabs.position().top + "px")
+		.css("left", "310px")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin", "0px")
+		;
+
+	for(var i = 0; i < project.modalInfo.tech.length; i++){
+		techTop = collabs.position().top - 2 + (22 * i);
+		mInfoContainer.append('<h4 id="techSub' + project.ID + i + '">' + project.modalInfo.tech[i] + '</h4>');
+		var techList = $('#techSub' + project.ID + i );
+
+		techList		
+		.css("margin", "0px")
+		.css("position", "absolute")
+		.css("top", collabs.position().top - 2 + (22 * i) + "px")
+		.css("left", "470px")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		;
+	}
+
+	lowestTech = techTop;
+
+	var nextTop = (lowestCollab > lowestTech) ? lowestCollab : lowestTech;
+
+	mInfoContainer.append('<h5 id="descriptionTitle' + project.ID + '">Description: </h5>');
+	var descriptionTitle = $('#descriptionTitle' + project.ID);
+	descriptionTitle
+		.css("position", "absolute")
+		.css("top", nextTop + 50 + "px")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin", "0px")
+		;
+
+	mInfoContainer.append('<div id="description' + project.ID + '">' + project.modalInfo.description + '</div>');
+	var description = $('#description' + project.ID );
+
+	description		
+	.css("margin-right", "30px")
+	.css("position", "absolute")
+	.css("top", nextTop + 48 + "px")
+	.css("left", "140px")
+	.css("font-family", "Hind, sans-serif")
+	.css("color", "#323232")
+	.css("font-size", "80%")
+	.css("letter-spacing", "1px")
+	;
 
 }
 
