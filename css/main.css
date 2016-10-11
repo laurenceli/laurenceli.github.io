@@ -364,7 +364,7 @@ h3{
   font-family: 'Hind', sans-serif;
   font-weight: normal;
   font-size: 90%;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   padding: 0;
   margin: 0;
 }
@@ -374,6 +374,7 @@ h4{
   font-weight: normal;
   font-size: 80%;
   color: #999999;
+  letter-spacing: 1px;
   padding: 0;
   margin: 0;
   }

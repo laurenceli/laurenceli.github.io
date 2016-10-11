@@ -16,16 +16,18 @@ var emptyArray = [""];
 
 var cherrypickerModallInfo = {
 	modalSub: "Basketball Statistics Visualization",
-	date: "Ongoing",
+	date: "Live (but development ongoing)",
+	role: "Full Stack",
 	collabs: ["Laurence Li", "Victor Thibert" ],
 	collabsLinks: ["laurenceli", "VictorThibert"],
 	tech: ["JavaScript", "jQuery", "D3", "HTML", "CSS", "PHP"],
-	description: "We take confusing NBA statistics data and turn them into something fun, interesting and accessible."
+	description: "We take confusing NBA statistics data and visualize it into something fun, interesting and accessible."
 }
 
 var FriendmapModallInfo = {
 	modalSub: "Reviews on a Map",
-	date: "Ongoing",
+	date: "Development ongoing",
+	role: "Front-End",
 	collabs: ["Laurence Li", "Victor Thibert", "Ahmed Khan", "Brandon Baksh" ],
 	collabsLinks: ["laurenceli", "VictorThibert", "AhmedAKhan", "bbaksh"],
 	tech: ["JavaScript", "React Native", "Objective-C", "Python", "Java"],
@@ -183,11 +185,12 @@ function drawProjectPanel(project, ID, hasLink){
 		.css("margin", "0px")
 		.css("padding", "0px")
 		.css("color", "#FFFFFF")
-		.css("top", "50%")
+		.css("top", "45%")
 		.css("transform", "translateY(-50%)")
 		.css("cursor", "pointer")
 		.on('click', function(){
 			drawModal(project);
+			$("body").css("overflow", "hidden");
 		})
 		;
 
@@ -297,6 +300,7 @@ function drawExperience(targetArray, ID, text){
 		expContainer			
 			.css("top", positionTop + "px")
 			.css("left", positionLeft + "px")
+			.css("letter-spacing", "1px")
 			;
 
 		expContainer.append('<h4 id="exp' + ID + i + '">' + targetArray[i] + '</h4>');
@@ -314,6 +318,7 @@ function drawModal(project){
 		.on('click', function(){
 			$(this).remove();
 			pModal.remove();
+			$("body").css("overflow", "auto");
 		})
 		.css("z-index", 3)
 		;
@@ -326,13 +331,13 @@ function drawModal(project){
 	pModal.append('<h5 id="modalTitle' + project.ID + '">' + project.title + '</h5>');
 	var modalTitle = $('#modalTitle' + project.ID);
 	modalTitle
-		.css("color", "#323232")
+		.css("color", "#48e59f")
 		.css("font-size", "150%")
 		.css("letter-spacing", "1px")
 		.css("margin", "0px")
 		;
 
-	pModal.append('<h5 id="modalSubtitle' + project.ID + '">' + project.modalInfo.modalSub + ' - ' + project.subtitle + '</h5>');
+	pModal.append('<h5 id="modalSubtitle' + project.ID + '">' + project.modalInfo.modalSub + ' // ' + project.subtitle + '</h5>');
 	var modalSubtitle = $('#modalSubtitle' + project.ID);
 	modalSubtitle
 		.css("color", "#323232")
@@ -345,7 +350,7 @@ function drawModal(project){
 	var mInfoContainer = $('#mInfoContainer' + project.ID);
 	mInfoContainer
 		.css("width", "100%")
-		.css("height", "80%")
+		.css("height", "50%")
 		.css("position", "absolute")
 		.css("top", "110px")
 		.css("left", "0px")
@@ -358,7 +363,7 @@ function drawModal(project){
 	var lowestCollab = 0;
 	var collabTop = 0;
 
-	mInfoContainer.append('<h5 id="collabs' + project.ID + '">Collaborators: </h5>');
+	mInfoContainer.append('<h5 id="collabs' + project.ID + '">Collaborators </h5>');
 	var collabs = $('#collabs' + project.ID);
 	collabs
 		.css("color", "#323232")
@@ -392,7 +397,7 @@ function drawModal(project){
 	var lowestTech = 0;
 	var techTop = 0;
 
-	mInfoContainer.append('<h5 id="tech' + project.ID + '">Technologies Used: </h5>');
+	mInfoContainer.append('<h5 id="tech' + project.ID + '">Technologies Used </h5>');
 	var tech = $('#tech' + project.ID);
 	tech
 		.css("position", "absolute")
@@ -414,7 +419,7 @@ function drawModal(project){
 		.css("position", "absolute")
 		.css("top", collabs.position().top - 2 + (22 * i) + "px")
 		.css("left", "470px")
-		.css("color", "#323232")
+		.css("color", "#999999")
 		.css("font-size", "80%")
 		.css("letter-spacing", "1px")
 		;
@@ -424,7 +429,7 @@ function drawModal(project){
 
 	var nextTop = (lowestCollab > lowestTech) ? lowestCollab : lowestTech;
 
-	mInfoContainer.append('<h5 id="descriptionTitle' + project.ID + '">Description: </h5>');
+	mInfoContainer.append('<h5 id="descriptionTitle' + project.ID + '">Description </h5>');
 	var descriptionTitle = $('#descriptionTitle' + project.ID);
 	descriptionTitle
 		.css("position", "absolute")
@@ -442,9 +447,61 @@ function drawModal(project){
 	.css("margin-right", "30px")
 	.css("position", "absolute")
 	.css("top", nextTop + 48 + "px")
-	.css("left", "140px")
+	.css("left", "150px")
 	.css("font-family", "Hind, sans-serif")
-	.css("color", "#323232")
+	.css("color", "#999999")
+	.css("font-size", "80%")
+	.css("letter-spacing", "1px")
+	;
+
+	nextTop = description.position().top;
+
+	mInfoContainer.append('<h5 id="progressTitle' + project.ID + '">Status </h5>');
+	var progressTitle = $('#progressTitle' + project.ID);
+	progressTitle
+		.css("position", "absolute")
+		.css("top", nextTop + 65 + "px")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin", "0px")
+		;
+
+
+	mInfoContainer.append('<h4 id="progress' + project.ID + '">' + project.modalInfo.date + '</h4>');
+	var progress = $('#progress' + project.ID);
+
+	progress		
+	.css("margin", "0px")
+	.css("position", "absolute")
+	.css("top", nextTop + 63 + "px")
+	.css("left", "150px")
+	.css("color", "#999999")
+	.css("font-size", "80%")
+	.css("letter-spacing", "1px")
+	;
+
+	mInfoContainer.append('<h5 id="roleTitle' + project.ID + '">My Role </h5>');
+	var roleTitle = $('#roleTitle' + project.ID);
+	roleTitle
+		.css("position", "absolute")
+		.css("top", nextTop + 106 + "px")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin", "0px")
+		;
+
+
+	mInfoContainer.append('<h4 id="role' + project.ID + '">' + project.modalInfo.role + '</h4>');
+	var role = $('#role' + project.ID);
+
+	role		
+	.css("margin", "0px")
+	.css("position", "absolute")
+	.css("top", nextTop + 104 + "px")
+	.css("left", "150px")
+	.css("color", "#999999")
 	.css("font-size", "80%")
 	.css("letter-spacing", "1px")
 	;
