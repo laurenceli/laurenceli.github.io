@@ -86,8 +86,7 @@ function drawNavBarElements(){
 	})
 
 	linkElements[2].on("click", function(){
-		currentPage.hide();
-		showResumePage();
+		window.open('docs/laurenceli_resume_v4.pdf', '_blank' );
 	})
 
 
