@@ -521,14 +521,14 @@ function drawModal(project){
 		.css("color", "#323232")
 		.css("font-size", "80%")
 		.css("letter-spacing", "1px")
-		.css("margin-right", "15px")
+		.css("margin-right", "0px")
 		.on('click', function(){
 			window.open(project.github, '_blank' );
 		})
 		;
 
 	if(project.hasLink){
-		modalGithub.css("margin-right", "0px");
+		modalGithub.css("margin-right", "15px");
 
 		pModal.append('<h4 class="clickableLink" id="modalLink' + project.ID + '">Live Website</h4>');
 		var modalLink = $('#modalLink' + project.ID);
