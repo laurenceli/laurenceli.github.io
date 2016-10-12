@@ -40,6 +40,7 @@ var cherrypicker = {
 	ID: "Cherrypicker",
 	title: "CHERRYPICKER.IO", 
 	subtitle: "Web Application", 
+	hasLink: true,
 	link: "http://cherrypicker.io", 
 	image: "images/cherrypicker-mockup.jpg",
 	github: "https://github.com/VictorThibert/cherrypicker.io", 
@@ -50,6 +51,7 @@ var friendmap = {
 	ID: "Friendmap",
 	title: "FRIENDMAP", 
 	subtitle: "Mobile Application", 
+	hasLink: false,
 	link: "", 
 	image: "images/friendmap-mockup.jpg",
 	github: "https://github.com/VictorThibert/friendmap",
@@ -155,9 +157,6 @@ function drawProjectPanel(project, ID, hasLink){
 		.css("float", "left")
 		.css("height", "450px")
 		.css("width", "50%")
-		//.css("width", "48.5%")
-		//.css("margin", "1% 0 1% 1%")
-		//.css("border-radius", "2px")
 		.css("background", "url(" + project.image + ") no-repeat")
 		.css("background-size", "cover")
 		;
@@ -506,41 +505,42 @@ function drawModal(project){
 	.css("letter-spacing", "1px")
 	;
 
-}
-
-function drawCarousel(){
-	pModal.append('<div id="carouselContainer"></div>')
-	var carouselContainer = $('#carouselContainer');
-
-	carouselContainer
-		.css("width", "450px")
-		.css("height", "280px")
-		.css("background-color", "white")
-		.css("border-radius", "3px")
+	pModal.append('<h5 id="modalLinksTitle' + project.ID + '">Check it out!</h5>');
+	var modalLinksTitle = $('#modalLinksTitle' + project.ID);
+	modalLinksTitle
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin-top", "55%")
 		;
 
-	carouselContainer.append('<div id="first"></div>');
-	var first = $('#first');
-	first
-		.css("width", "440px")
-		.css("height", "270px")
-		.css("position", "absolute")
-		.css("top", "5px")
-		.css("left", "5px")
-		.css("border-radius", "3px")
-		.css("background", "url(images/cherrypicker-mockup.jpg) no-repeat")
-		.css("background-size", "cover")
+	pModal.append('<h4 class="clickableLink" id="modalGithub' + project.ID + '">Github</h4>');
+	var modalGithub = $('#modalGithub' + project.ID);
+	modalGithub
+		.css("display", "inline-block")
+		.css("color", "#323232")
+		.css("font-size", "80%")
+		.css("letter-spacing", "1px")
+		.css("margin-right", "15px")
+		.on('click', function(){
+			window.open(project.github, '_blank' );
+		})
 		;
 
-	// carouselContainer.append('<div>Lol</div>');
-	// carouselContainer.append('<div>asdf</div>');
-	// carouselContainer.append('<div>Hadsfljno</div>');
+	if(project.hasLink){
+		modalGithub.css("margin-right", "0px");
 
-	$('#carouselContainer').slick({
-		dots: true,
-		infinite: true,
-		speed: 500,
-		fade: true,
-		cssEase: 'linear'
-  	});
+		pModal.append('<h4 class="clickableLink" id="modalLink' + project.ID + '">Live Website</h4>');
+		var modalLink = $('#modalLink' + project.ID);
+		modalLink
+			.css("display", "inline-block")
+			.css("color", "#323232")
+			.css("font-size", "80%")
+			.css("letter-spacing", "1px")
+			.css("margin-left", "15px")
+			.on('click', function(){
+				window.open(project.link, '_blank' );
+			})
+			;
+	}
 }

@@ -85,6 +85,10 @@ function drawNavBarElements(){
 		showMainPage();
 	})
 
+	linkElements[1].on("click", function(){
+		window.open('https://github.com/laurenceli', '_blank' );
+	})
+
 	linkElements[2].on("click", function(){
 		window.open('docs/laurenceli_resume_v4.pdf', '_blank' );
 	})
