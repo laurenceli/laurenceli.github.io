@@ -55,11 +55,11 @@ $backgroundWhite: #f7f7f7;
 }
 
 @mixin scaleX($ratio){
-	-webkit-transform: scaleX(0);
-	transform: scaleX(0);
+	-webkit-transform: scaleX($ratio);
+	transform: scaleX($ratio);
 }
 
-@mixin position($top: false, $left: false, $bottom: false, $rigth: false){
+@mixin position($top: false, $left: false, $bottom: false, $right: false){
 	@if $top { top: $top; }
 	@if $left { left: $left; }
 	@if $bottom { bottom: $bottom; }
@@ -74,13 +74,16 @@ html{
 	margin: 0px;
   	height:100%;
   	width: 100%;
-	body{
-		padding: 0px;
-		margin: 0px;
-		height:100%;
-		width: 100%;
-		background-color: $backgroundWhite;
-	}
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+	height:100%;
+	width: 100%;
+	background-color: $backgroundWhite;
+	overflow-x: hidden;
+  	overflow-y: scroll;
 }
 
 
@@ -96,11 +99,13 @@ html{
 }
 
 .verticallyCenter{
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%); 
 }
 
 .horizontallyCenter{
+	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -151,7 +156,7 @@ h1{
 
 h2{
 	@include resetBoxModel();
-	@include fontWorkSans(300%, 300, 1px);
+	@include fontWorkSans(100%, 300, 1px);
 }
 
 h3{
@@ -235,14 +240,17 @@ h5{
 
 .projectModal{
 	position: absolute;
-	@extend .horizontallyCenter;
-	@extend .verticallyCenter;
+	//@extend .horizontallyCenter;
+	//@extend .verticallyCenter;
   	width: 600px;
   	height: 440px;
   	border-radius: 8px;
   	background-color: $backgroundWhite;
   	padding: 30px 0px 30px 0px;
   	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
 }
 
 .collabSubtitle{
@@ -259,13 +267,15 @@ h5{
 }
 
 .linkIcon{
-	@extend .image;
+	//@extend .image;
 	background: url("../images/link-symbol.png") no-repeat;
+	background-size: cover;
 }
 
 .githubIcon{
-	@extend .image;
+	//@extend .image;
   	background: url("../images/github-logo.png") no-repeat;
+  	background-size: cover;
 }
 
 /////////////
@@ -285,6 +295,18 @@ h5{
 	background-color: $menuGrey;
 	z-index: 2;
 }
+
+#navHamburgerContainer{
+	width: 80px;
+	height: 80px;
+	background-color: #323232;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-85%);
+  	cursor: pointer;
+  	z-index: 1;
+}
+
 
 #navIcon{
   width: 60px;
@@ -339,12 +361,13 @@ h5{
 }
 
 .menuList{
+	text-align: right;
 	margin: 0 30px 30px 0;
 	@include fontWorkSans(false, 200, 1px);
 	color: white;
 	.links{
 		font-size: 180%;
-		margin: 30px 0 0 0;
+		margin: 30px 30px 30px 0;
 		li{
 			float: right;
 			display: inline-block;
@@ -356,6 +379,7 @@ h5{
 		li{
 			float: right;
 			display: inline-block;
+			letter-spacing: 2px;
 		}
 	}
 }

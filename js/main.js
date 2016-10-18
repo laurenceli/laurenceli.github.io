@@ -136,20 +136,17 @@ function drawMainPage(){
 	drawExperience(dls1Array, "DLS1", "DLS TECHNOLOGY");
 	drawExperience(dls2Array, "DLS2", "DLS TECHNOLOGY");
 
-	$('#skillsTitle0')
-		.css("top", "0px")
-		.css("font-size", "100%")
-		.css("font-family", "Montserrat, sans-serif")
-
-	$('#expTitle0')
-		.css("top", "0px")
-		.css("font-size", "100%")
-		.css("font-family", "Montserrat, sans-serif")
+	boldTitle("skills");
+	boldTitle("exp");
 
 }
 
+function boldTitle(id){
+	$('#' + id + 'Title0').addClass('aCTitleBold');
+}
+
 function drawProjectPanel(project, ID, hasLink){
-	mainContainer.append('<div class="projectImage" id="pImage' + ID + '"></div>');
+	mainContainer.append('<div class="projectImage image" id="pImage' + ID + '"></div>');
 	pPanelsArray[pPanelsCounter] = $('#pImage' + ID);
 
 	pPanelsArray[pPanelsCounter]
