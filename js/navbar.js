@@ -1,112 +1,92 @@
 var body = $(document.body);
 
-var navbarWidth = 80;
-
-var navbar;
-var navHamburgerContainer;
-var navIcon;
-
-var linksContainer;
-var socialContainer;
-var contactTItle;
-var linked = [];
+var navbar, navIconContainer, navIcon, navMenu;
+var linksContainer, socialContainer, contactTitle;
+var isOpen = false;
 
 drawNavBar();
-drawNavBarElements();
+drawLinksList();
+drawSocialList();
 
 function drawNavBar(){
 
 	body.append("<div id='navbar'></div>");
 	navbar = $('#navbar');
 
-	navbar.append('<div id="navHamburgerContainer"></div>');
-	navHamburgerContainer = $('#navHamburgerContainer');
+	body.append('<div id="navIconContainer"></div>');
+	navIconContainer = $('#navIconContainer');
 
-	navHamburgerContainer.append('<div id="navIcon"></div>');
+	navIconContainer.append('<div id="navIcon"></div>');
 	navIcon = $('#navIcon');
 
-	for(var i = 0; i < 4; i++){
-		navIcon.append('<span></span>') //loop to create hamburger menu lines
-	}
+	for(var i = 0; i < 4; i++){ navIcon.append('<span></span>') }
 
-	navHamburgerContainer
+	navIconContainer
 	.hover(
-		function(){
-			navIcon.find("span").css("background", "#50FFB1");
-		},
-		function(){
-			navIcon.find("span").css("background", "#818181");
-		}
+		function(){navIcon.find("span").css("background", "#50FFB1");},
+		function(){navIcon.find("span").css("background", "#818181");}
 	)
-	.click(function(){
-		navIcon.toggleClass('open');
-	})
-	;
+	.click(function(){ navIcon.toggleClass('open'); });
+
+	body.append('<div id="navMenu"></div>');
+	navMenu = $('#navMenu');
 }
 
-function drawNavBarElements(){
-
+function drawLinksList(){
 	var linksText = ["About", "Projects", "Resume"];
 	var linkElements = [];
 	var linkElementsCounter = 0;
-	var socialText = ["613 794 4859", "li.laurence55@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];
 
-	navbar.append('<div class="menuList" id="linksContainer"></div>');
+	navMenu.append('<div class="menuList" id="linksContainer"></div>');
 	linksContainer = $('#linksContainer');
 
 	linksContainer
 		.css("position", "absolute")
+		.css("right", "170px")
 		.css("top", "0px")
-		.css("right", "80px")
-		.css("width", "150px")
-		.css("height", "230px")
 		.css("z-index", 10)
 		;
 
-	linksContainer.append('<ul id="navLinks"></ul>')
+	linksContainer.append('<ul class="links" id="navLinks"></ul>')
 	var links = $('#navLinks');
 
+	links
+		.css("position", "absolute")
+		.css("top", "0px")
+		.css("left", "0px");
+
 	for(var i = 0; i < linksText.length; i++){
-		links.append('<li class="links clickableLink" id="' + linksText[i] + '" style="list-style-type:none">' + linksText[i] + '</li>');
+		links.append('<li class="clickableLink" id="' + linksText[i] + '" style="list-style-type:none">' + linksText[i] + '</li>');
 		linkElements[i] = $('#' + linksText[i]);
 	}
 
-	linkElements[0].on("click", function(){
-		currentPage.hide();
-		showMainPage();
-	})
+	setClickable(linksText[1], "https://github.com/laurenceli");
+	setClickable(linksText[2], "docs/laurenceli_resume_v4.pdf");
+}
 
-	linkElements[1].on("click", function(){
-		window.open('https://github.com/laurenceli', '_blank' );
-	})
+function drawSocialList(){
+	var socialText = ["613 794 4859", "li.laurence55@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];
 
-	linkElements[2].on("click", function(){
-		window.open('docs/laurenceli_resume_v4.pdf', '_blank' );
-	})
-
-	navbar.append('<div class="menuList" id="socialContainer"></div>')
+	navMenu.append('<div class="menuList" id="socialContainer"></div>')
 	socialContainer = $('#socialContainer');
 
 	socialContainer
 		.css("position", "absolute")
-		.css("bottom", "0px")
-		.css("right", "80px")
-		.css("width", "220px")
-		.css("height", "180px")
-		.css("z-index", 10);
+		.css("bottom", "200px")
+		.css("right", "30px")
+		.css("z-index", 10)
 
 	socialContainer.append('<div id="contactTitle"></div>');
 	contactTitle = $('#contactTitle')
 
 	contactTitle
-		.addClass("navTitle")
 		.css("position", "absolute")
 		.css("top", "0px")
 		.css("right", "0px")
-		.text("Contact // Social")
+		.text("Contact")
 		; 
 
-	socialContainer.append('<ul id="navSocial"></ul>')
+	socialContainer.append('<ul class="social" id="navSocial"></ul>')
 	var social = $('#navSocial');
 	social
 		.css("position", "absolute")
@@ -114,60 +94,21 @@ function drawNavBarElements(){
 		.css("right", "0px");
 
 	for(var i = 0; i < socialText.length; i++){
-		if(i < 2){
-			social.append('<li class="social notClickable" id="socialItem' + i + '" style="list-style-type:none">' + socialText[i] + '</li>');
-		}
-		else{ 
-			social.append('<li class="social clickableLink" id="socialItem' + i + '" style="list-style-type:none">' + socialText[i] + '</li>');
-		}
+		social.append('<li class="notClickable" id="socialItem' + i + '" style="list-style-type:none">' + socialText[i] + '</li>');
 	}
 
-	var socialItem2 = $('#socialItem2');
-	socialItem2
-		.on("click", function(){
-				window.open('https://www.github.com/laurenceli' , '_blank' );
-			})
-		;
-
-	var socialItem3 = $('#socialItem3');
-	socialItem3
-		.on("click", function(){
-				window.open('https://www.linkedin.com/in/laurenceli' , '_blank' );
-			})
-		;
+	setClickable("socialItem2", "https://www.github.com/laurenceli");
+	setClickable("socialItem3", "https://www.linkedin.com/in/laurenceli");
 }
 
-var isOpen = false;
-$('#navHamburgerContainer')
-	.click(function(){
-		if(!isOpen){
-			navbar.animate({
-				width: "300px"
-			}, 300);
+function setClickable(id, link){
+	$('#' + id)
+		.removeClass('notClickable')
+		.addClass('clickableLink')
+		.on('click', function(){ window.open(link, '_blank')})
+}
 
-			linksContainer.animate({
-				right: "0px"
-			}, 300);
-
-			socialContainer.animate({
-				left: "50px"
-			}, 300);
-
-			isOpen = true;
-		}
-		else{
-			navbar.animate({
-				width: "80px",
-			}, 300);
-
-			linksContainer.animate({
-				right: "80px"
-			}, 300);
-
-			socialContainer.animate({
-				left: "-240px"
-			}, 300);
-
-			isOpen = false;
-		}
-	});
+$('#navIconContainer').click(function(){
+	(!isOpen) ? navMenu.animate({left: "0px"}, 300) : navMenu.animate({left: "-220px",}, 300);
+	isOpen = !isOpen;
+})

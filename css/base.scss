@@ -82,8 +82,6 @@ body{
 	height:100%;
 	width: 100%;
 	background-color: $backgroundWhite;
-	overflow-x: hidden;
-  	overflow-y: scroll;
 }
 
 
@@ -212,9 +210,10 @@ h5{
 }
 
 .aCText{
-  width: auto;
-  position: absolute;
-  text-align: left;
+	color: #999999;
+	width: auto;
+	position: absolute;
+	text-align: left;
 }
 
 /////////////
@@ -231,7 +230,7 @@ h5{
 }
 
 .projectModalBG{
-	position: absolute;
+	position: fixed;
 	@include position(0px, 0px);
 	@extend .fullWidth;
 	@extend .fullHeight;
@@ -239,7 +238,7 @@ h5{
 }
 
 .projectModal{
-	position: absolute;
+	position: fixed;
 	//@extend .horizontallyCenter;
 	//@extend .verticallyCenter;
   	width: 600px;
@@ -296,17 +295,25 @@ h5{
 	z-index: 2;
 }
 
-#navHamburgerContainer{
+#navIconContainer{
 	width: 80px;
 	height: 80px;
 	background-color: #323232;
-	position: relative;
+	position: fixed;
   	top: 50%;
   	transform: translateY(-85%);
   	cursor: pointer;
-  	z-index: 1;
+  	z-index: 3;
 }
 
+#navMenu{
+	width: 300px;
+	height: 100%;
+	background-color: #323232;
+	position: fixed;
+	left: -220px;
+	top: 0px;
+}
 
 #navIcon{
   width: 60px;
@@ -314,8 +321,6 @@ h5{
   position: relative;
   margin: 50px auto;
   cursor: pointer;
-  @include rotation(0deg);
-  @include easeAnimation(0.5s);
   span{
 	display: block;
 	position: absolute;
@@ -325,6 +330,8 @@ h5{
 	border-radius: 1px;
 	opacity: 1;
 	left: 0;
+	@include rotation(0deg);
+	@include easeAnimation(0.25s);
 	&:nth-child(1){
 		top: 0px;
 		left: 12px;
@@ -338,7 +345,7 @@ h5{
 		left: 12px;
 	}
   }
-  .open{
+  &.open{
   	span{
   		&:nth-child(1){
 			top: 18px;
@@ -362,24 +369,24 @@ h5{
 
 .menuList{
 	text-align: right;
-	margin: 0 30px 30px 0;
 	@include fontWorkSans(false, 200, 1px);
 	color: white;
 	.links{
-		font-size: 180%;
-		margin: 30px 30px 30px 0;
 		li{
-			float: right;
+			font-size: 150%;
+			margin-top: 20px;
+			//float: right;
 			display: inline-block;
+			letter-spacing: 2px;
 		}
 	}
 	.social{
-		font-size: 80%;
-		margin: 10px 0 0 0;
 		li{
-			float: right;
+			font-size: 70%;
+			margin-top: 10px;
+			//float: right;
 			display: inline-block;
-			letter-spacing: 2px;
+			letter-spacing: 1px;
 		}
 	}
 }

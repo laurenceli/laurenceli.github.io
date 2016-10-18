@@ -9,9 +9,7 @@ body {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background-color: #f7f7f7;
-  overflow-x: hidden;
-  overflow-y: scroll; }
+  background-color: #f7f7f7; }
 
 .fullHeight, .projectModalBG, #navContainer, #navbar {
   height: 100%; }
@@ -131,6 +129,7 @@ h5 {
   font-size: 100%; }
 
 .aCText {
+  color: #999999;
   width: auto;
   position: absolute;
   text-align: left; }
@@ -149,13 +148,13 @@ h5 {
     transition: 0.2s ease-in-out; }
 
 .projectModalBG {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.5); }
 
 .projectModal {
-  position: absolute;
+  position: fixed;
   width: 600px;
   height: 440px;
   border-radius: 8px;
@@ -196,30 +195,30 @@ h5 {
   background-color: #323232;
   z-index: 2; }
 
-#navHamburgerContainer {
+#navIconContainer {
   width: 80px;
   height: 80px;
   background-color: #323232;
-  position: relative;
+  position: fixed;
   top: 50%;
   transform: translateY(-85%);
   cursor: pointer;
-  z-index: 1; }
+  z-index: 3; }
+
+#navMenu {
+  width: 300px;
+  height: 100%;
+  background-color: #323232;
+  position: fixed;
+  left: -220px;
+  top: 0px; }
 
 #navIcon {
   width: 60px;
   height: 45px;
   position: relative;
   margin: 50px auto;
-  cursor: pointer;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out; }
+  cursor: pointer; }
   #navIcon span {
     display: block;
     position: absolute;
@@ -228,7 +227,15 @@ h5 {
     background: #818181;
     border-radius: 1px;
     opacity: 1;
-    left: 0; }
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out; }
     #navIcon span:nth-child(1) {
       top: 0px;
       left: 12px; }
@@ -238,44 +245,40 @@ h5 {
     #navIcon span:nth-child(4) {
       top: 24px;
       left: 12px; }
-  #navIcon .open span:nth-child(1) {
+  #navIcon.open span:nth-child(1) {
     top: 18px;
     width: 0%;
     left: 50%; }
-  #navIcon .open span:nth-child(2) {
+  #navIcon.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg); }
-  #navIcon .open span:nth-child(3) {
+  #navIcon.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-  #navIcon .open span:nth-child(4) {
+  #navIcon.open span:nth-child(4) {
     top: 18px;
     width: 0%;
     left: 50%; }
 
 .menuList {
   text-align: right;
-  margin: 0 30px 30px 0;
   font-family: Work Sans, sans-serif;
   font-weight: 200;
   letter-spacing: 1px;
   color: white; }
-  .menuList .links {
-    font-size: 180%;
-    margin: 30px 30px 30px 0; }
-    .menuList .links li {
-      float: right;
-      display: inline-block; }
-  .menuList .social {
-    font-size: 80%;
-    margin: 10px 0 0 0; }
-    .menuList .social li {
-      float: right;
-      display: inline-block;
-      letter-spacing: 2px; }
+  .menuList .links li {
+    font-size: 150%;
+    margin-top: 20px;
+    display: inline-block;
+    letter-spacing: 2px; }
+  .menuList .social li {
+    font-size: 70%;
+    margin-top: 10px;
+    display: inline-block;
+    letter-spacing: 1px; }
 
 /*# sourceMappingURL=base.css.map */

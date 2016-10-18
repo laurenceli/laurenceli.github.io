@@ -186,7 +186,7 @@ function drawProjectPanel(project, ID, hasLink){
 		.css("cursor", "pointer")
 		.on('click', function(){
 			drawModal(project);
-			$("body").css("overflow", "hidden");
+			$("#mainContainer").css("overflow-y", "hidden");
 		})
 		;
 
@@ -195,7 +195,7 @@ function drawProjectPanel(project, ID, hasLink){
 
 	pSubtitle
 		.css("position", "absolute")
-		.css("top", "10px")
+		.css("top", "25px")
 		.css("left", "35px")
 		.css("color", "#FFFFFF")
 		.css("font-size", "60%")
@@ -314,7 +314,7 @@ function drawModal(project){
 		.on('click', function(){
 			$(this).remove();
 			pModal.remove();
-			$("body").css("overflow", "auto");
+			$("mainContainer").css("overflow-y", "auto");
 		})
 		.css("z-index", 3)
 		;
