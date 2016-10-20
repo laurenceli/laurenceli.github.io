@@ -101,12 +101,12 @@ function drawMainPage(){
 		.css("width", "700px")
 		;
 
-	bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
+	bannerTitlesContainer.append('<h1 id="bannerTitle">LAURENCE LI</h1>')
 	var bannerTitle = $('#bannerTitle');
 
 	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "37px");//.css("color", "#8AB0AB");
 
-	bannerTitlesContainer.append('<h4 id="bannerSubtitle">Student // University of Ottawa, Candidate for B.Sc in Computer Science</h4>')
+	bannerTitlesContainer.append('<h4 id="bannerSubtitle">Student // University of Ottawa // Computer Science</h4>')
 	var bannerSubtitle = $('#bannerSubtitle')
 
 	bannerSubtitle.addClass("bannerElement").css("top", "115px").css("left", "43px");//.css("color", "#323232");
@@ -143,7 +143,6 @@ function boldTitle(id){
 }
 
 function drawProjectPanel(project, ID){
-
 	// init project image
 	mainContainer.append('<div class="projectImage image" id="pImage' + ID + '"></div>'); 
 	pPanelsArray[pPanelsCounter] = $('#pImage' + ID);
@@ -161,7 +160,7 @@ function drawProjectPanel(project, ID){
 	;
 
 	// init project name text, hover functionality in css
-	pPanel.append('<h5 class="clickableLink projectTitle" id="pLabel' + ID + '">' + project.title + '</h5>');
+	pPanel.append('<h1 class="clickableLink projectTitle" id="pLabel' + ID + '">' + project.title + '</h1>');
 	var pLabel = $('#pLabel' + ID);
 
 	pLabel
@@ -184,7 +183,7 @@ function drawProjectPanel(project, ID){
 				window.open(project.link , '_blank' );
 			});
 	}
-	
+
 	// init github button
 	pPanel.append('<div class="projectIcon githubIcon" id="pGitLogo' + ID + '"></div>');
 	var pGitLogo = $('#pGitLogo' + ID);
@@ -266,6 +265,11 @@ function drawExperience(targetArray, ID, text){
 	expCounter++;
 
 }
+
+// function drawProjects(){
+// 	for(var i = 0; i < )
+// 		infoSection.append()
+// }
 
 function drawModal(project){
 	body.append('<div class="projectModalBG" id="pModalBG' + project.ID + '"></div>');

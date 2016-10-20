@@ -33,7 +33,7 @@ function drawNavBar(){
 }
 
 function drawLinksList(){
-	var linksText = ["About", "Projects", "Resume"];
+	var linksText = ["ABOUT", "PROJECTS", "RESUME"];
 	var linkElements = [];
 	var linkElementsCounter = 0;
 
@@ -42,7 +42,7 @@ function drawLinksList(){
 
 	linksContainer
 		.css("position", "absolute")
-		.css("right", "170px")
+		.css("right", "200px")
 		.css("top", "0px")
 		.css("z-index", 10)
 		;
@@ -83,7 +83,7 @@ function drawSocialList(){
 		.css("position", "absolute")
 		.css("top", "0px")
 		.css("right", "0px")
-		.text("Contact")
+		.text("CONTACT")
 		; 
 
 	socialContainer.append('<ul class="social" id="navSocial"></ul>')
@@ -109,6 +109,6 @@ function setClickable(id, link){
 }
 
 $('#navIconContainer').click(function(){
-	(!isOpen) ? navMenu.animate({left: "0px"}, 300) : navMenu.animate({left: "-220px",}, 300);
+	(!isOpen) ? navMenu.animate({left: "0px"}, 300) : navMenu.animate({left: "-245px",}, 300);
 	isOpen = !isOpen;
 })

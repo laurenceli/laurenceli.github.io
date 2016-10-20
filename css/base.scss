@@ -159,7 +159,7 @@ body{
 /////////////
 h1{
 	@include resetBoxModel();
-	@include fontMontserrat(400%, normal, 2px);
+	@include fontWorkSans(400%, 200, 1px);
 }
 
 h2{
@@ -271,6 +271,7 @@ h5{
 	@include pseudo($display: inline-block, $pos: relative);
 	@include resetBoxModel();
 	@include centered($vertical: true);
+	font-size: 200%;
 	top: 45%;
 	color: white;
 	cursor: pointer;
@@ -342,13 +343,13 @@ h5{
 /////////////
 #navContainer{
 	@extend .fullHeight;
-	width: 80px;
+	width: 55px;
   	float: left;
 }
 
 #navbar{
 	@extend .fullHeight;
-	width: 80px;
+	width: 55px;
 	position: fixed;
 	@include position(0px, 0px);
 	background-color: $menuGrey;
@@ -356,7 +357,7 @@ h5{
 }
 
 #navIconContainer{
-	width: 80px;
+	width: 55px;
 	height: 80px;
 	background-color: #323232;
 	position: fixed;
@@ -371,12 +372,12 @@ h5{
 	height: 100%;
 	background-color: #323232;
 	position: fixed;
-	left: -220px;
+	left: -245px;
 	top: 0px;
 }
 
 #navIcon{
-  width: 60px;
+  width: 55px;
   height: 45px;
   position: relative;
   margin: 50px auto;
@@ -384,8 +385,8 @@ h5{
   span{
 	display: block;
 	position: absolute;
-	height: 3px;
-	width: 60%;
+	height: 2px;
+	width: 40%;
 	background: #818181;
 	border-radius: 1px;
 	opacity: 1;
@@ -394,15 +395,15 @@ h5{
 	@include easeAnimation(0.25s);
 	&:nth-child(1){
 		top: 0px;
-		left: 12px;
+		left: 15px;
 	}
 	&:nth-child(2) , &:nth-child(3){
-		top: 12px;
-		left: 12px;
+		top: 8px;
+		left: 15px;
 	}
 	&:nth-child(4){
-		top: 24px;
-		left: 12px;
+		top: 16px;
+		left: 15px;
 	}
   }
   &.open{

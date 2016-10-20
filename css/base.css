@@ -57,10 +57,10 @@ body {
 h1 {
   margin: 0px;
   padding: 0px;
-  font-family: Montserrat, sans-serif;
+  font-family: Work Sans, sans-serif;
   font-size: 400%;
-  font-weight: normal;
-  letter-spacing: 2px; }
+  font-weight: 200;
+  letter-spacing: 1px; }
 
 h2 {
   margin: 0px;
@@ -177,6 +177,7 @@ h5 {
   padding: 0px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 200%;
   top: 45%;
   color: white;
   cursor: pointer; }
@@ -237,11 +238,11 @@ h5 {
   background-size: cover; }
 
 #navContainer {
-  width: 80px;
+  width: 55px;
   float: left; }
 
 #navbar {
-  width: 80px;
+  width: 55px;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -249,7 +250,7 @@ h5 {
   z-index: 2; }
 
 #navIconContainer {
-  width: 80px;
+  width: 55px;
   height: 80px;
   background-color: #323232;
   position: fixed;
@@ -263,11 +264,11 @@ h5 {
   height: 100%;
   background-color: #323232;
   position: fixed;
-  left: -220px;
+  left: -245px;
   top: 0px; }
 
 #navIcon {
-  width: 60px;
+  width: 55px;
   height: 45px;
   position: relative;
   margin: 50px auto;
@@ -275,8 +276,8 @@ h5 {
   #navIcon span {
     display: block;
     position: absolute;
-    height: 3px;
-    width: 60%;
+    height: 2px;
+    width: 40%;
     background: #818181;
     border-radius: 1px;
     opacity: 1;
@@ -291,13 +292,13 @@ h5 {
     transition: 0.25s ease-in-out; }
     #navIcon span:nth-child(1) {
       top: 0px;
-      left: 12px; }
+      left: 15px; }
     #navIcon span:nth-child(2), #navIcon span:nth-child(3) {
-      top: 12px;
-      left: 12px; }
+      top: 8px;
+      left: 15px; }
     #navIcon span:nth-child(4) {
-      top: 24px;
-      left: 12px; }
+      top: 16px;
+      left: 15px; }
   #navIcon.open span:nth-child(1) {
     top: 18px;
     width: 0%;
