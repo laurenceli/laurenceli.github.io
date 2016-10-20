@@ -9,6 +9,7 @@ $highlightGreen: #48e59f;
 $menuGrey: #323232;
 $subtitleTeal: #8AB0AB;
 $backgroundWhite: #f7f7f7;
+$textColor: #999999;
 
 
 /////////////
@@ -40,6 +41,12 @@ $backgroundWhite: #f7f7f7;
     @if $ls { letter-spacing: $ls; }
 }
 
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
 @mixin rotation($angle){
 	-webkit-transform: rotate($angle);
 	-moz-transform: rotate($angle);
@@ -64,6 +71,22 @@ $backgroundWhite: #f7f7f7;
 	@if $left { left: $left; }
 	@if $bottom { bottom: $bottom; }
 	@if $right { right: $right; }
+}
+
+@mixin centered($vertical: false, $horizontal: false, $both: false){
+	@if $vertical{
+		top: 50%;
+		transform: translateY(-50%); 
+	}
+	@if $horizontal{
+		left: 50%;
+		transform: translateX(-50%); 
+	}
+	@if $both{
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%); 
+	}
 }
 
 /////////////
@@ -96,34 +119,21 @@ body{
 	width: 100%;
 }
 
-.verticallyCenter{
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%); 
-}
-
-.horizontallyCenter{
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
 .image{
 	background-size: cover;
 }
 
 .clickableLink {
+	@include pseudo($pos: relative);
 	width: auto;
 	padding-right: 0px;
-	position: relative;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
 	&:before {
+		@include pseudo();
 		@extend .fullWidth;
 		height: 2px;
-		content: "";
-		position: absolute;
 		bottom: -5%;
 		left: 0;
 		background-color: $highlightGreen;
@@ -193,26 +203,41 @@ h5{
 }
 
 .bannerElement{
-  position: absolute;
+  	@include pseudo();
+}
+
+#bannerTitle{
+	@extend .bannerElement;
+	color: $subtitleTeal;
+}
+
+#bannerSubtitle{
+	@extend .bannerElement;
+	color:  $textColor;
+}
+
+#infoSection{
+	background-color: $backgroundWhite;
 }
 
 .aCTitles{
-  width: 200px;
-  height: 50px;
-  position: absolute;
-  color: $subtitleTeal;
-  text-align: right;
+	@include pseudo();
+	width: 200px;
+	height: 50px;
+	color: $subtitleTeal;
+	text-align: right;
 }
 
 .aCTitleBold{
-  top: 0px;
-  @include fontMontserrat(100%, false, false);
+	@extend .aCTitles;
+	@include fontMontserrat(100%, false, false);
+  	//top: 0px;
+  	color: $subtitleTeal;
 }
 
 .aCText{
-	color: #999999;
-	width: auto;
-	position: absolute;
+	@include pseudo();
+	color: $textColor;
 	text-align: left;
 }
 
@@ -220,13 +245,42 @@ h5{
 ////PROJECT PANELS AND MODALS
 /////////////
 
+.projectImage{
+	@include pseudo($pos: relative);
+	float: left;
+	height: 450px;
+	width: 50%;
+}
+
 .projectPanel{
-  opacity: 0;
-  @include easeAnimation(0.3s);
-  &:hover{
-  	opacity: 1;
-  	@include easeAnimation(0.2s)
-  }
+	position: absolute;
+	@include position(0px, 0px);
+	height: 450px;
+	width: 100%;
+	border-radius: 2px;
+	text-align: center;
+	opacity: 0;
+	@include easeAnimation(0.3s);
+	&:hover{
+		opacity: 1;
+		@include easeAnimation(0.2s)
+	}
+}
+
+.projectTitle{
+	@include pseudo($display: inline-block, $pos: relative);
+	@include resetBoxModel();
+	@include centered($vertical: true);
+	top: 45%;
+	color: white;
+	cursor: pointer;
+}
+
+.projectSubtitle{
+	@include pseudo();
+	@include position(25px, 35px);
+	color: white;
+	font-size: 60%;
 }
 
 .projectModalBG{
@@ -239,17 +293,13 @@ h5{
 
 .projectModal{
 	position: fixed;
-	//@extend .horizontallyCenter;
-	//@extend .verticallyCenter;
   	width: 600px;
   	height: 440px;
   	border-radius: 8px;
   	background-color: $backgroundWhite;
   	padding: 30px 0px 30px 0px;
   	text-align: center;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); 
+	@include centered($both: true);
 }
 
 .collabSubtitle{
@@ -265,14 +315,24 @@ h5{
 	}
 }
 
+.projectIcon{
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+}
+
 .linkIcon{
-	//@extend .image;
+	@extend .projectIcon;
+	@include position($bottom: 30px, $right: 35px);
 	background: url("../images/link-symbol.png") no-repeat;
 	background-size: cover;
+
 }
 
 .githubIcon{
-	//@extend .image;
+	@extend .projectIcon;
+	@include position($bottom: 30px, $left: 35px);
   	background: url("../images/github-logo.png") no-repeat;
   	background-size: cover;
 }

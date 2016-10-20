@@ -25,60 +25,14 @@
 		$( document ).ready(function() {
 			alert("Still under construction, bear with me :)")
 		    drawMainPage();
-		    drawResumePage();
 		});
 
 		var body = $(document.body);
 
-		//var navContainer = $('#navContainer');
-		//$('#navContainer')
-			//.css("height", "100%")
-			//.css("float", "left")
-		;
-
 		body.append('<div id="mainContainer"></div>');
-
 		var mainContainer = $('#mainContainer');
+		mainContainer.css("height", "100%").css("overflow", "auto");
 
-		mainContainer
-			//.css("width", "100%")
-			.css("height", "100%")
-			//.css("min-height", "100%")
-			// .css("position", "absolute")
-			// .css("top", "0px")
-			// .css("left", "0px")
-			// .css("padding-left", "80px")
-			//.css("box-sizing", "border-box")
-			.css("overflow", "auto")
-			;
-
-		body.append('<div id="resumeContainer"></div>');
-
-		var resumeContainer = $('#resumeContainer');
-
-		resumeContainer
-			.css("width", "100%")
-			.css("height", "100%")
-			.css("position", "absolute")
-			.css("top", "0px")
-			.css("left", "0px")
-			.css("padding-left", "80px")
-			.css("box-sizing", "border-box")
-			.css("background-color", "#f7f7f7")
-			;
-
-
-		function changeURL(url) {
-			if (typeof (history.pushState) != "undefined") {
-					var obj = { Title: url, Url: url };
-					history.pushState(obj, null, obj.Url);
-			} else {
-					alert("Browser does not support HTML5.");
-			}
-		}
-		var currentPage =  mainContainer;
-		changeURL("#about");
-		resumeContainer.hide();
 	</script>
 	<script src="js/main.js"></script>
 	<script src="js/resume.js"></script>

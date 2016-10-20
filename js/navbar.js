@@ -23,7 +23,7 @@ function drawNavBar(){
 
 	navIconContainer
 	.hover(
-		function(){navIcon.find("span").css("background", "#50FFB1");},
+		function(){navIcon.find("span").css("background", "#48e59f");},
 		function(){navIcon.find("span").css("background", "#818181");}
 	)
 	.click(function(){ navIcon.toggleClass('open'); });

@@ -75,8 +75,8 @@ function showMainPage(){
 
 function drawMainPage(){
 
-	drawProjectPanel(projectInfo[0], "Cherrypicker", true);
-	drawProjectPanel(projectInfo[1], "FriendMap", false);
+	drawProjectPanel(projectInfo[0], "Cherrypicker");
+	drawProjectPanel(projectInfo[1], "FriendMap");
 
 	mainContainer.append('<div id="centerBanner"></div>')
 	var centerBanner = $('#centerBanner');
@@ -85,7 +85,6 @@ function drawMainPage(){
 		.css("width", "100%")
 		.css("height", "200px")
 		.css("position", "relative")
-		//.css("margin-top", "2%")
 		.css("top", "450px")
 		.css("left", "0px")
 		;
@@ -97,7 +96,6 @@ function drawMainPage(){
 		.css("position", "absolute")
 		.css("top", "0px")
 		.css("left", "0px")
-		//.css("background-color", "#DF9A57")
 		.css("z-index", 10)
 		.css("height", "100%")
 		.css("width", "700px")
@@ -106,12 +104,12 @@ function drawMainPage(){
 	bannerTitlesContainer.append('<h1 id="bannerTitle">Laurence Li</h1>')
 	var bannerTitle = $('#bannerTitle');
 
-	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "37px").css("color", "#8AB0AB");
+	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "37px");//.css("color", "#8AB0AB");
 
-	bannerTitlesContainer.append('<h2 id="bannerSubtitle">Student // University of Ottawa, Candidate for B.Sc in Computer Science</h2>')
+	bannerTitlesContainer.append('<h4 id="bannerSubtitle">Student // University of Ottawa, Candidate for B.Sc in Computer Science</h4>')
 	var bannerSubtitle = $('#bannerSubtitle')
 
-	bannerSubtitle.addClass("bannerElement").css("top", "110px").css("left", "43px").css("color", "#999999");
+	bannerSubtitle.addClass("bannerElement").css("top", "115px").css("left", "43px");//.css("color", "#323232");
 
 	mainContainer.append('<div id="infoSection"></div>')
 	infoSection = $('#infoSection');
@@ -122,7 +120,6 @@ function drawMainPage(){
 		.css("position", "absolute")
 		.css("top", "650px")
 		.css("left", "0px")
-		.css("background-color", "#f7f7f7")
 		;
 
 	drawSkills(emptyArray, "SKILLS");
@@ -145,90 +142,54 @@ function boldTitle(id){
 	$('#' + id + 'Title0').addClass('aCTitleBold');
 }
 
-function drawProjectPanel(project, ID, hasLink){
-	mainContainer.append('<div class="projectImage image" id="pImage' + ID + '"></div>');
+function drawProjectPanel(project, ID){
+
+	// init project image
+	mainContainer.append('<div class="projectImage image" id="pImage' + ID + '"></div>'); 
 	pPanelsArray[pPanelsCounter] = $('#pImage' + ID);
 
 	pPanelsArray[pPanelsCounter]
-		.css("position", "relative")
-		.css("float", "left")
-		.css("height", "450px")
-		.css("width", "50%")
 		.css("background", "url(" + project.image + ") no-repeat")
-		.css("background-size", "cover")
-		;
+		.css("background-size", "cover");
 
+	// init project overlay, hover functionality in css
 	pPanelsArray[pPanelsCounter].append('<div class="projectPanel" id="pPanel' + ID +'"></div>');
 	pPanel = $('#pPanel' + ID);
 
 	pPanel
-		.css("position", "absolute")
-		.css("left", "0px")
-		.css("top", "0px")
-		.css("height", "450px")
 		.css("background-color", "rgba(0,0,0,0.4)")
-		.css("width", "100%")
-		.css("border-radius", "2px")
-		.css("text-align", "center")
 	;
 
-	pPanel.append('<h5 class="clickableLink" id="pLabel' + ID + '">' + project.title + '</h5>');
+	// init project name text, hover functionality in css
+	pPanel.append('<h5 class="clickableLink projectTitle" id="pLabel' + ID + '">' + project.title + '</h5>');
 	var pLabel = $('#pLabel' + ID);
 
 	pLabel
-		.css("position", "relative")
-		.css("display", "inline-block")
-		.css("margin", "0px")
-		.css("padding", "0px")
-		.css("color", "#FFFFFF")
-		.css("top", "45%")
-		.css("transform", "translateY(-50%)")
-		.css("cursor", "pointer")
 		.on('click', function(){
 			drawModal(project);
 			$("#mainContainer").css("overflow-y", "hidden");
-		})
-		;
+		});
 
-	pPanel.append('<h5 id="pSubtitle' + ID + '">' + project.subtitle + '</h5>');
+	// init project subtitle text
+	pPanel.append('<h5 class="projectSubtitle" id="pSubtitle' + ID + '">' + project.subtitle + '</h5>');
 	var pSubtitle = $('#pSubtitle' + ID);
 
-	pSubtitle
-		.css("position", "absolute")
-		.css("top", "25px")
-		.css("left", "35px")
-		.css("color", "#FFFFFF")
-		.css("font-size", "60%")
-		;
+	// init link button
+	if(project.hasLink){
+		pPanel.append('<div class="projectIcon linkIcon" id="pLinkIcon' + ID + '"></div>');
+		var pLinkIcon = $('#pLinkIcon' + ID);
 
-	if(hasLink){
-
-	pPanel.append('<div class="linkIcon" id="pLinkIcon' + ID + '"></div>');
-	var pLinkIcon = $('#pLinkIcon' + ID);
-
-	pLinkIcon
-		.css("width", "25px")
-		.css("height", "25px")
-		.css("position", "absolute")
-		.css("bottom", "30px")
-		.css("right", "35px")
-		.css("cursor", "pointer")
-		.on("click", function(){
+		pLinkIcon
+			.on("click", function(){
 				window.open(project.link , '_blank' );
-			})
-		;
+			});
 	}
-
-	pPanel.append('<div class="githubIcon" id="pGitLogo' + ID + '"></div>');
+	
+	// init github button
+	pPanel.append('<div class="projectIcon githubIcon" id="pGitLogo' + ID + '"></div>');
 	var pGitLogo = $('#pGitLogo' + ID);
 
 	pGitLogo
-		.css("width", "25px")
-		.css("height", "25px")
-		.css("position", "absolute")
-		.css("bottom", "30px")
-		.css("left", "35px")
-		.css("cursor", "pointer")
 		.on("click", function(){
 				window.open(project.github , '_blank' );
 			})

@@ -17,30 +17,23 @@ body {
 .fullWidth, .clickableLink:before, .projectModalBG {
   width: 100%; }
 
-.verticallyCenter {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
-
-.horizontallyCenter {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); }
-
 .image {
   background-size: cover; }
 
 .clickableLink {
+  content: "";
+  display: block;
+  position: relative;
   width: auto;
   padding-right: 0px;
-  position: relative;
   color: white;
   text-decoration: none;
   cursor: pointer; }
   .clickableLink:before {
-    height: 2px;
     content: "";
+    display: block;
     position: absolute;
+    height: 2px;
     bottom: -5%;
     left: 0;
     background-color: #48e59f;
@@ -113,28 +106,57 @@ h5 {
   height: 200px;
   z-index: 0; }
 
-.bannerElement {
+.bannerElement, #bannerTitle, #bannerSubtitle {
+  content: "";
+  display: block;
   position: absolute; }
 
-.aCTitles {
+#bannerTitle {
+  color: #8AB0AB; }
+
+#bannerSubtitle {
+  color: #999999; }
+
+#infoSection {
+  background-color: #f7f7f7; }
+
+.aCTitles, .aCTitleBold {
+  content: "";
+  display: block;
+  position: absolute;
   width: 200px;
   height: 50px;
-  position: absolute;
   color: #8AB0AB;
   text-align: right; }
 
 .aCTitleBold {
-  top: 0px;
   font-family: Montserrat, sans-serif;
-  font-size: 100%; }
+  font-size: 100%;
+  color: #8AB0AB; }
 
 .aCText {
-  color: #999999;
-  width: auto;
+  content: "";
+  display: block;
   position: absolute;
+  color: #999999;
   text-align: left; }
 
+.projectImage {
+  content: "";
+  display: block;
+  position: relative;
+  float: left;
+  height: 450px;
+  width: 50%; }
+
 .projectPanel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 450px;
+  width: 100%;
+  border-radius: 2px;
+  text-align: center;
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -146,6 +168,27 @@ h5 {
     -moz-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out; }
+
+.projectTitle {
+  content: "";
+  display: inline-block;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  top: 45%;
+  color: white;
+  cursor: pointer; }
+
+.projectSubtitle {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  color: white;
+  font-size: 60%; }
 
 .projectModalBG {
   position: fixed;
@@ -175,11 +218,21 @@ h5 {
 .collabSubtitle:hover:after {
   opacity: 1; }
 
+.projectIcon, .linkIcon, .githubIcon {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  cursor: pointer; }
+
 .linkIcon {
+  bottom: 30px;
+  right: 35px;
   background: url("../images/link-symbol.png") no-repeat;
   background-size: cover; }
 
 .githubIcon {
+  left: 35px;
+  bottom: 30px;
   background: url("../images/github-logo.png") no-repeat;
   background-size: cover; }
 
