@@ -1,0 +1,192 @@
+{
+  "skills": [
+    {
+      "title": "Programming",
+      "programming": [
+        {
+          "text": "JavaScript",
+          "level": 0,
+          "experience": [
+            "Cherrypicker.io",
+            "Friendmap",
+            "vDM",
+            "Personal Website"
+          ]
+        },
+        {
+          "text": "Java",
+          "level": 0,
+          "experience": [
+            "Academic exposure"
+          ]
+        },
+        {
+          "text": "C++",
+          "level": 10,
+          "experience": [
+            "Minor academic exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Web",
+      "web": [
+        {
+          "text": "HTML/CSS",
+          "level": 0,
+          "experience": [
+            "Cherrypicker.io",
+            "Personal Website"
+          ]
+        },
+        {
+          "text": "jQuery",
+          "level": 0,
+          "experience": [
+            "Cherrypicker.io",
+            "vDM",
+            "Personal Website"
+          ]
+        },
+        {
+          "text": "React",
+          "level": 10,
+          "experience": [
+            "Online tutorials"
+          ]
+        },
+        {
+          "text": "D3",
+          "level": 10,
+          "experience": [
+            "Cherrypicker.io"
+          ]
+        },
+        {
+          "text": "SASS",
+          "level": 10,
+          "experience": [
+            "Personal Website"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mobile",
+      "mobile": [
+        {
+          "text": "React Native",
+          "level": 10,
+          "experience": [
+            "Friendmap"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "other": [
+        {
+          "text": "Git/Github",
+          "level": 0
+        },
+        {
+          "text": "Adobe Creative Suite",
+          "level": 0
+        },
+        {
+          "text": "Windows",
+          "level": 0
+        },
+        {
+          "text": "macOS",
+          "level": 0
+        },
+        {
+          "text": "Linux",
+          "level": 0
+        }
+      ]
+    },
+    {
+      "title": "Language",
+      "language": [
+        {
+          "text": "English",
+          "level": 0
+        },
+        {
+          "text": "French",
+          "level": 0
+        }
+      ]
+    }
+  ],
+  "project": [
+    {
+      "ID": "Cherrypicker",
+      "title": "CHERRYPICKER.IO",
+      "subtitle": "Web Application",
+      "hasLink": true,
+      "link": "http://cherrypicker.io",
+      "image": "images/cherrypicker-mockup.jpg",
+      "github": "https://github.com/VictorThibert/cherrypicker.io",
+      "projectInfo": {
+        "modalSub": "Basketball Statistics Visualization",
+        "date": "Live (but development ongoing)",
+        "role": "Full Stack",
+        "collabs": [
+          "Laurence Li",
+          "Victor Thibert"
+        ],
+        "collabsLinks": [
+          "laurenceli",
+          "VictorThibert"
+        ],
+        "tech": [
+          "JavaScript",
+          "jQuery",
+          "D3",
+          "HTML",
+          "CSS",
+          "PHP"
+        ],
+        "description": "We take confusing NBA statistics data and visualize it into something fun, interesting and accessible."
+      }
+    },
+    {
+      "ID": "Friendmap",
+      "title": "FRIENDMAP",
+      "subtitle": "Mobile Application",
+      "hasLink": false,
+      "link": "",
+      "image": "images/friendmap-mockup.jpg",
+      "github": "https://github.com/VictorThibert/friendmap",
+      "projectInfo": {
+        "modalSub": "Reviews on a Map",
+        "role": "Front End",
+        "collabs": [
+          "Laurence Li",
+          "Victor Thibert",
+          "Ahmed Khan",
+          "Brandon Baksh"
+        ],
+        "collabsLinks": [
+          "laurenceli",
+          "VictorThibert",
+          "AhmedAKhan",
+          "bbaksh"
+        ],
+        "tech": [
+          "JavaScript",
+          "React Native",
+          "Objective-C",
+          "Python",
+          "Java"
+        ],
+        "description": "Tag and review places you've been. Follow your friends to see where they've been and what they recommend."
+      }
+    }
+  ]
+}

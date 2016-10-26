@@ -62,6 +62,24 @@ var projectInfo = [cherrypicker, friendmap];
 var pPanelsArray = [];
 var pPanelsCounter = 0;
 
+var xmlhttp = new XMLHttpRequest();
+var url = "js/aboutData.json";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+	for(var i = 0; i < arr.length; i++){
+		console.log(arr[i]);
+	}
+}
+
 $( window ).resize(function() {
 	mainContainer.css("height", "100%");
 })
