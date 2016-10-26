@@ -3,6 +3,8 @@ var programmingSkills;
 var skillsTitleContainer;
 var skillsContainer;
 var pModal;
+var skillsArray = [];
+var projectsArray = [];
 
 var programmingArray = ["JavaScript", "Java"];
 var webArray = ["HTML/CSS", "jQuery", "React", "D3", "SASS"];
@@ -68,16 +70,15 @@ var url = "js/aboutData.json";
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
+        assignArrays(myArr);
     }
 };
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-function myFunction(arr) {
-	for(var i = 0; i < arr.length; i++){
-		console.log(arr[i]);
-	}
+function assignArrays(arr) {
+	skillsArray = arr.skills;
+	projectsArray = arr.projects;
 }
 
 $( window ).resize(function() {
@@ -88,11 +89,9 @@ function showMainPage(){
 	mainContainer.show();
 	currentPage = mainContainer;
 	changeURL("#about");
-
 }
 
 function drawMainPage(){
-
 	drawProjectPanel(projectInfo[0], "Cherrypicker");
 	drawProjectPanel(projectInfo[1], "FriendMap");
 
