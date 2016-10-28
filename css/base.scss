@@ -243,8 +243,9 @@ h5{
 
 .filterButton{
 	font-family: $workSans;
+	font-size: 60%;
 	padding: 2px 5px 2px 5px;
-	border-radius: 2px;
+	border-radius: 0px;
 	border: 1px solid #48e59f;
 	letter-spacing: 1px;
 	color: $highlightGreen;
@@ -368,6 +369,7 @@ h5{
 /////////////
 #navContainer{
 	@extend .fullHeight;
+	background-color: $menuGrey;
 	width: 55px;
   	float: left;
 }
@@ -384,7 +386,7 @@ h5{
 #navIconContainer{
 	width: 55px;
 	height: 80px;
-	background-color: #323232;
+	background-color: $menuGrey;
 	position: fixed;
   	top: 50%;
   	transform: translateY(-85%);
@@ -395,7 +397,7 @@ h5{
 #navMenu{
 	width: 300px;
 	height: 100%;
-	background-color: #323232;
+	background-color: $menuGrey;
 	position: fixed;
 	left: -245px;
 	top: 0px;

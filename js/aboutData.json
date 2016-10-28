@@ -126,11 +126,11 @@
       "title": "SKILLS",
       "filters": [
         {
-          "text": "Proficient",
+          "text": "PROFICIENT",
           "level": 100
         },
         {
-          "text": "Learning",
+          "text": "LEARNING",
           "level": 100
         }
       ]
@@ -201,6 +201,71 @@
         ],
         "description": "Tag and review places you've been. Follow your friends to see where they've been and what they recommend."
       }
+    },
+    {
+      "ID": "laurenceligithubio",
+      "title": "LAURNCELI.GITHUB.IO",
+      "subtitle": "Website",
+      "hasLink": true,
+      "link": "https://laurenceli.github.io",
+      "image": "images/friendmap-mockup.jpg",
+      "github": "https://github.com/laurenceli/laurenceli.github.io",
+      "modalInfo": {
+        "modalSub": "Personal Portfolio",
+        "date": "Development Ongoing",
+        "role": "Full-stack",
+        "collabs": [
+          "Laurence Li"
+        ],
+        "collabsLinks": [
+          "laurenceli"
+        ],
+        "tech": [
+          "JavaScript",
+          "jQuery",
+          "HTML/CSS",
+          "SASS"
+        ],
+        "description": "A personal website to showcase my work and flex my creative and visual design skills."
+      }
     }
+  ],
+  "experience": [
+  {
+    "company": "DLS Technology Corporation",
+    "position": "Junior Developer (Summer Student)",
+    "startDate": "May 2016",
+    "endDate": "August 2016",
+    "skills": [
+      "JavaScript",
+      "jQuery",
+      "CSS",
+      "PHP"
+    ],
+    "environment": "Linux",
+    "summary": [
+      "Redeveloped existing JavaScript codebase to be scalable, maintainable and modular.",
+      "Refactored user-facing code to be fully responsive and use updated libraries.",
+      "Designed and translated UI wireframes prototypes into functioning front-end elements.",
+      "Implemented a server-side user login permissions solutions using PHP and JavaScript."
+    ]
+  },
+  {
+    "company": "DLS Technology Corporation",
+    "position": "Technical Support Coordinator (Summer Student)",
+    "startDate": "May 2014",
+    "endDate": "August 2014",
+    "skills": [
+      "JavaScript",
+      "Excel"
+    ],
+    "environment": "MacOS",
+    "summary": [
+      "Designed quality assurance solutions using Microsoft Excel.",
+      "Implemented software language localization using JavaScript.",
+      "Collaborated with developers, employing Agile software development.",
+      "Authored techical internal and customer documentation."
+    ]
+  }
   ]
 }

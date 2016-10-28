@@ -143,8 +143,9 @@ h5 {
 
 .filterButton {
   font-family: Work Sans, sans-serif;
+  font-size: 60%;
   padding: 2px 5px 2px 5px;
-  border-radius: 2px;
+  border-radius: 0px;
   border: 1px solid #48e59f;
   letter-spacing: 1px;
   color: #48e59f;
@@ -264,6 +265,7 @@ h5 {
   background-size: cover; }
 
 #navContainer {
+  background-color: #323232;
   width: 55px;
   float: left; }
 
