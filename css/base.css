@@ -142,7 +142,6 @@ h5 {
   text-align: left; }
 
 .filterButton {
-  margin-bottom: 100px;
   font-family: Work Sans, sans-serif;
   padding: 2px 5px 2px 5px;
   border-radius: 2px;
@@ -162,7 +161,11 @@ h5 {
 
 .skillBolded {
   font-weight: bold;
-  color: #48e59f; }
+  color: #48e59f;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
 
 .projectImage {
   content: "";

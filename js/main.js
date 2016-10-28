@@ -8,61 +8,10 @@ var projectsArray = [];
 var pBolded = false;
 var lBolded = false;
 
-var programmingArray = ["JavaScript", "Java"];
-var webArray = ["HTML/CSS", "jQuery", "React", "D3", "SASS"];
-var mobileArray = ["React Native"];
-var infraArray = [""];
-var otherArray = ["Git/Github",  "Adobe Creative Suite", "Windows", "MacOS", "Linux"];
-var languageArray = ["English", "French"];
 var dls1Array = ["Junior Developer (May 2016 - August 2016)"];
 var dls2Array = ["Technical Support Coordinator (May 2014 - August 2014)"];
 var emptyArray = [""];
 
-var cherrypickerModallInfo = {
-	modalSub: "Basketball Statistics Visualization",
-	date: "Live (but development ongoing)",
-	role: "Full Stack",
-	collabs: ["Laurence Li", "Victor Thibert" ],
-	collabsLinks: ["laurenceli", "VictorThibert"],
-	tech: ["JavaScript", "jQuery", "D3", "HTML", "CSS", "PHP"],
-	description: "We take confusing NBA statistics data and visualize it into something fun, interesting and accessible."
-}
-
-var FriendmapModallInfo = {
-	modalSub: "Reviews on a Map",
-	date: "Development ongoing",
-	role: "Front-End",
-	collabs: ["Laurence Li", "Victor Thibert", "Ahmed Khan", "Brandon Baksh" ],
-	collabsLinks: ["laurenceli", "VictorThibert", "AhmedAKhan", "bbaksh"],
-	tech: ["JavaScript", "React Native", "Objective-C", "Python", "Java"],
-	description: "Tag and review places you've been. Follow your friends to see where they've been and what they recommend."
-}
-
-var links = ["laurenceli", "VictorThibert"];
-
-var cherrypicker = {
-	ID: "Cherrypicker",
-	title: "CHERRYPICKER.IO", 
-	subtitle: "Web Application", 
-	hasLink: true,
-	link: "http://cherrypicker.io", 
-	image: "images/cherrypicker-mockup.jpg",
-	github: "https://github.com/VictorThibert/cherrypicker.io", 
-	modalInfo: cherrypickerModallInfo
-};
-
-var friendmap = {
-	ID: "Friendmap",
-	title: "FRIENDMAP", 
-	subtitle: "Mobile Application", 
-	hasLink: false,
-	link: "", 
-	image: "images/friendmap-mockup.jpg",
-	github: "https://github.com/VictorThibert/friendmap",
-	modalInfo: FriendmapModallInfo
-};
-
-var projectInfo = [cherrypicker, friendmap];
 var pPanelsArray = [];
 var pPanelsCounter = 0;
 

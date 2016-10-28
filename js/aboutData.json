@@ -148,7 +148,7 @@
       "modalInfo": {
         "modalSub": "Basketball Statistics Visualization",
         "date": "Live (but development ongoing)",
-        "role": "Full Stack",
+        "role": "Full-Stack",
         "collabs": [
           "Laurence Li",
           "Victor Thibert"
@@ -178,7 +178,8 @@
       "github": "https://github.com/VictorThibert/friendmap",
       "modalInfo": {
         "modalSub": "Reviews on a Map",
-        "role": "Front End",
+        "date": "Development Ongoing",
+        "role": "Front-End",
         "collabs": [
           "Laurence Li",
           "Victor Thibert",
