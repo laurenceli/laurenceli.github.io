@@ -141,6 +141,29 @@ h5 {
   color: #999999;
   text-align: left; }
 
+.filterButton {
+  margin-bottom: 100px;
+  font-family: Work Sans, sans-serif;
+  padding: 2px 5px 2px 5px;
+  border-radius: 2px;
+  border: 1px solid #48e59f;
+  letter-spacing: 1px;
+  color: #48e59f;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
+  .filterButton:hover {
+    background-color: white; }
+  .filterButton.clicked {
+    background-color: #48e59f;
+    color: #f7f7f7; }
+
+.skillBolded {
+  font-weight: bold;
+  color: #48e59f; }
+
 .projectImage {
   content: "";
   display: block;

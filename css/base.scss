@@ -241,6 +241,31 @@ h5{
 	text-align: left;
 }
 
+.filterButton{
+	margin-bottom: 100px;
+	font-family: $workSans;
+	padding: 2px 5px 2px 5px;
+	border-radius: 2px;
+	border: 1px solid #48e59f;
+	letter-spacing: 1px;
+	color: $highlightGreen;
+	cursor: pointer;
+	@include easeAnimation(0.2s);
+	&:hover{
+		background-color: white;
+	}
+	&.clicked{
+		background-color: $highlightGreen;
+		color: #f7f7f7;
+	}
+
+}
+
+.skillBolded{
+	font-weight: bold;
+	color: $highlightGreen;
+}
+
 /////////////
 ////PROJECT PANELS AND MODALS
 /////////////

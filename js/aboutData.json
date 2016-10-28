@@ -1,7 +1,7 @@
 {
   "skills": [
     {
-      "title": "Programming",
+      "title": "PROGRAMMING",
       "programming": [
         {
           "text": "JavaScript",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "title": "Web",
+      "title": "WEB",
       "web": [
         {
           "text": "HTML/CSS",
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "title": "Mobile",
+      "title": "MOBILE",
       "mobile": [
         {
           "text": "React Native",
@@ -85,40 +85,53 @@
       ]
     },
     {
-      "title": "Other",
+      "title": "OTHER",
       "other": [
         {
           "text": "Git/Github",
-          "level": 0
+          "level": 5
         },
         {
           "text": "Adobe Creative Suite",
-          "level": 0
+          "level": 5
         },
         {
           "text": "Windows",
-          "level": 0
+          "level": 5
         },
         {
           "text": "macOS",
-          "level": 0
+          "level": 5
         },
         {
           "text": "Linux",
-          "level": 0
+          "level": 5
         }
       ]
     },
     {
-      "title": "Language",
+      "title": "LANGUAGE",
       "language": [
         {
           "text": "English",
-          "level": 0
+          "level": 5
         },
         {
           "text": "French",
-          "level": 0
+          "level": 5
+        }
+      ]
+    },
+    {
+      "title": "SKILLS",
+      "filters": [
+        {
+          "text": "Proficient",
+          "level": 100
+        },
+        {
+          "text": "Learning",
+          "level": 100
         }
       ]
     }
@@ -132,7 +145,7 @@
       "link": "http://cherrypicker.io",
       "image": "images/cherrypicker-mockup.jpg",
       "github": "https://github.com/VictorThibert/cherrypicker.io",
-      "projectInfo": {
+      "modalInfo": {
         "modalSub": "Basketball Statistics Visualization",
         "date": "Live (but development ongoing)",
         "role": "Full Stack",
@@ -163,7 +176,7 @@
       "link": "",
       "image": "images/friendmap-mockup.jpg",
       "github": "https://github.com/VictorThibert/friendmap",
-      "projectInfo": {
+      "modalInfo": {
         "modalSub": "Reviews on a Map",
         "role": "Front End",
         "collabs": [

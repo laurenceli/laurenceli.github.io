@@ -5,6 +5,8 @@ var skillsContainer;
 var pModal;
 var skillsArray = [];
 var projectsArray = [];
+var pBolded = false;
+var lBolded = false;
 
 var programmingArray = ["JavaScript", "Java"];
 var webArray = ["HTML/CSS", "jQuery", "React", "D3", "SASS"];
@@ -79,6 +81,8 @@ xmlhttp.send();
 function assignArrays(arr) {
 	skillsArray = arr.skills;
 	projectsArray = arr.projects;
+	console.log(skillsArray);
+	console.log(projectsArray);
 }
 
 $( window ).resize(function() {
@@ -92,8 +96,8 @@ function showMainPage(){
 }
 
 function drawMainPage(){
-	drawProjectPanel(projectInfo[0], "Cherrypicker");
-	drawProjectPanel(projectInfo[1], "FriendMap");
+	drawProjectPanel(projectsArray[0], "Cherrypicker");
+	drawProjectPanel(projectsArray[1], "FriendMap");
 
 	mainContainer.append('<div id="centerBanner"></div>')
 	var centerBanner = $('#centerBanner');
@@ -139,12 +143,12 @@ function drawMainPage(){
 		.css("left", "0px")
 		;
 
-	drawSkills(emptyArray, "SKILLS");
-	drawSkills(programmingArray, "PROGRAMMING");
-	drawSkills(webArray, "WEB");
-	drawSkills(mobileArray, "MOBILE");
-	drawSkills(otherArray, "OTHER");
-	drawSkills(languageArray, "LANGUAGE");
+	drawSkills(skillsArray[5].filters, skillsArray[5].title);
+	drawSkills(skillsArray[0].programming, skillsArray[0].title)
+	drawSkills(skillsArray[1].web, skillsArray[1].title);
+	drawSkills(skillsArray[2].mobile, skillsArray[2].title);
+	drawSkills(skillsArray[3].other, skillsArray[3].title);
+	drawSkills(skillsArray[4].language, skillsArray[4].title);
 
 	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
 	drawExperience(dls1Array, "DLS1", "DLS TECHNOLOGY");
@@ -153,6 +157,37 @@ function drawMainPage(){
 	boldTitle("skills");
 	boldTitle("exp");
 
+	setFilters("skillsSKILLS0", 0);
+	setFilters("skillsSKILLS1", 10);
+}
+
+function setFilters(id, filter){
+	$('#' + id)
+		.addClass('filterButton')
+		.on('click', function(){
+			//status = !status;
+			$(this).toggleClass('clicked');
+			// if(filter == 0){ 
+			// 	pBolded = !pBolded; 
+			// 	toggleSkillsBold(getSkillsByLevel(filter), pBolded);
+			// }
+			// else if(filter == 10) { 
+			// 	lBolded = !lBolded;
+			// 	toggleSkillsBold(getSkillsByLevel(filter), lBolded);
+			// }
+			toggleSkillsBold(getSkillsByLevel(filter));
+		});
+}
+
+function getSkillsByLevel(level){
+	return document.getElementsByClassName(level);
+}
+
+function toggleSkillsBold(skills, status){
+	//(status) ? 300
+	for(var i = 0; i < skills.length; i++){
+		$(skills[i]).toggleClass('skillBolded');
+	}
 }
 
 function boldTitle(id){
@@ -241,7 +276,7 @@ function drawSkills(targetArray, ID){
 			.css("left", positionLeft + "px")
 			;
 
-		skillsContainer.append('<h4 id="skills' + ID + i + '">' + targetArray[i] + '</h4>');
+		skillsContainer.append('<h4 class="' + targetArray[i].level + '" id="skills' + ID + i + '">' + targetArray[i].text + '</h4>');
 	}
 
 	skillsCounter++;
