@@ -144,6 +144,7 @@
       "hasLink": true,
       "link": "http://cherrypicker.io",
       "image": "images/cherrypicker-mockup.jpg",
+      "hasGithub": true,
       "github": "https://github.com/VictorThibert/cherrypicker.io",
       "modalInfo": {
         "modalSub": "Basketball Statistics Visualization",
@@ -175,6 +176,7 @@
       "hasLink": false,
       "link": "",
       "image": "images/friendmap-mockup.jpg",
+      "hasGithub": true,
       "github": "https://github.com/VictorThibert/friendmap",
       "modalInfo": {
         "modalSub": "Reviews on a Map",
@@ -208,7 +210,8 @@
       "subtitle": "Website",
       "hasLink": true,
       "link": "https://laurenceli.github.io",
-      "image": "images/friendmap-mockup.jpg",
+      "image": "",
+      "hasGithub": true,
       "github": "https://github.com/laurenceli/laurenceli.github.io",
       "modalInfo": {
         "modalSub": "Personal Portfolio",
@@ -226,7 +229,36 @@
           "HTML/CSS",
           "SASS"
         ],
-        "description": "A personal website to showcase my work and flex my creative and visual design skills."
+        "description": "A personal website to showcase my work along with my creative and visual design skills."
+      }
+    },
+    {
+      "ID": "vDM",
+      "title": "VKEY DEVICE MANAGER",
+      "subtitle": "Web Application",
+      "hasLink": false,
+      "link": "",
+      "image": "",
+      "hasGithub": false,
+      "github": "",
+      "modalInfo": {
+        "modalSub": "Enterprise Software",
+        "date": "Development from May 2016 - August 2016",
+        "role": "Front-End",
+        "collabs": [
+          "Laurence Li"
+        ],
+        "collabsLinks": [
+          "laurenceli"
+        ],
+        "tech": [
+          "JavaScript",
+          "jQuery",
+          "PHP",
+          "Java",
+          "CSS"
+        ],
+        "description": "An enterprise software solution for managing physical media containing mobile desktop software. Keeps track of hundreds of devices; allowing for building, reassigning and editing of devices."
       }
     }
   ],
