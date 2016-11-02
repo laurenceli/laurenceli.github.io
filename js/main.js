@@ -2,6 +2,7 @@ var infoSection;
 var programmingSkills;
 var skillsTitleContainer;
 var skillsContainer;
+var expSubtitleContainer;
 var pModal;
 var skillsArray = [];
 var projectsArray = [];
@@ -108,9 +109,12 @@ function drawMainPage(){
 	drawExperience(experienceArray[0], "DLS1", "DLS Technology");
 	drawExperience(experienceArray[1], "DLS2", "DLS Technology");
 
+	drawProjects("PROJECTS");
+
 	boldTitle("education");
 	boldTitle("skills");
 	boldTitle("exp");
+	boldTitle("proj");
 
 	setFilters("skillsSKILLS0", 0);
 	setFilters("skillsSKILLS1", 10);
@@ -268,8 +272,6 @@ function drawSkills(targetArray, ID){
 }
 
 var expCounter = 0;
-var expSubtitleContainer;
-
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
@@ -304,9 +306,25 @@ function drawExperience(targetArray, ID, text){
 
 		expContainer.append('<h4 id="exp' + ID + '">' + targetArray.position + '</h4>');
 	}
-
 	expCounter++;
+}
 
+var projTitle;
+var projTitleContainer;
+var projCounter = 0;
+
+function drawProjects(text){
+	positionTop = (projCounter > 1) ? 670 + (50 * projCounter) : 670 + (40 * projCounter);
+
+	infoSection.append('<div class="aCTitles" id="projTitleContainer' + skillsCounter + '"></div>')
+	projTitleContainer = $('#projTitleContainer' + skillsCounter);
+
+	projTitleContainer
+		.css("left", "150px")
+		.css("top", positionTop + "px")
+		;
+
+	projTitleContainer.append('<h3 id="projTitle' + projCounter + '">' + text + '</h3>');
 }
 
 function drawModal(project){

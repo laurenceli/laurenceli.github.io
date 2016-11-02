@@ -115,7 +115,7 @@ h5 {
   color: #6e8c88; }
 
 #bannerSubtitle {
-  color: #999999; }
+  color: #a1bfbb; }
 
 #infoSection {
   background-color: #f7f7f7; }
@@ -365,7 +365,7 @@ h5 {
     display: inline-block;
     letter-spacing: 2px; }
   .menuList .social li {
-    font-size: 70%;
+    font-size: 85%;
     margin-top: 10px;
     display: inline-block;
     letter-spacing: 1px; }
