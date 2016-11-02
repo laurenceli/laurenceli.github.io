@@ -1,7 +1,7 @@
 {
   "skills": [
     {
-      "title": "PROGRAMMING",
+      "title": "Programming",
       "programming": [
         {
           "text": "JavaScript",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "title": "WEB",
+      "title": "Web",
       "web": [
         {
           "text": "HTML/CSS",
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "title": "MOBILE",
+      "title": "Mobile",
       "mobile": [
         {
           "text": "React Native",
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "title": "OTHER",
+      "title": "Other",
       "other": [
         {
           "text": "Git/Github",
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "title": "LANGUAGE",
+      "title": "Language",
       "language": [
         {
           "text": "English",
@@ -298,6 +298,20 @@
       "Collaborated with developers, employing Agile software development.",
       "Authored techical internal and customer documentation."
     ]
+  }
+  ],
+  "education":[
+  {
+    "school": "UNIVERSITY OF WATERLOO",
+    "program": "Candidate B. Math in Computer Science",
+    "startDate": "September 2013",
+    "endDate": "May 2014"
+  },
+  {
+    "school": "UNIVERSITY OF OTTAWA",
+    "program": "Candidate B. Science in Computer Science",
+    "startDate": "September 2014",
+    "endDate": "Present"
   }
   ]
 }

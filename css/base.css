@@ -11,10 +11,10 @@ body {
   width: 100%;
   background-color: #f7f7f7; }
 
-.fullHeight, .projectModalBG, #navContainer, #navbar {
+.fullHeight, .projectModalBG, #navContainer, #navbar, #navModal {
   height: 100%; }
 
-.fullWidth, .clickableLink:before, .projectModalBG {
+.fullWidth, .clickableLink:before, .projectModalBG, #navModal {
   width: 100%; }
 
 .image {
@@ -112,7 +112,7 @@ h5 {
   position: absolute; }
 
 #bannerTitle {
-  color: #8AB0AB; }
+  color: #6e8c88; }
 
 #bannerSubtitle {
   color: #999999; }
@@ -132,7 +132,7 @@ h5 {
 .aCTitleBold {
   font-family: Montserrat, sans-serif;
   font-size: 100%;
-  color: #8AB0AB; }
+  color: #6e8c88; }
 
 .aCText {
   content: "";
@@ -274,7 +274,7 @@ h5 {
   top: 0px;
   left: 0px;
   background-color: #323232;
-  z-index: 2; }
+  z-index: 3; }
 
 #navIconContainer {
   width: 55px;
@@ -292,7 +292,15 @@ h5 {
   background-color: #323232;
   position: fixed;
   left: -245px;
-  top: 0px; }
+  top: 0px;
+  z-index: 2; }
+
+#navModal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0; }
 
 #navIcon {
   width: 55px;

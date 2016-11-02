@@ -5,6 +5,7 @@ var skillsContainer;
 var pModal;
 var skillsArray = [];
 var projectsArray = [];
+var educationArray = [];
 var pBolded = false;
 var lBolded = false;
 
@@ -29,9 +30,9 @@ xmlhttp.send();
 
 function assignArrays(arr) {
 	skillsArray = arr.skills;
+	experienceArray = arr.experience;
 	projectsArray = arr.projects;
-	console.log(skillsArray);
-	console.log(projectsArray);
+	educationArray = arr.education;
 }
 
 $( window ).resize(function() {
@@ -99,10 +100,15 @@ function drawMainPage(){
 	drawSkills(skillsArray[3].other, skillsArray[3].title);
 	drawSkills(skillsArray[4].language, skillsArray[4].title);
 
-	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
-	drawExperience(dls1Array, "DLS1", "DLS TECHNOLOGY");
-	drawExperience(dls2Array, "DLS2", "DLS TECHNOLOGY");
+	drawEducation(emptyArray, "EDUCATION", "EDUCATION");
+	drawEducation(educationArray[1], "uottawa", "University of Ottawa");
+	drawEducation(educationArray[0], "uwo", "University of Waterloo");
 
+	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
+	drawExperience(experienceArray[0], "DLS1", "DLS Technology");
+	drawExperience(experienceArray[1], "DLS2", "DLS Technology");
+
+	boldTitle("education");
 	boldTitle("skills");
 	boldTitle("exp");
 
@@ -114,16 +120,7 @@ function setFilters(id, filter){
 	$('#' + id)
 		.addClass('filterButton')
 		.on('click', function(){
-			//status = !status;
 			$(this).toggleClass('clicked');
-			// if(filter == 0){ 
-			// 	pBolded = !pBolded; 
-			// 	toggleSkillsBold(getSkillsByLevel(filter), pBolded);
-			// }
-			// else if(filter == 10) { 
-			// 	lBolded = !lBolded;
-			// 	toggleSkillsBold(getSkillsByLevel(filter), lBolded);
-			// }
 			toggleSkillsBold(getSkillsByLevel(filter));
 		});
 }
@@ -198,25 +195,65 @@ function drawProjectPanel(project, ID){
 	pPanelsCounter++;
 }
 
+var educationCounter = 0;
+var educationContainer;
+var educationTitleContainer;
+var educationSubtitleContainer;
+
+function drawEducation(targetArray, ID, text){
+	var positionTop, positionLeft;
+
+	positionTop = (educationCounter > 1) ? (50 * educationCounter) : (40 * educationCounter);
+
+	infoSection.append('<div class="aCTitles" id="educationTitleContainer' + educationCounter + '"></div>')
+	educationTitleContainer = $('#educationTitleContainer' + educationCounter);
+	educationTitleContainer
+		.css("left", "150px")
+		.css("top", positionTop + "px")
+		;
+
+	educationTitleContainer.append('<h3 id="educationTitle' + educationCounter + '" >' + text + '<h3>');
+
+	if(educationCounter != 0){
+		educationSubtitleContainer = $('#educationSubtitleContainer' + educationCounter);
+		educationSubtitleContainer
+			.css("left", "150px")
+			.css("top", positionTop + 30 + "px")
+			;
+		educationTitleContainer.append('<h3 id="educationSubtitle' + educationCounter + '" >' + targetArray.startDate + ' - ' + targetArray.endDate + '<h3>');
+		$('#educationSubtitle' + educationCounter).css("font-size", "60%").css("color", "#a1bfbb");
+
+		infoSection.append('<div class="aCText" id="educationContainer' + ID + '"></div>');
+		educationContainer = $('#educationContainer' + ID);
+		educationContainer			
+			.css("top", positionTop + "px")
+			.css("left", "400px")
+			;
+
+		educationContainer.append('<h4 id="education' + ID + '">' + targetArray.program + '</h4>');
+	}
+	educationCounter++;
+}
+
 var skillsCounter = 0;
 
 function drawSkills(targetArray, ID){
 	var positionTop, positionLeft;
 
-	positionTop = (40 * skillsCounter);
+	positionTop = 190 + (40 * skillsCounter);
 
 	infoSection.append('<div class="aCTitles" id="skillsTitleContainer' + skillsCounter + '"></div>')
 	skillsTitleContainer = $('#skillsTitleContainer' + skillsCounter);
 
 	skillsTitleContainer
-		.css("left", "75px")
+		.css("left", "150px")
 		.css("top", positionTop + "px")
 		;
 
 	skillsTitleContainer.append('<h3 id="skillsTitle' + skillsCounter + '" >' + ID + '<h3>');
 
 	for(var i = 0; i < targetArray.length; i++){
-		positionLeft = (i == 0) ? 300 : $('#skillsContainer' + ID + (i - 1)).position().left + $('#skillsContainer' + ID + (i - 1)).width() + 30;
+		positionLeft = (i == 0) ? 400 : $('#skillsContainer' + ID + (i - 1)).position().left + $('#skillsContainer' + ID + (i - 1)).width() + 30;
 
 		infoSection.append('<div class="aCText" id="skillsContainer' + ID + i + '"></div>');
 		skillsContainer = $('#skillsContainer' + ID + i);
@@ -227,50 +264,50 @@ function drawSkills(targetArray, ID){
 
 		skillsContainer.append('<h4 class="' + targetArray[i].level + '" id="skills' + ID + i + '">' + targetArray[i].text + '</h4>');
 	}
-
 	skillsCounter++;
-
 }
 
 var expCounter = 0;
+var expSubtitleContainer;
 
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = 280 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 470 + (50 * expCounter) : 470 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
 
 	expTitleContainer
-		.css("left", "75px")
+		.css("left", "150px")
 		.css("top", positionTop + "px")
 		;
-
 	expTitleContainer.append('<h3 id="expTitle' + expCounter + '" >' + text + '<h3>');
 
-	for(var i = 0; i < targetArray.length; i++){
-		positionLeft = (i == 0) ? 300 : $('#expContainer' + ID + (i - 1)).position().left + $('#expContainer' + ID + (i - 1)).width() + 30;
+	if(expCounter != 0){
+		expTitleContainer.append('<h3 id="expSubtitleContainer' + expCounter + '" >' + targetArray.startDate + ' - ' + targetArray.endDate + '<h3>');
+		$('#expSubtitleContainer' + expCounter).css("font-size", "60%").css("color", "#a1bfbb");
 
-		infoSection.append('<div class="aCText" id="expContainer' + ID + i + '"></div>');
-		expContainer = $('#expContainer' + ID + i);
+		expSubtitleContainer = $('#expSubtitleContainer' + expCounter);
+		expSubtitleContainer
+			.css("left", "150px")
+			.css("top", positionTop + 30 + "px")
+			;
+
+		infoSection.append('<div class="aCText" id="expContainer' + ID + '"></div>');
+		expContainer = $('#expContainer' + ID);
 		expContainer			
 			.css("top", positionTop + "px")
-			.css("left", positionLeft + "px")
+			.css("left", "400px")
 			.css("letter-spacing", "1px")
 			;
 
-		expContainer.append('<h4 id="exp' + ID + i + '">' + targetArray[i] + '</h4>');
+		expContainer.append('<h4 id="exp' + ID + '">' + targetArray.position + '</h4>');
 	}
 
 	expCounter++;
 
 }
-
-// function drawProjects(){
-// 	for(var i = 0; i < )
-// 		infoSection.append()
-// }
 
 function drawModal(project){
 	body.append('<div class="projectModalBG" id="pModalBG' + project.ID + '"></div>');

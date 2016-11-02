@@ -208,7 +208,7 @@ h5{
 
 #bannerTitle{
 	@extend .bannerElement;
-	color: $subtitleTeal;
+	color: #6e8c88;
 }
 
 #bannerSubtitle{
@@ -232,7 +232,7 @@ h5{
 	@extend .aCTitles;
 	@include fontMontserrat(100%, false, false);
   	//top: 0px;
-  	color: $subtitleTeal;
+  	color: #6e8c88;
 }
 
 .aCText{
@@ -379,7 +379,7 @@ h5{
 	position: fixed;
 	@include position(0px, 0px);
 	background-color: $menuGrey;
-	z-index: 2;
+	z-index: 3;
 }
 
 #navIconContainer{
@@ -400,6 +400,16 @@ h5{
 	position: fixed;
 	left: -245px;
 	top: 0px;
+	z-index: 2;
+}
+
+#navModal{
+	position: fixed;
+	@include position(0px, 0px);
+	@extend .fullWidth;
+	@extend .fullHeight;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 0;
 }
 
 #navIcon{

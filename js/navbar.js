@@ -8,6 +8,14 @@ drawNavBar();
 drawLinksList();
 drawSocialList();
 
+body.append('<div id="navModal"></div>');
+$('#navModal')
+	.on('click', function(){
+		toggleNav();
+		navIcon.toggleClass('open');
+	})
+	.hide();
+
 function drawNavBar(){
 
 	body.append("<div id='navbar'></div>");
@@ -109,6 +117,11 @@ function setClickable(id, link){
 }
 
 $('#navIconContainer').click(function(){
-	(!isOpen) ? navMenu.animate({left: "0px"}, 300) : navMenu.animate({left: "-245px",}, 300);
-	isOpen = !isOpen;
+	toggleNav();
 })
+
+function toggleNav(){
+	(!isOpen) ? navMenu.animate({left: "0px"}, 300) : navMenu.animate({left: "-245px",}, 300);
+	(!isOpen) ? $('#navModal').show() : $('#navModal').hide();
+	isOpen = !isOpen;
+}
