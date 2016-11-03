@@ -265,9 +265,10 @@
   "experience": [
   {
     "company": "DLS Technology Corporation",
-    "position": "Junior Developer (Summer Student)",
+    "position": "Junior Developer (Summer Intern)",
     "startDate": "May 2016",
     "endDate": "August 2016",
+    "location": "Ottawa, Ontario",
     "skills": [
       "JavaScript",
       "jQuery",
@@ -284,9 +285,10 @@
   },
   {
     "company": "DLS Technology Corporation",
-    "position": "Technical Support Coordinator (Summer Student)",
+    "position": "Technical Support Coordinator (Summer Intern)",
     "startDate": "May 2014",
     "endDate": "August 2014",
+    "location": "Ottawa, Ontario",
     "skills": [
       "JavaScript",
       "Excel"

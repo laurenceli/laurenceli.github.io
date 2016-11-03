@@ -225,7 +225,7 @@ function drawEducation(targetArray, ID, text){
 			.css("top", positionTop + 30 + "px")
 			;
 		educationTitleContainer.append('<h3 id="educationSubtitle' + educationCounter + '" >' + targetArray.startDate + ' - ' + targetArray.endDate + '<h3>');
-		$('#educationSubtitle' + educationCounter).css("font-size", "60%").css("color", "#a1bfbb");
+		$('#educationSubtitle' + educationCounter).css("font-size", "75%").css("color", "#a1bfbb");
 
 		infoSection.append('<div class="aCText" id="educationContainer' + ID + '"></div>');
 		educationContainer = $('#educationContainer' + ID);
@@ -244,7 +244,7 @@ var skillsCounter = 0;
 function drawSkills(targetArray, ID){
 	var positionTop, positionLeft;
 
-	positionTop = 190 + (40 * skillsCounter);
+	positionTop = 220 + (40 * skillsCounter);
 
 	infoSection.append('<div class="aCTitles" id="skillsTitleContainer' + skillsCounter + '"></div>')
 	skillsTitleContainer = $('#skillsTitleContainer' + skillsCounter);
@@ -272,10 +272,11 @@ function drawSkills(targetArray, ID){
 }
 
 var expCounter = 0;
+var expLocation;
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = (expCounter > 1) ? 470 + (50 * expCounter) : 470 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 520 + (70 * expCounter) : 520 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
@@ -288,12 +289,21 @@ function drawExperience(targetArray, ID, text){
 
 	if(expCounter != 0){
 		expTitleContainer.append('<h3 id="expSubtitleContainer' + expCounter + '" >' + targetArray.startDate + ' - ' + targetArray.endDate + '<h3>');
-		$('#expSubtitleContainer' + expCounter).css("font-size", "60%").css("color", "#a1bfbb");
+		$('#expSubtitleContainer' + expCounter).css("font-size", "75%").css("color", "#a1bfbb");
 
 		expSubtitleContainer = $('#expSubtitleContainer' + expCounter);
 		expSubtitleContainer
 			.css("left", "150px")
-			.css("top", positionTop + 30 + "px")
+			.css("top", positionTop + "px")
+			;
+
+		expTitleContainer.append('<h3 id="expLocation' + expCounter + '" >' + targetArray.location + '<h3>');
+		$('#expLocation' + expCounter).css("font-size", "75%").css("color", "#a1bfbb");
+
+		expLocation = $('#expLocation' + expCounter);
+		expLocation
+			.css("left", "150px")
+			.css("padding-top", 10 + "px")
 			;
 
 		infoSection.append('<div class="aCText" id="expContainer' + ID + '"></div>');
@@ -314,7 +324,7 @@ var projTitleContainer;
 var projCounter = 0;
 
 function drawProjects(text){
-	positionTop = (projCounter > 1) ? 670 + (50 * projCounter) : 670 + (40 * projCounter);
+	positionTop = (projCounter > 1) ? 800 + (50 * projCounter) : 800 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer' + skillsCounter + '"></div>')
 	projTitleContainer = $('#projTitleContainer' + skillsCounter);

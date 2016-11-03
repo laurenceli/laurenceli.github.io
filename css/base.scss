@@ -169,12 +169,12 @@ h2{
 
 h3{
 	@include resetBoxModel();
-	@include fontHind(90%, normal, 2px);
+	@include fontHind(100%, normal, 2px);
 }
 
 h4{
 	@include resetBoxModel();
-	@include fontHind(80%, normal, 1px);
+	@include fontHind(100%, normal, 1px);
 }
 
 h5{
