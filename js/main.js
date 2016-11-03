@@ -10,6 +10,9 @@ var educationArray = [];
 var pBolded = false;
 var lBolded = false;
 
+var cherrypickerURL = "images/cherrypicker-mockup.jpg";
+var friendmapURL = "images/friendmap-mockup.jpg";
+
 var dls1Array = ["Junior Developer (May 2016 - August 2016)"];
 var dls2Array = ["Technical Support Coordinator (May 2014 - August 2014)"];
 var emptyArray = [""];
@@ -47,8 +50,8 @@ function showMainPage(){
 }
 
 function drawMainPage(){
-	drawProjectPanel(projectsArray[0], "Cherrypicker");
-	drawProjectPanel(projectsArray[1], "FriendMap");
+	drawProjectPanel(projectsArray[0], "Cherrypicker", cherrypickerURL);
+	drawProjectPanel(projectsArray[1], "Friendmap", friendmapURL);
 
 	mainContainer.append('<div id="centerBanner"></div>')
 	var centerBanner = $('#centerBanner');
@@ -144,13 +147,13 @@ function boldTitle(id){
 	$('#' + id + 'Title0').addClass('aCTitleBold');
 }
 
-function drawProjectPanel(project, ID){
+function drawProjectPanel(project, ID, url){
 	// init project image
 	mainContainer.append('<div class="projectImage image" id="pImage' + ID + '"></div>'); 
 	pPanelsArray[pPanelsCounter] = $('#pImage' + ID);
 
 	pPanelsArray[pPanelsCounter]
-		.css("background", "url(" + project.image + ") no-repeat")
+		.css("background", "url(" + url + ") no-repeat")
 		.css("background-size", "cover");
 
 	// init project overlay, hover functionality in css
