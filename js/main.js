@@ -4,9 +4,6 @@ var skillsTitleContainer;
 var skillsContainer;
 var expSubtitleContainer;
 var pModal;
-var skillsArray = [];
-var projectsArray = [];
-var educationArray = [];
 var pBolded = false;
 var lBolded = false;
 
@@ -20,24 +17,24 @@ var emptyArray = [""];
 var pPanelsArray = [];
 var pPanelsCounter = 0;
 
-var xmlhttp = new XMLHttpRequest();
-var url = "js/aboutData.json";
+// var xmlhttp = new XMLHttpRequest();
+// var url = "js/aboutData.json";
 
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        assignArrays(myArr);
-    }
-};
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+// xmlhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//         var myArr = JSON.parse(this.responseText);
+//         assignArrays(myArr);
+//     }
+// };
+// xmlhttp.open("GET", url, true);
+// xmlhttp.send();
 
-function assignArrays(arr) {
-	skillsArray = arr.skills;
-	experienceArray = arr.experience;
-	projectsArray = arr.projects;
-	educationArray = arr.education;
-}
+// function assignArrays(arr) {
+// 	skillsArray = arr.skills;
+// 	experienceArray = arr.experience;
+// 	projectsArray = arr.projects;
+// 	educationArray = arr.education;
+// }
 
 $( window ).resize(function() {
 	mainContainer.css("height", "100%");
