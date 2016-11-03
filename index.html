@@ -35,6 +35,7 @@
 		        assignArrays(myArr);
 		    }
 		};
+
 		xmlhttp.open("GET", url, true);
 		xmlhttp.send();
 
@@ -43,15 +44,15 @@
 			experienceArray = arr.experience;
 			projectsArray = arr.projects;
 			educationArray = arr.education;
+			drawMainPage();
 		}
-		$( document ).ready(function() {
 
-			alert("Still under construction, bear with me :)")
-		    drawMainPage();
-		});
+		// $( document ).ready(function() {
+		// 	alert("Still under construction, bear with me :)")
+		//     drawMainPage();
+		// });
 
 		var body = $(document.body);
-
 		body.append('<div id="mainContainer"></div>');
 		var mainContainer = $('#mainContainer');
 		mainContainer.css("height", "100%").css("overflow", "auto");
