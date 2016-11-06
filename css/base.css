@@ -225,11 +225,11 @@ h5 {
 
 .projectModal {
   position: fixed;
-  width: 600px;
-  height: 440px;
-  border-radius: 8px;
+  width: 585px;
+  height: 425px;
+  border-radius: 3px;
   background-color: #f7f7f7;
-  padding: 30px 0px 30px 0px;
+  padding: 25px 0px 25px 0px;
   text-align: center;
   top: 50%;
   left: 50%;

@@ -361,7 +361,6 @@ function drawModal(project){
 		.css("color", "#48e59f")
 		.css("font-size", "150%")
 		.css("letter-spacing", "1px")
-		.css("margin", "0px")
 		;
 
 	pModal.append('<h5 id="modalSubtitle' + project.ID + '">' + project.modalInfo.modalSub + ' // ' + project.subtitle + '</h5>');
@@ -370,7 +369,7 @@ function drawModal(project){
 		.css("color", "#323232")
 		.css("font-size", "80%")
 		.css("letter-spacing", "1px")
-		.css("margin-top", "5px")
+		.css("margin-top", "10px")
 		;
 
 	pModal.append('<div id="mInfoContainer' + project.ID + '"></div>');
@@ -549,6 +548,7 @@ function drawModal(project){
 		.css("color", "#323232")
 		.css("font-size", "80%")
 		.css("letter-spacing", "1px")
+		.css("margin-top", "10px")
 		.css("margin-right", "0px")
 		.on('click', function(){
 			window.open(project.github, '_blank' );
@@ -565,6 +565,7 @@ function drawModal(project){
 			.css("color", "#323232")
 			.css("font-size", "80%")
 			.css("letter-spacing", "1px")
+			.css("margin-top", "10px")
 			.css("margin-left", "15px")
 			.on('click', function(){
 				window.open(project.link, '_blank' );
