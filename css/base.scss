@@ -7,10 +7,12 @@ $workSans: Work Sans, sans-serif;
 
 $highlightGreen: #48e59f;
 $menuGrey: #323232;
-$subtitleTeal: #8AB0AB;
+$subtitleTeal: #6e8c88;
 $backgroundWhite: #f7f7f7;
-$textColor: #999999;
-
+$textColor: rgba(0,0,0,0.4);
+$defaultBlack: rgba(0,0,0,0.65);
+$defaultGrey: rgba(0,0,0,0.4);
+//#a1bfbb
 
 /////////////
 ////MIXINS
@@ -159,7 +161,7 @@ body{
 /////////////
 h1{
 	@include resetBoxModel();
-	@include fontWorkSans(400%, 200, 1px);
+	@include fontWorkSans(400%, 300, 1px);
 }
 
 h2{
@@ -208,12 +210,12 @@ h5{
 
 #bannerTitle{
 	@extend .bannerElement;
-	color: #6e8c88;
+	color: $defaultBlack;
 }
 
 #bannerSubtitle{
 	@extend .bannerElement;
-	color:  #a1bfbb;
+	color:  $defaultGrey;
 }
 
 #infoSection{
@@ -224,21 +226,24 @@ h5{
 	@include pseudo();
 	width: 200px;
 	height: 50px;
-	color: $subtitleTeal;
+	color: $defaultBlack;
 	text-align: right;
 }
 
 .aCTitleBold{
 	@extend .aCTitles;
 	@include fontMontserrat(100%, false, false);
-  	//top: 0px;
-  	color: #6e8c88;
+  	color: $highlightGreen;
 }
 
 .aCText{
 	@include pseudo();
-	color: $textColor;
+	color: $defaultGrey;
 	text-align: left;
+}
+
+.aCSub{
+	color: $defaultGrey;
 }
 
 .filterButton{

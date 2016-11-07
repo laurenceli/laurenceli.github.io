@@ -59,7 +59,7 @@ h1 {
   padding: 0px;
   font-family: Work Sans, sans-serif;
   font-size: 400%;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px; }
 
 h2 {
@@ -112,10 +112,10 @@ h5 {
   position: absolute; }
 
 #bannerTitle {
-  color: #6e8c88; }
+  color: rgba(0, 0, 0, 0.65); }
 
 #bannerSubtitle {
-  color: #a1bfbb; }
+  color: rgba(0, 0, 0, 0.4); }
 
 #infoSection {
   background-color: #f7f7f7; }
@@ -126,20 +126,23 @@ h5 {
   position: absolute;
   width: 200px;
   height: 50px;
-  color: #8AB0AB;
+  color: rgba(0, 0, 0, 0.65);
   text-align: right; }
 
 .aCTitleBold {
   font-family: Montserrat, sans-serif;
   font-size: 100%;
-  color: #6e8c88; }
+  color: #48e59f; }
 
 .aCText {
   content: "";
   display: block;
   position: absolute;
-  color: #999999;
+  color: rgba(0, 0, 0, 0.4);
   text-align: left; }
+
+.aCSub {
+  color: rgba(0, 0, 0, 0.4); }
 
 .filterButton {
   font-family: Work Sans, sans-serif;

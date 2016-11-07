@@ -225,7 +225,7 @@ function drawEducation(targetArray, ID, text){
 			.css("top", positionTop + 30 + "px")
 			;
 		educationTitleContainer.append('<h3 id="educationSubtitle' + educationCounter + '" >' + targetArray.startDate + ' - ' + targetArray.endDate + '<h3>');
-		$('#educationSubtitle' + educationCounter).css("font-size", "75%").css("color", "#a1bfbb");
+		$('#educationSubtitle' + educationCounter).css("font-size", "75%").addClass("aCSub");
 
 		infoSection.append('<div class="aCText" id="educationContainer' + ID + '"></div>');
 		educationContainer = $('#educationContainer' + ID);
@@ -289,7 +289,7 @@ function drawExperience(targetArray, ID, text){
 
 	if(expCounter != 0){
 		expTitleContainer.append('<h3 id="expSubtitleContainer' + expCounter + '" >' + targetArray.startDate + ' - ' + targetArray.endDate + '<h3>');
-		$('#expSubtitleContainer' + expCounter).css("font-size", "75%").css("color", "#a1bfbb");
+		$('#expSubtitleContainer' + expCounter).css("font-size", "75%").addClass("aCSub");
 
 		expSubtitleContainer = $('#expSubtitleContainer' + expCounter);
 		expSubtitleContainer
@@ -298,7 +298,7 @@ function drawExperience(targetArray, ID, text){
 			;
 
 		expTitleContainer.append('<h3 id="expLocation' + expCounter + '" >' + targetArray.location + '<h3>');
-		$('#expLocation' + expCounter).css("font-size", "75%").css("color", "#a1bfbb");
+		$('#expLocation' + expCounter).css("font-size", "75%").addClass("aCSub");
 
 		expLocation = $('#expLocation' + expCounter);
 		expLocation
@@ -573,3 +573,14 @@ function drawModal(project){
 			;
 	}
 }
+
+// var pEntryContainer;
+// function drawProjectEntry(){
+// 	infoSection.append('<div id="pEntryContainer"></div>');
+// 	pEntryContainer = $('#pEntryContainer');
+
+// 	pEntryContainer
+// 		.css("position", "absolute")
+// 		.css("top", topVal)
+// 		.css("left", leftVal)
+// }
