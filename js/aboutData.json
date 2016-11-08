@@ -140,6 +140,7 @@
     {
       "ID": "Cherrypicker",
       "title": "CHERRYPICKER.IO",
+      "titleLower": "Cherrypicker.io",
       "subtitle": "Web Application",
       "hasLink": true,
       "link": "http://cherrypicker.io",
@@ -172,6 +173,7 @@
     {
       "ID": "Friendmap",
       "title": "FRIENDMAP",
+      "titleLower": "Friendmap",
       "subtitle": "Mobile Application",
       "hasLink": false,
       "link": "",
@@ -207,6 +209,7 @@
     {
       "ID": "laurenceligithubio",
       "title": "LAURNCELI.GITHUB.IO",
+      "titleLower": "laurenceli.github.io",
       "subtitle": "Website",
       "hasLink": true,
       "link": "https://laurenceli.github.io",
@@ -235,6 +238,7 @@
     {
       "ID": "vDM",
       "title": "VKEY DEVICE MANAGER",
+      "titleLower": "vKey Device Manager",
       "subtitle": "Web Application",
       "hasLink": false,
       "link": "",

@@ -109,7 +109,7 @@ function drawMainPage(){
 	drawExperience(experienceArray[0], "DLS1", "DLS Technology");
 	drawExperience(experienceArray[1], "DLS2", "DLS Technology");
 
-	drawProjects("PROJECTS");
+	drawProjects("PROJECTS", projectsArray);
 
 	boldTitle("education");
 	boldTitle("skills");
@@ -320,14 +320,17 @@ function drawExperience(targetArray, ID, text){
 }
 
 var projTitle;
-var projTitleContainer;
 var projCounter = 0;
+var projCounter;
+var projTitle;
+var projTitleContainer;
+var projContainer;
 
-function drawProjects(text){
+function drawProjects(text, array){
 	positionTop = (projCounter > 1) ? 800 + (50 * projCounter) : 800 + (40 * projCounter);
 
-	infoSection.append('<div class="aCTitles" id="projTitleContainer' + skillsCounter + '"></div>')
-	projTitleContainer = $('#projTitleContainer' + skillsCounter);
+	infoSection.append('<div class="aCTitles" id="projTitleContainer"></div>')
+	projTitleContainer = $('#projTitleContainer');
 
 	projTitleContainer
 		.css("left", "150px")
@@ -335,6 +338,11 @@ function drawProjects(text){
 		;
 
 	projTitleContainer.append('<h3 id="projTitle' + projCounter + '">' + text + '</h3>');
+
+	drawProjectEntry("CherrypickerText", array[0]);
+	drawProjectEntry("FriendmapText", array[1]);
+	drawProjectEntry("vDMText", array[3]);
+	drawProjectEntry("PersonalText", array[2]);
 }
 
 function drawModal(project){
@@ -574,13 +582,32 @@ function drawModal(project){
 	}
 }
 
-// var pEntryContainer;
-// function drawProjectEntry(){
-// 	infoSection.append('<div id="pEntryContainer"></div>');
-// 	pEntryContainer = $('#pEntryContainer');
+function drawProjectEntry(ID, project){
+	var positionTop, positionLeft;
 
-// 	pEntryContainer
-// 		.css("position", "absolute")
-// 		.css("top", topVal)
-// 		.css("left", leftVal)
-// }
+	positionTop = 840 + (40 * projCounter);
+
+	infoSection.append('<div class="aCTitles" id="projTitleContainer' + projCounter + '"></div>')
+	projTitleContainer = $('#projTitleContainer' + projCounter);
+
+	projTitleContainer
+		.css("left", "150px")
+		.css("top", positionTop + "px")
+		;
+
+	projTitleContainer.append('<h3 id="projTitle' + projCounter + '" >' + project.titleLower + '<h3>');
+
+	for(var i = 0; i < 1; i++){
+		positionLeft = (i == 0) ? 400 : $('#projContainer' + ID + (i - 1)).position().left + $('#projContainer' + ID + (i - 1)).width() + 30;
+
+		infoSection.append('<div class="aCText" id="projContainer' + ID + i + '"></div>');
+		projContainer = $('#projContainer' + ID + i);
+		projContainer			
+			.css("top", positionTop + "px")
+			.css("left", positionLeft + "px")
+			;
+
+		projContainer.append('<h4 id="skills' + ID + i + '">' + project.subtitle + '</h4>');
+	}
+	projCounter++;
+}
