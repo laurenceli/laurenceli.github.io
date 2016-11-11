@@ -119,8 +119,8 @@ function drawMainPage(){
 	setFilters("skillsSKILLS0", 0);
 	setFilters("skillsSKILLS1", 10);
 
-	setRollover("skillsSKILLS0", "HelHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHellolo");
-	setRollover("skillsSKILLS1", "pokpokpokpokpokpopokpokpokpokpokpokopokpokpokpokpokpopokpopok");
+	setRollover("skillsSKILLS0", "Very comfortable (with documentation). Significant experience from projects or academic/workplace exposure", 185, 45);
+	setRollover("skillsSKILLS1", "Still learning but possess working knowledge. Some experience from projects or at least 4 months academic exposure.", 200, 45);
 
 }
 
@@ -616,67 +616,43 @@ function drawProjectEntry(ID, project){
 	projCounter++;
 }
 
-var tooltip = [];
-var tooltipCount = 0;
-function setRollover(ID, text){
+var tooltip;
+function setRollover(ID, text, width, height){
 
 	var target = $('#' + ID);
 
-	target.append('<div id="tooltip' + ID + '"></div>');
+	target.append('<div class="tooltip" id="tooltip' + ID + '"></div>');
 
-	tooltip[tooltipCount] = $('#tooltip' + ID);
-	tooltip[tooltipCount]
+	tooltip = $('#tooltip' + ID);
+	tooltip
 		.text(text)
 		.css("word-wrap", "break-word")
 		.css("position", "absolute")
-		.css("top", target.position().top - 65 + "px")
+		.css("top", target.position().top - (height + 27) + "px")
 		.css("left", target.position().left + "px")
-		.css("border-radius", "1px")
+		.css("border-radius", "2px")
 		.css("padding", "10px")
-		.css("width", "200px")
-		.css("height", "40px")
+		.css("width", width + "px")
+		.css("height", height + "px")
 		.css("color", "rgba(255,255,255, 0.8)")
 		.css("background-color", "rgba(0,0,0,0.8)");
 
-	tooltip[tooltipCount].hide();
+	tooltip.hide();
 
 	target
-	.on("mouseover", (function(tooltipCopy){
-		return function(){
-			alert(tooltipCopy);
-		};
-	}), (tooltip))
-	.on("mouseout", (function(tooltipCopy){
-		return function(){
-			alert(tooltipCopy);
-			tooltipCopy.hide();
-		};
-	}), (tooltip))
-
-	tooltipCount++;
+	.on('mouseover', (function(tooltipCopy) {
+		return function() {showTooltip(tooltipCopy);}
+	})(tooltip))
+	.on('mouseout', (function(tooltipCopy){
+		return function() { hideTooltip(tooltipCopy);}
+	})(tooltip))
+	;
 }
 
-function drawTooltip(ID, parent, text){
-	parent.append('<div id="tooltip' + ID + '"></div>');
+function showTooltip(target){
+	target.show();
+}
 
-	tooltip[tooltipCount] = $('#tooltip' + ID);
-	tooltip[tooltipCount]
-		.text(text)
-		.css("word-wrap", "break-word")
-		.css("position", "absolute")
-		.css("top", parent.position().top - 65 + "px")
-		.css("left", parent.position().left + "px")
-		.css("border-radius", "1px")
-		.css("padding", "10px")
-		.css("width", "200px")
-		.css("height", "40px")
-		.css("color", "rgba(255,255,255, 0.8)")
-		.css("background-color", "rgba(0,0,0,0.8)");
-
-	tooltip[tooltipCount].hide();
-	tooltipCount++;
-	console.log(tooltip[tooltipCount]);
-
-	return tooltip[tooltipCount];
-	//tooltip.append('<p>' + text + '</p>')
+function hideTooltip(target){
+	target.hide();
 }
