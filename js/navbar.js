@@ -73,14 +73,14 @@ function drawLinksList(){
 }
 
 function drawSocialList(){
-	var socialText = ["613 794 4859", "li.laurence55@gmail.com", "github.com/laurenceli", "linkedin.com/in/laurenceli"];
+	var socialText = ["613 794 4859", "li.laurence55@gmail.com", "Github Profile", "LinkedIn Profile"];
 
 	navMenu.append('<div class="menuList" id="socialContainer"></div>')
 	socialContainer = $('#socialContainer');
 
 	socialContainer
 		.css("position", "absolute")
-		.css("bottom", "200px")
+		.css("bottom", "215px")
 		.css("right", "30px")
 		.css("z-index", 10)
 

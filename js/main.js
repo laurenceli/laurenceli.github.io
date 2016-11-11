@@ -118,6 +118,10 @@ function drawMainPage(){
 
 	setFilters("skillsSKILLS0", 0);
 	setFilters("skillsSKILLS1", 10);
+
+	setRollover("skillsSKILLS0", "HelHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHellolo");
+	setRollover("skillsSKILLS1", "pokpokpokpokpokpopokpokpokpokpokpokopokpokpokpokpokpopokpopok");
+
 }
 
 function setFilters(id, filter){
@@ -610,4 +614,69 @@ function drawProjectEntry(ID, project){
 		projContainer.append('<h4 id="skills' + ID + i + '">' + project.subtitle + '</h4>');
 	}
 	projCounter++;
+}
+
+var tooltip = [];
+var tooltipCount = 0;
+function setRollover(ID, text){
+
+	var target = $('#' + ID);
+
+	target.append('<div id="tooltip' + ID + '"></div>');
+
+	tooltip[tooltipCount] = $('#tooltip' + ID);
+	tooltip[tooltipCount]
+		.text(text)
+		.css("word-wrap", "break-word")
+		.css("position", "absolute")
+		.css("top", target.position().top - 65 + "px")
+		.css("left", target.position().left + "px")
+		.css("border-radius", "1px")
+		.css("padding", "10px")
+		.css("width", "200px")
+		.css("height", "40px")
+		.css("color", "rgba(255,255,255, 0.8)")
+		.css("background-color", "rgba(0,0,0,0.8)");
+
+	tooltip[tooltipCount].hide();
+
+	target
+	.on("mouseover", (function(tooltipCopy){
+		return function(){
+			alert(tooltipCopy);
+		};
+	}), (tooltip))
+	.on("mouseout", (function(tooltipCopy){
+		return function(){
+			alert(tooltipCopy);
+			tooltipCopy.hide();
+		};
+	}), (tooltip))
+
+	tooltipCount++;
+}
+
+function drawTooltip(ID, parent, text){
+	parent.append('<div id="tooltip' + ID + '"></div>');
+
+	tooltip[tooltipCount] = $('#tooltip' + ID);
+	tooltip[tooltipCount]
+		.text(text)
+		.css("word-wrap", "break-word")
+		.css("position", "absolute")
+		.css("top", parent.position().top - 65 + "px")
+		.css("left", parent.position().left + "px")
+		.css("border-radius", "1px")
+		.css("padding", "10px")
+		.css("width", "200px")
+		.css("height", "40px")
+		.css("color", "rgba(255,255,255, 0.8)")
+		.css("background-color", "rgba(0,0,0,0.8)");
+
+	tooltip[tooltipCount].hide();
+	tooltipCount++;
+	console.log(tooltip[tooltipCount]);
+
+	return tooltip[tooltipCount];
+	//tooltip.append('<p>' + text + '</p>')
 }
