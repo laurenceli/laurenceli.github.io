@@ -119,8 +119,8 @@ function drawMainPage(){
 	setFilters("skillsSKILLS0", 0);
 	setFilters("skillsSKILLS1", 10);
 
-	setRollover("skillsSKILLS0", "Very comfortable (with documentation). Significant experience from projects or academic/workplace exposure", 185, 45);
-	setRollover("skillsSKILLS1", "Still learning but possess working knowledge. Some experience from projects or at least 4 months academic exposure.", 200, 45);
+	setRollover("skillsSKILLS0", "Very comfortable (with documentation). Significant experience from projects or academic/workplace exposure.", 185, 45);
+	setRollover("skillsSKILLS1", "Working knowledge but still learning. Some experience from projects or at least 4 months academic exposure.", 185, 45);
 
 }
 
@@ -280,7 +280,7 @@ var expLocation;
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = (expCounter > 1) ? 520 + (70 * expCounter) : 520 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 520 + (100 * expCounter) : 520 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
@@ -319,6 +319,12 @@ function drawExperience(targetArray, ID, text){
 			;
 
 		expContainer.append('<h4 id="exp' + ID + '">' + targetArray.position + '</h4>');
+		$('#exp' + ID).css("color", "rgba(0,0,0,0.65)");
+
+		for(var i = 0; i < targetArray.summary.length; i++){
+			expContainer.append('<h4 id="expSummary' + ID + i + '">' + targetArray.summary[i] + '</h4>');
+			$('#expSummary' + ID + i).css("font-size", "90%");
+		}
 	}
 	expCounter++;
 }
@@ -331,7 +337,7 @@ var projTitleContainer;
 var projContainer;
 
 function drawProjects(text, array){
-	positionTop = (projCounter > 1) ? 800 + (50 * projCounter) : 800 + (40 * projCounter);
+	positionTop = (projCounter > 1) ? 900 + (50 * projCounter) : 900 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer"></div>')
 	projTitleContainer = $('#projTitleContainer');
@@ -589,7 +595,7 @@ function drawModal(project){
 function drawProjectEntry(ID, project){
 	var positionTop, positionLeft;
 
-	positionTop = 840 + (40 * projCounter);
+	positionTop = 940 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer' + projCounter + '"></div>')
 	projTitleContainer = $('#projTitleContainer' + projCounter);
@@ -635,7 +641,7 @@ function setRollover(ID, text, width, height){
 		.css("width", width + "px")
 		.css("height", height + "px")
 		.css("color", "rgba(255,255,255, 0.8)")
-		.css("background-color", "rgba(0,0,0,0.8)");
+		.css("background-color", "rgba(0,0,0,0.75)");
 
 	tooltip.hide();
 
