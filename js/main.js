@@ -323,7 +323,7 @@ function drawExperience(targetArray, ID, text){
 
 		for(var i = 0; i < targetArray.summary.length; i++){
 			expContainer.append('<h4 id="expSummary' + ID + i + '">' + targetArray.summary[i] + '</h4>');
-			$('#expSummary' + ID + i).css("font-size", "90%");
+			$('#expSummary' + ID + i).css("font-size", "80%");
 		}
 	}
 	expCounter++;
