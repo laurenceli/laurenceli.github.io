@@ -86,7 +86,7 @@
     },
     {
       "title": "Infrastructure",
-      "mobile": [
+      "infra": [
         {
           "text": "PostgreSQL",
           "level": 10,

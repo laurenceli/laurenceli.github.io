@@ -94,12 +94,13 @@ function drawMainPage(){
 		.css("left", "0px")
 		;
 
-	drawSkills(skillsArray[5].filters, skillsArray[5].title);
+	drawSkills(skillsArray[6].filters, skillsArray[6].title);
 	drawSkills(skillsArray[0].programming, skillsArray[0].title)
 	drawSkills(skillsArray[1].web, skillsArray[1].title);
 	drawSkills(skillsArray[2].mobile, skillsArray[2].title);
-	drawSkills(skillsArray[3].other, skillsArray[3].title);
-	drawSkills(skillsArray[4].language, skillsArray[4].title);
+	drawSkills(skillsArray[3].infra, skillsArray[3].title);
+	drawSkills(skillsArray[4].other, skillsArray[4].title);
+	drawSkills(skillsArray[5].language, skillsArray[5].title);
 
 	drawEducation(emptyArray, "EDUCATION", "EDUCATION");
 	drawEducation(educationArray[1], "uottawa", "University of Ottawa");
@@ -280,7 +281,7 @@ var expLocation;
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = (expCounter > 1) ? 520 + (100 * expCounter) : 520 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 560 + (100 * expCounter) : 560 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
@@ -337,7 +338,7 @@ var projTitleContainer;
 var projContainer;
 
 function drawProjects(text, array){
-	positionTop = (projCounter > 1) ? 900 + (50 * projCounter) : 900 + (40 * projCounter);
+	positionTop = (projCounter > 1) ? 940 + (50 * projCounter) : 940 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer"></div>')
 	projTitleContainer = $('#projTitleContainer');
@@ -595,7 +596,7 @@ function drawModal(project){
 function drawProjectEntry(ID, project){
 	var positionTop, positionLeft;
 
-	positionTop = 940 + (40 * projCounter);
+	positionTop = 980 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer' + projCounter + '"></div>')
 	projTitleContainer = $('#projTitleContainer' + projCounter);
