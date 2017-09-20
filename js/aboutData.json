@@ -97,26 +97,26 @@
       ]
     },
     {
-      "title": "Other",
+      "title": "DevOps",
       "other": [
         {
           "text": "Git/Github",
           "level": 5
         },
         {
-          "text": "Adobe Creative Suite",
+          "text": "Docker",
           "level": 5
         },
         {
-          "text": "Windows",
+          "text": "Selenium",
           "level": 5
         },
         {
-          "text": "macOS",
+          "text": "Agile Development",
           "level": 5
         },
         {
-          "text": "Linux",
+          "text": "Jira",
           "level": 5
         }
       ]
@@ -280,8 +280,27 @@
   ],
   "experience": [
   {
+    "company": "Rubikloud",
+    "position": "Software Developer Intern",
+    "startDate": "May 2017",
+    "endDate": "August 2017",
+    "location": "Toronto, Ontario",
+    "skills": [
+      "Java",
+      "React",
+      "PostgreSQL",
+      "Selenium"
+    ],
+    "environment": "MacOS",
+    "summary": [
+      "Developed comprehensive UI/UX autotesting scripts using Selenium.",
+      "Implemented data validation of front-end information using PostgreSQL and Java.",
+      "Improved code structure of front-end application in React to facilitate testing."
+    ]
+  },
+  {
     "company": "DLS Technology Corporation",
-    "position": "Junior Developer (Summer Intern)",
+    "position": "Front-End Developer Intern",
     "startDate": "May 2016",
     "endDate": "August 2016",
     "location": "Ottawa, Ontario",
@@ -301,7 +320,7 @@
   },
   {
     "company": "DLS Technology Corporation",
-    "position": "Technical Support Coordinator (Summer Intern)",
+    "position": "Technical Support Coordinator",
     "startDate": "May 2014",
     "endDate": "August 2014",
     "location": "Ottawa, Ontario",
@@ -327,9 +346,9 @@
   },
   {
     "school": "UNIVERSITY OF OTTAWA",
-    "program": "Candidate B. Science in Computer Science",
+    "program": "B. Science in Computer Science",
     "startDate": "September 2014",
-    "endDate": "Present"
+    "endDate": "May 2018"
   }
   ]
 }
