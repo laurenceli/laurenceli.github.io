@@ -108,7 +108,7 @@ function drawMainPage(){
 
 	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
 	drawExperience(experienceArray[0], "RUBI", "Rubikloud");
-	drawExperience(experienceArray[1], "DLS1", "DLS Technology1");
+	drawExperience(experienceArray[1], "DLS1", "DLS Technology");
 	drawExperience(experienceArray[2], "DLS2", "DLS Technology");
 
 	drawProjects("PROJECTS", projectsArray);
@@ -282,7 +282,7 @@ var expLocation;
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = (expCounter > 1) ? 560 + (100 * expCounter) : 560 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 560 + (90 * expCounter) + (90 * (expCounter - 2)) : 560 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
@@ -339,7 +339,7 @@ var projTitleContainer;
 var projContainer;
 
 function drawProjects(text, array){
-	positionTop = (projCounter > 1) ? 940 + (50 * projCounter) : 940 + (40 * projCounter);
+	positionTop = (projCounter > 1) ? 1100 + (50 * projCounter) : 1100 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer"></div>')
 	projTitleContainer = $('#projTitleContainer');
@@ -597,7 +597,7 @@ function drawModal(project){
 function drawProjectEntry(ID, project){
 	var positionTop, positionLeft;
 
-	positionTop = 980 + (40 * projCounter);
+	positionTop = 1150 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer' + projCounter + '"></div>')
 	projTitleContainer = $('#projTitleContainer' + projCounter);
