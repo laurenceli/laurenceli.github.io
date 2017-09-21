@@ -109,7 +109,7 @@ function drawMainPage(){
 	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
 	drawExperience(experienceArray[0], "RUBI", "Rubikloud");
 	drawExperience(experienceArray[1], "DLS1", "DLS Technology");
-	drawExperience(experienceArray[1], "DLS1", "DLS Technology");
+	drawExperience(experienceArray[1], "DLS2", "DLS Technology");
 
 	drawProjects("PROJECTS", projectsArray);
 
