@@ -69,7 +69,7 @@ function drawLinksList(){
 	}
 
 	setClickable(linksText[1], "https://github.com/laurenceli");
-	setClickable(linksText[2], "docs/laurenceli_resume_2017.pdf");
+	setClickable(linksText[2], "docs/laurenceli_resume_dev.pdf");
 }
 
 function drawSocialList(){
