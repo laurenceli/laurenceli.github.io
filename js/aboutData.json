@@ -150,36 +150,6 @@
   ],
   "projects": [
     {
-      "ID": "promoManager",
-      "title": "PROMOTION MANAGER",
-      "titleLower": "Promotion Manager",
-      "subtitle": "Web Application",
-      "hasLink": false,
-      "link": "",
-      "image": "",
-      "hasGithub": false,
-      "github": "",
-      "modalInfo": {
-        "modalSub": "Enterprise Software",
-        "date": "Development from May 2016 - August 2016",
-        "role": "Front-End",
-        "collabs": [
-          "Laurence Li"
-        ],
-        "collabsLinks": [
-          "laurenceli"
-        ],
-        "tech": [
-          "Java",
-          "PostgreSQL",
-          "React",
-          "Selenium",
-          "Docker"
-        ],
-        "description": "A enterprise software solution for retailers, leveraging machine learning to display visualized comprehensive sales data, optimized forecasts and promotion recommendations."
-      }
-    },
-    {
       "ID": "Cherrypicker",
       "title": "CHERRYPICKER.IO",
       "titleLower": "Cherrypicker.io",
@@ -306,7 +276,37 @@
         ],
         "description": "An enterprise software solution for managing physical media containing mobile desktop software. Keeps track of hundreds of devices; allowing for building, reassigning and editing of devices."
       }
-    }
+    },
+    {
+      "ID": "promoManager",
+      "title": "PROMOTION MANAGER",
+      "titleLower": "Promotion Manager",
+      "subtitle": "Web Application",
+      "hasLink": false,
+      "link": "",
+      "image": "",
+      "hasGithub": false,
+      "github": "",
+      "modalInfo": {
+        "modalSub": "Enterprise Software",
+        "date": "Development from May 2016 - August 2016",
+        "role": "Front-End",
+        "collabs": [
+          "Laurence Li"
+        ],
+        "collabsLinks": [
+          "laurenceli"
+        ],
+        "tech": [
+          "Java",
+          "PostgreSQL",
+          "React",
+          "Selenium",
+          "Docker"
+        ],
+        "description": "A enterprise software solution for retailers, leveraging machine learning to display visualized comprehensive sales data, optimized forecasts and promotion recommendations."
+      }
+    },
   ],
   "experience": [
   {

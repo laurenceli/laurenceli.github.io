@@ -104,7 +104,6 @@ function drawMainPage(){
 
 	drawEducation(emptyArray, "EDUCATION", "EDUCATION");
 	drawEducation(educationArray[1], "uottawa", "University of Ottawa");
-	drawEducation(educationArray[0], "uwo", "University of Waterloo");
 
 	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
 	drawExperience(experienceArray[0], "RUBI", "Rubikloud");
