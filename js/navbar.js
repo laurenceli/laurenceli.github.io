@@ -68,8 +68,8 @@ function drawLinksList(){
 		linkElements[i] = $('#' + linksText[i]);
 	}
 
-	setClickable(linksText[1], "https://github.com/laurenceli");
-	setClickable(linksText[2], "docs/laurenceli_resume_dev.pdf");
+	setClickable(linksText[0], "https://github.com/laurenceli");
+	setClickable(linksText[1], "docs/laurenceli_resume_v5.pdf");
 }
 
 function drawSocialList(){
