@@ -150,6 +150,36 @@
   ],
   "projects": [
     {
+      "ID": "promoManager",
+      "title": "PROMOTION MANAGER",
+      "titleLower": "Promotion Manager",
+      "subtitle": "Web Application",
+      "hasLink": false,
+      "link": "",
+      "image": "",
+      "hasGithub": false,
+      "github": "",
+      "modalInfo": {
+        "modalSub": "Enterprise Software",
+        "date": "Development from May 2016 - August 2016",
+        "role": "Front-End",
+        "collabs": [
+          "Laurence Li"
+        ],
+        "collabsLinks": [
+          "laurenceli"
+        ],
+        "tech": [
+          "Java",
+          "PostgreSQL",
+          "React",
+          "Selenium",
+          "Docker"
+        ],
+        "description": "A enterprise software solution for retailers, leveraging machine learning to display visualized comprehensive sales data, optimized forecasts and promotion recommendations."
+      }
+    },
+    {
       "ID": "Cherrypicker",
       "title": "CHERRYPICKER.IO",
       "titleLower": "Cherrypicker.io",
@@ -298,7 +328,7 @@
       "Performed SQL optimization, improving query performances by up to 80%",
       "Improved code structure of front-end application in React to facilitate testing.",
       "Implemented feature enhancements such as email account activation and dynamic indicators.",
-      "Engaged in daily scrums and shipped on bi-weekly sprints."
+      "Engaged in daily scrums and shipped on bi-weekly sprints.",
       "Reported and fixed bugs in production; took part in user testing."
     ]
   },
