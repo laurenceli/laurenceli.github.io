@@ -144,7 +144,6 @@ body{
 		@include easeAnimation(0.3s)
 	}
     &:hover {
-        color: white;
         &:before {
         	visibility: visible;
         	@include scaleX(1);

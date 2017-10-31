@@ -44,12 +44,10 @@ body {
     -moz-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
-  .clickableLink:hover {
-    color: white; }
-    .clickableLink:hover:before {
-      visibility: visible;
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1); }
+  .clickableLink:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
 
 .notClickable {
   color: white; }
@@ -169,14 +167,6 @@ h5 {
   -moz-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out; }
-
-.tooltip {
-  color: red; }
-  .tooltip:after {
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out; }
 
 .projectImage {
   content: "";

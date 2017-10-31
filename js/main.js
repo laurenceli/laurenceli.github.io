@@ -3,6 +3,7 @@ var programmingSkills;
 var skillsTitleContainer;
 var skillsContainer;
 var expSubtitleContainer;
+var projSubtitleContainer;
 var pModal;
 var pBolded = false;
 var lBolded = false;
@@ -94,6 +95,8 @@ function drawMainPage(){
 		.css("left", "0px")
 		;
 
+	drawContact();
+
 	drawSkills(skillsArray[6].filters, skillsArray[6].title);
 	drawSkills(skillsArray[0].programming, skillsArray[0].title)
 	drawSkills(skillsArray[1].web, skillsArray[1].title);
@@ -103,7 +106,7 @@ function drawMainPage(){
 	drawSkills(skillsArray[5].language, skillsArray[5].title);
 
 	drawEducation(emptyArray, "EDUCATION", "EDUCATION");
-	drawEducation(educationArray[1], "uottawa", "University of Ottawa");
+	drawEducation(educationArray[0], "uottawa", "University of Ottawa");
 
 	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
 	drawExperience(experienceArray[0], "RUBI", "Rubikloud");
@@ -112,6 +115,7 @@ function drawMainPage(){
 
 	drawProjects("PROJECTS", projectsArray);
 
+	boldTitle("contact");
 	boldTitle("education");
 	boldTitle("skills");
 	boldTitle("exp");
@@ -244,12 +248,57 @@ function drawEducation(targetArray, ID, text){
 	educationCounter++;
 }
 
+function drawContact(){
+	infoSection.append('<div class="aCTitles" id="contactTitleContainer"></div>')
+	contactTitleContainer = $('#contactTitleContainer');
+
+	contactTitleContainer
+		.css("left", "150px")
+		.css("top", "1930px")
+		;
+
+	contactTitleContainer.append('<h3 id="contactTitle0" >CONTACT<h3>');
+
+	infoSection.append('<div class="aCText" id="email">li.laurence55@gmail.com</div>');
+	email = $('#email');
+	email			
+		.css("top", "1930px")
+		.css("left", "400px")
+	;
+
+	infoSection.append('<div class="aCText" id="phone">613 794 4859</div>');
+	phone = $('#phone');
+	phone			
+		.css("top", "1960px")
+		.css("left", "400px")
+	;
+
+	infoSection.append('<div class="aCText" id="github">Github</div>');
+	github = $('#github');
+	github			
+		.css("top", "1990px")
+		.css("left", "400px")
+		.addClass('clickableLink')
+		.on('click', function(){ window.open('https://github.com/laurenceli', '_blank')})
+	;
+
+	infoSection.append('<div class="aCText" id="linkedin">Linkedin</div>');
+	linkedin = $('#linkedin');
+	linkedin			
+		.css("top", "2020px")
+		.css("left", "400px")
+		.css("margin-bottom", "30px")
+		.addClass('clickableLink')
+		.on('click', function(){ window.open('linkedin.com/in/laurenceli', '_blank')})
+	;
+}
+
 var skillsCounter = 0;
 
 function drawSkills(targetArray, ID){
 	var positionTop, positionLeft;
 
-	positionTop = 220 + (40 * skillsCounter);
+	positionTop = 140 + (40 * skillsCounter);
 
 	infoSection.append('<div class="aCTitles" id="skillsTitleContainer' + skillsCounter + '"></div>')
 	skillsTitleContainer = $('#skillsTitleContainer' + skillsCounter);
@@ -281,7 +330,7 @@ var expLocation;
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = (expCounter > 1) ? 560 + (90 * expCounter) + (90 * (expCounter - 2)) : 560 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 480 + (100 * expCounter) + (70 * (expCounter - 2)) : 480 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
@@ -338,7 +387,7 @@ var projTitleContainer;
 var projContainer;
 
 function drawProjects(text, array){
-	positionTop = (projCounter > 1) ? 1100 + (50 * projCounter) : 1100 + (40 * projCounter);
+	positionTop = (projCounter > 1) ? 1020 + (50 * projCounter) : 1020 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer"></div>')
 	projTitleContainer = $('#projTitleContainer');
@@ -350,9 +399,11 @@ function drawProjects(text, array){
 
 	projTitleContainer.append('<h3 id="projTitle' + projCounter + '">' + text + '</h3>');
 
-	drawProjectEntry("CherrypickerText", array[0]);
-	drawProjectEntry("FriendmapText", array[1]);
+	drawProjectEntry("promoText", array[4]);
 	drawProjectEntry("vDMText", array[3]);
+	drawProjectEntry("CherrypickerText", array[0]);
+	drawProjectEntry("talkfolioText", array[5]);
+	drawProjectEntry("FriendmapText", array[1]);
 	drawProjectEntry("PersonalText", array[2]);
 }
 
@@ -596,7 +647,7 @@ function drawModal(project){
 function drawProjectEntry(ID, project){
 	var positionTop, positionLeft;
 
-	positionTop = 1150 + (40 * projCounter);
+	positionTop = 1060 + (140 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer' + projCounter + '"></div>')
 	projTitleContainer = $('#projTitleContainer' + projCounter);
@@ -618,7 +669,48 @@ function drawProjectEntry(ID, project){
 			.css("left", positionLeft + "px")
 			;
 
-		projContainer.append('<h4 id="skills' + ID + i + '">' + project.subtitle + '</h4>');
+		projTitleContainer.append('<h3 id="projSubtitleContainer' + ID + i + '" >For ' + project.modalInfo.client +'<h3>');
+		$('#projSubtitleContainer' + ID + i).css("font-size", "50%").addClass("aCSub");
+
+		projSubtitleContainer = $('#projSubtitleContainer' + ID + i);
+		projSubtitleContainer
+			.css("position", "absolute")
+			.css("width", "200px")
+			.css("left",  "0px")
+			.css("top", "25px")
+			;
+
+		projContainer.append('<h4 id="projectTitle' + ID + i + '">' + project.subtitle + '</h4>');
+		$('#projectTitle' + ID + i).css("color", "rgba(0,0,0,0.65)");
+
+		infoSection.append('<div class="aCText" id="projDescContainer' + ID + i + '"></div>');
+		projContainer = $('#projDescContainer' + ID + i);
+		projContainer			
+			.css("top", positionTop + 25 + "px")
+			.css("left", positionLeft + "px")
+			.css("width", "520px")
+			;
+
+		projContainer.append('<h4 id="projectDesc' + ID + i + '">' + project.modalInfo.fullDescription + '</h4>');
+		$('#projectDesc' + ID + i).css("font-size", "80%");
+
+		var techUsedString = "Technologies used: ";
+		for(var j = 0; j < project.modalInfo.tech.length; j++){
+			if(j == 0) techUsedString = techUsedString.concat(" " + project.modalInfo.tech[j] + "")
+			else techUsedString = techUsedString.concat(", " + project.modalInfo.tech[j] + "")
+		}
+
+		infoSection.append('<div class="aCText" id="projSkillsContainer' + ID + i + '"></div>');
+		projSkillsContainer = $('#projSkillsContainer' + ID + i);
+		projSkillsContainer			
+			.css("top", positionTop + 75 + "px")
+			.css("left", positionLeft + "px")
+			;
+
+		projSkillsContainer.append('<h4 id="projSkills' + ID + i + '">' + techUsedString + '</h4>');
+		$('#projSkills' + ID + i)
+			.css("font-size", "80%")
+		
 	}
 	projCounter++;
 }
