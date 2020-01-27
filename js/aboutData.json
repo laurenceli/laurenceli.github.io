@@ -94,7 +94,7 @@
     },
     {
       "title": "Metrics and Logging",
-      "other": [
+      "metrics": [
         {
           "text": "Sumo Logic",
           "level": 5,
@@ -120,7 +120,7 @@
     },
     {
       "title": "Workflow",
-      "language": [
+      "workflow": [
         {
           "text": "Atlassian (Jira / Confluence)",
           "level": 5,

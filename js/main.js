@@ -97,21 +97,21 @@ function drawMainPage(){
 
 	drawContact();
 
-	drawSkills(skillsArray[6].filters, skillsArray[6].title);
+	drawSkills(skillsArray[5].filters, skillsArray[5].title);
 	drawSkills(skillsArray[0].programming, skillsArray[0].title)
 	drawSkills(skillsArray[1].web, skillsArray[1].title);
-	drawSkills(skillsArray[2].mobile, skillsArray[2].title);
-	drawSkills(skillsArray[3].infra, skillsArray[3].title);
-	drawSkills(skillsArray[4].other, skillsArray[4].title);
-	drawSkills(skillsArray[5].language, skillsArray[5].title);
+	drawSkills(skillsArray[2].infra, skillsArray[2].title);
+	drawSkills(skillsArray[3].metrics, skillsArray[3].title);
+	drawSkills(skillsArray[4].workflow, skillsArray[4].title);
 
 	drawEducation(emptyArray, "EDUCATION", "EDUCATION");
 	drawEducation(educationArray[0], "uottawa", "University of Ottawa");
 
 	drawExperience(emptyArray, "EXPERIENCE", "EXPERIENCE");
-	drawExperience(experienceArray[0], "RUBI", "Rubikloud");
-	drawExperience(experienceArray[1], "DLS1", "DLS Technology");
-	drawExperience(experienceArray[2], "DLS2", "DLS Technology");
+	drawExperience(experienceArray[0], "XERO", "Xero (Hubdoc)");
+	drawExperience(experienceArray[1], "RUBI", "Rubikloud");
+	drawExperience(experienceArray[2], "DLS1", "DLS Technology");
+	drawExperience(experienceArray[3], "DLS2", "DLS Technology");
 
 	drawProjects("PROJECTS", projectsArray);
 
