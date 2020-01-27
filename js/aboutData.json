@@ -4,7 +4,7 @@
       "title": "Programming",
       "programming": [
         {
-          "text": "JavaScript",
+          "text": "JavaScript / Node.js",
           "level": 0,
           "experience": [
             "Cherrypicker.io",
@@ -20,20 +20,13 @@
             "Academic exposure"
           ]
         },
-        {
-          "text": "C++",
-          "level": 10,
-          "experience": [
-            "Minor academic exposure"
-          ]
-        }
       ]
     },
     {
       "title": "Web",
       "web": [
         {
-          "text": "HTML/CSS",
+          "text": "HTML/CSS/SASS",
           "level": 0,
           "experience": [
             "Cherrypicker.io",
@@ -50,10 +43,10 @@
           ]
         },
         {
-          "text": "React",
-          "level": 10,
+          "text": "Nightmare.js",
+          "level": 0,
           "experience": [
-            "Online tutorials"
+            "Xero (Hubdoc)"
           ]
         },
         {
@@ -63,74 +56,84 @@
             "Cherrypicker.io"
           ]
         },
-        {
-          "text": "SASS",
-          "level": 10,
-          "experience": [
-            "Personal Website"
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Mobile",
-      "mobile": [
-        {
-          "text": "React Native",
-          "level": 10,
-          "experience": [
-            "Friendmap"
-          ]
-        }
       ]
     },
     {
       "title": "Infrastructure",
       "infra": [
         {
-          "text": "PostgreSQL",
+          "text": "AWS (ECS,EC2,SQS)",
           "level": 10,
           "experience": [
-            "Academic Exposure"
+            "Xero (Hubdoc)"
+          ]
+        },
+        {
+          "text": "PostgreSQL",
+          "level": 0,
+          "experience": [
+            "Academic Exposure",
+            "Xero (Hubdoc)"
+          ]
+        },
+        {
+          "text": "Docker",
+          "level": 10,
+          "experience": [
+            "Xero (Hubdoc)"
+          ]
+        },
+        {
+          "text": "Redis",
+          "level": 10,
+          "experience": [
+            "Xero (Hubdoc)"
           ]
         }
       ]
     },
     {
-      "title": "DevOps",
+      "title": "Metrics and Logging",
       "other": [
         {
-          "text": "Git/Github",
-          "level": 5
+          "text": "Sumo Logic",
+          "level": 5,
+          "experience": [
+            "Xero (Hubdoc)"
+          ]
         },
         {
-          "text": "Docker",
-          "level": 5
+          "text": "Datadog",
+          "level": 5,
+          "experience": [
+            "Xero (Hubdoc)"
+          ]
         },
         {
-          "text": "Selenium",
-          "level": 5
+          "text": "AWS CloudWatch",
+          "level": 5,
+          "experience": [
+            "Xero (Hubdoc)"
+          ]
         },
-        {
-          "text": "Agile Development",
-          "level": 5
-        },
-        {
-          "text": "Jira",
-          "level": 5
-        }
       ]
     },
     {
-      "title": "Language",
+      "title": "Workflow",
       "language": [
         {
-          "text": "English",
-          "level": 5
+          "text": "Atlassian (Jira / Confluence)",
+          "level": 5,
+          "experience": [
+            "Xero (Hubdoc)"
+          ]
         },
         {
-          "text": "French",
-          "level": 5
+          "text": "Github / Git",
+          "level": 5,
+           "experience": [
+            "Xero (Hubdoc)"
+          ]
         }
       ]
     },
@@ -352,6 +355,28 @@
   ],
   "experience": [
   {
+    "company": "Xero (Hubdoc)",
+    "position": "Software Developer",
+    "startDate": "September 2018",
+    "endDate": "Present",
+    "location": "Toronto, Ontario",
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "environment": "MacOS",
+    "summary": [
+    "Implemented features for scraping platform, built on AWS; improving reliability and robustness for 80000+ daily jobs." 
+    "Maintained 700+ Node.js web scrapers, improving success rate by 70%+ on average, for 50000+ end users."
+    "Engineered rapid solutions for high priority connections, ensuring the fetch of 1000+ documents over several months."
+    "Participated in on-call rotation, performed code reviews daily and monitored platform performance metrics dashboards."
+    "Lead onboarding process improvements, reducing developer ramp-up time from roughly 3 weeks to 1 week."
+    "Conducted interviews, 1-on-1s and provided direct mentorship and evaluations to software developer interns."
+    ]
+  },
+  {
     "company": "Rubikloud",
     "position": "Software Developer Intern",
     "startDate": "May 2017",
@@ -365,11 +390,11 @@
     ],
     "environment": "MacOS",
     "summary": [
-      "Developed 50+ Java modules using the Selenium framework; improved test coverage from less than 10% to over 85%",
-      "Performed SQL optimization, improving query performances by up to 80%",
+      "Developed 50+ Selenium QA modules in Java for automated UI testing, improving coverage from 10% to over 85%.",
+      "Optimized SQL queries by up to 80%, satisfying strict performance thresholds.",
       "Implemented feature enhancements such as email account activation and dynamic indicators.",
       "Reported and fixed bugs in production; took part in user testing.",
-      "Engaged in daily scrums and shipped on bi-weekly sprints."
+      "Modified code structure of front-end application in React to improve maintainability and facilitate future testing."
     ]
   },
   {
@@ -386,11 +411,10 @@
     ],
     "environment": "Linux",
     "summary": [
-      "Developed 10+ reusable UI modules, making the platform maintainable and scalable.",
-      "Refactored 10 000+ line codebase to be fully responsive and use updated libraries.",
-      "Designed, iterated over and adapted UI wireframes into functioning front-end elements.",
-      "Modernized application UI/UX, improving usability and increasing aesthetic appeal to clients.",
-      "Implemented a server-side user login permissions solutions using PHP and JavaScript."
+    "Refactored 10000+ lines of JavaScript in dozens of modules to improve platform scalability and readability."
+    "Developed reusable web modules and built new application pages based on client specifications."
+    "Designed, iterated and adapted UI wireframes into functioning front-end elements, emphasising modern design patterns."
+    "Implemented a server-side user login permissions solutions using PHP and JavaScript."
     ]
   },
   {
