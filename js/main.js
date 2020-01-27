@@ -79,7 +79,7 @@ function drawMainPage(){
 
 	bannerTitle.addClass("bannerElement").css("top", "42px").css("left", "37px");//.css("color", "#8AB0AB");
 
-	bannerTitlesContainer.append('<h4 id="bannerSubtitle">Student // University of Ottawa // Computer Science</h4>')
+	bannerTitlesContainer.append('<h4 id="bannerSubtitle">Software Developer at Xero</h4>')
 	var bannerSubtitle = $('#bannerSubtitle')
 
 	bannerSubtitle.addClass("bannerElement").css("top", "115px").css("left", "43px");//.css("color", "#323232");

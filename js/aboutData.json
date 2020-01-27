@@ -364,16 +364,16 @@
       "JavaScript",
       "Node.js",
       "PostgreSQL",
-      "AWS"
+      "AWS",
     ],
     "environment": "MacOS",
     "summary": [
-    "Implemented features for scraping platform, built on AWS; improving reliability and robustness for 80000+ daily jobs." 
-    "Maintained 700+ Node.js web scrapers, improving success rate by 70%+ on average, for 50000+ end users."
-    "Engineered rapid solutions for high priority connections, ensuring the fetch of 1000+ documents over several months."
-    "Participated in on-call rotation, performed code reviews daily and monitored platform performance metrics dashboards."
-    "Lead onboarding process improvements, reducing developer ramp-up time from roughly 3 weeks to 1 week."
-    "Conducted interviews, 1-on-1s and provided direct mentorship and evaluations to software developer interns."
+      "Implemented features for scraping platform, built on AWS; improving reliability and robustness for 80000+ daily jobs.",
+      "Maintained 700+ Node.js web scrapers, improving success rate by 70%+ on average, for 50000+ end users.",
+      "Engineered rapid solutions for high priority connections, ensuring the fetch of 1000+ documents over several months.",
+      "Participated in on-call rotation, performed code reviews daily and monitored platform performance metrics dashboards.",
+      "Lead onboarding process improvements, reducing developer ramp-up time from roughly 3 weeks to 1 week.",
+      "Conducted interviews, 1-on-1s and provided direct mentorship and evaluations to software developer interns.",
     ]
   },
   {
@@ -411,10 +411,10 @@
     ],
     "environment": "Linux",
     "summary": [
-    "Refactored 10000+ lines of JavaScript in dozens of modules to improve platform scalability and readability."
-    "Developed reusable web modules and built new application pages based on client specifications."
-    "Designed, iterated and adapted UI wireframes into functioning front-end elements, emphasising modern design patterns."
-    "Implemented a server-side user login permissions solutions using PHP and JavaScript."
+    "Refactored 10000+ lines of JavaScript in dozens of modules to improve platform scalability and readability.",
+    "Developed reusable web modules and built new application pages based on client specifications.",
+    "Designed, iterated and adapted UI wireframes into functioning front-end elements, emphasising modern design patterns.",
+    "Implemented a server-side user login permissions solutions using PHP and JavaScript.",
     ]
   },
   {
