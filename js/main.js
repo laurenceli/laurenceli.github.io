@@ -254,7 +254,7 @@ function drawContact(){
 
 	contactTitleContainer
 		.css("left", "150px")
-		.css("top", "1930px")
+		.css("top", "2130px")
 		;
 
 	contactTitleContainer.append('<h3 id="contactTitle0" >CONTACT<h3>');
@@ -262,34 +262,38 @@ function drawContact(){
 	infoSection.append('<div class="aCText" id="email">li.laurence55@gmail.com</div>');
 	email = $('#email');
 	email			
-		.css("top", "1930px")
+		.css("top", "2130px")
 		.css("left", "400px")
+		.css("font-family", "Work Sans, sans-serif")
 	;
 
 	infoSection.append('<div class="aCText" id="phone">613 794 4859</div>');
 	phone = $('#phone');
 	phone			
-		.css("top", "1960px")
+		.css("top", "2160px")
 		.css("left", "400px")
+		.css("font-family", "Work Sans, sans-serif")
 	;
 
 	infoSection.append('<div class="aCText" id="github">Github</div>');
 	github = $('#github');
 	github			
-		.css("top", "1990px")
+		.css("top", "2190px")
 		.css("left", "400px")
 		.addClass('clickableLink')
 		.on('click', function(){ window.open('https://github.com/laurenceli', '_blank')})
+		.css("font-family", "Work Sans, sans-serif")
 	;
 
 	infoSection.append('<div class="aCText" id="linkedin">Linkedin</div>');
 	linkedin = $('#linkedin');
 	linkedin			
-		.css("top", "2020px")
+		.css("top", "2220px")
 		.css("left", "400px")
 		.css("margin-bottom", "30px")
 		.addClass('clickableLink')
 		.on('click', function(){ window.open('linkedin.com/in/laurenceli', '_blank')})
+		.css("font-family", "Work Sans, sans-serif")
 	;
 }
 
@@ -330,7 +334,7 @@ var expLocation;
 function drawExperience(targetArray, ID, text){
 	var positionTop, positionLeft;
 
-	positionTop = (expCounter > 1) ? 480 + (100 * expCounter) + (70 * (expCounter - 2)) : 480 + (40 * expCounter);
+	positionTop = (expCounter > 1) ? 480 + (100 * expCounter) + (70 * (expCounter - 2)) : 450 + (40 * expCounter);
 
 	infoSection.append('<div class="aCTitles" id="expTitleContainer' + expCounter + '"></div>')
 	expTitleContainer = $('#expTitleContainer' + expCounter);
@@ -381,13 +385,12 @@ function drawExperience(targetArray, ID, text){
 
 var projTitle;
 var projCounter = 0;
-var projCounter;
 var projTitle;
 var projTitleContainer;
 var projContainer;
 
 function drawProjects(text, array){
-	positionTop = (projCounter > 1) ? 1020 + (50 * projCounter) : 1020 + (40 * projCounter);
+	positionTop = (projCounter > 1) ? 1220 + (50 * projCounter) : 1220 + (40 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer"></div>')
 	projTitleContainer = $('#projTitleContainer');
@@ -647,7 +650,7 @@ function drawModal(project){
 function drawProjectEntry(ID, project){
 	var positionTop, positionLeft;
 
-	positionTop = 1060 + (140 * projCounter);
+	positionTop = 1260 + (140 * projCounter);
 
 	infoSection.append('<div class="aCTitles" id="projTitleContainer' + projCounter + '"></div>')
 	projTitleContainer = $('#projTitleContainer' + projCounter);
