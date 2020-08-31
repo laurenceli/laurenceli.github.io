@@ -13,18 +13,6 @@ body{
   background-color: #f7f7f7;
 }
 
-/*
-@font-face{
-	font-family: 'Kollektif';
-	src: url('fonts/Kollektif.ttf') format('truetype');
-}
-
-@font-face{
-	font-family: 'Norwester';
-	src: url('fonts/norwester.otf') format('opentype');
-}
-*/
-
 #mainContainer{
 	background-color: #f7f7f7;
 	z-index: 1;
