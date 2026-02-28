@@ -12,13 +12,14 @@ describe('Skills component', () => {
     expect(container.querySelector('#skills')).not.toBeNull();
   });
 
-  it('renders all five category titles', () => {
+  it('renders all six category titles', () => {
     const { getByText } = render(Skills, { props: { skills } });
-    expect(getByText('Programming')).toBeTruthy();
-    expect(getByText('Web')).toBeTruthy();
+    expect(getByText('Languages')).toBeTruthy();
     expect(getByText('Infrastructure')).toBeTruthy();
-    expect(getByText('Metrics')).toBeTruthy();
-    expect(getByText('Workflow')).toBeTruthy();
+    expect(getByText('Observability')).toBeTruthy();
+    expect(getByText('Datastores')).toBeTruthy();
+    expect(getByText('Workflow and CI/CD')).toBeTruthy();
+    expect(getByText('Cloud Providers')).toBeTruthy();
   });
 
   it('does NOT render "SKILLS" as a category heading', () => {
@@ -30,25 +31,23 @@ describe('Skills component', () => {
 
   it('renders known skill pills per category', () => {
     const { getByText } = render(Skills, { props: { skills } });
-    expect(getByText(/JavaScript \/ Node\.js/)).toBeTruthy();
-    expect(getByText(/HTML\/CSS\/SASS/)).toBeTruthy();
+    expect(getByText(/Node\.js \/ TypeScript/)).toBeTruthy();
+    expect(getByText(/Kubernetes/)).toBeTruthy();
     expect(getByText(/PostgreSQL/)).toBeTruthy();
-    expect(getByText(/Sumo Logic/)).toBeTruthy();
-    expect(getByText(/Github \/ Git/)).toBeTruthy();
+    expect(getByText(/New Relic/)).toBeTruthy();
+    expect(getByText(/Git & GitHub Actions/)).toBeTruthy();
   });
 
-  it('skill with level > 0 has "dim" CSS class', () => {
+  it('all skills have level 0 and no "dim" pills are rendered', () => {
     const { container } = render(Skills, { props: { skills } });
-    // D3 has level: 10 in the Web category
-    const pills = Array.from(container.querySelectorAll('.pill'));
-    const d3Pill = pills.find((p) => p.textContent?.trim() === 'D3');
-    expect(d3Pill?.classList.contains('dim')).toBe(true);
+    const dimPills = container.querySelectorAll('.pill.dim');
+    expect(dimPills).toHaveLength(0);
   });
 
   it('skill with level 0 does NOT have "dim" class', () => {
     const { container } = render(Skills, { props: { skills } });
     const pills = Array.from(container.querySelectorAll('.pill'));
-    const jsPill = pills.find((p) => p.textContent?.trim() === 'JavaScript / Node.js');
-    expect(jsPill?.classList.contains('dim')).toBe(false);
+    const tsPill = pills.find((p) => p.textContent?.trim() === 'Node.js / TypeScript');
+    expect(tsPill?.classList.contains('dim')).toBe(false);
   });
 });

@@ -18,6 +18,9 @@
           <div class="entry-left">
             <h3 class="school">{edu.school}</h3>
             <p class="program">{edu.program}</p>
+            {#if edu.minor}
+              <p class="minor">{edu.minor}</p>
+            {/if}
           </div>
           <div class="entry-right">
             <span class="dates">{edu.startDate} — {edu.endDate}</span>
@@ -57,6 +60,12 @@
   .program {
     font-size: 14px;
     color: var(--text-secondary);
+  }
+
+  .minor {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
   }
 
   .dates {

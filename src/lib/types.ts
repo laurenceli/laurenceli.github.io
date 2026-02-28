@@ -17,6 +17,10 @@ export interface SkillCategory {
   metrics?: SkillItem[];
   workflow?: SkillItem[];
   filters?: SkillFilter[];
+  languages?: SkillItem[];
+  observability?: SkillItem[];
+  datastores?: SkillItem[];
+  cloud?: SkillItem[];
 }
 
 export interface ProjectModalInfo {
@@ -58,6 +62,7 @@ export interface Experience {
 export interface Education {
   school: string;
   program: string;
+  minor?: string;
   startDate: string;
   endDate: string;
 }

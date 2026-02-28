@@ -12,9 +12,9 @@ describe('Experience component', () => {
     expect(container.querySelector('#experience')).not.toBeNull();
   });
 
-  it('renders 4 entries', () => {
+  it('renders 5 entries', () => {
     const { container } = render(Experience, { props: { experience } });
-    expect(container.querySelectorAll('.entry')).toHaveLength(4);
+    expect(container.querySelectorAll('.entry')).toHaveLength(5);
   });
 
   it('renders company names', () => {
@@ -26,7 +26,8 @@ describe('Experience component', () => {
 
   it('renders position titles', () => {
     const { getAllByText } = render(Experience, { props: { experience } });
-    expect(getAllByText('Software Developer').length).toBeGreaterThan(0);
+    expect(getAllByText('Infrastructure Engineer').length).toBeGreaterThan(0);
+    expect(getAllByText('Software Engineer').length).toBeGreaterThan(0);
     expect(getAllByText('Software Developer Intern').length).toBeGreaterThan(0);
     expect(getAllByText('Front-End Developer Intern').length).toBeGreaterThan(0);
   });
@@ -34,7 +35,7 @@ describe('Experience component', () => {
   it('renders start/end dates for first entry', () => {
     const { container } = render(Experience, { props: { experience } });
     const firstEntry = container.querySelectorAll('.entry')[0];
-    expect(firstEntry.textContent).toContain('September 2018');
+    expect(firstEntry.textContent).toContain('September 2022');
     expect(firstEntry.textContent).toContain('Present');
   });
 
@@ -49,7 +50,7 @@ describe('Experience component', () => {
     const chips = firstEntry.querySelectorAll('.chip');
     expect(chips.length).toBeGreaterThan(0);
     const chipTexts = Array.from(chips).map((c) => c.textContent?.trim());
-    expect(chipTexts).toContain('JavaScript');
+    expect(chipTexts).toContain('Kubernetes');
   });
 
   it('renders at least one summary bullet for first entry', () => {

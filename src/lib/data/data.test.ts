@@ -71,21 +71,30 @@ describe('data.json shape', () => {
     const titles = data.skills.map((s) => s.title);
 
     it('includes all required category titles', () => {
-      expect(titles).toContain('Programming');
-      expect(titles).toContain('Web');
+      expect(titles).toContain('Languages');
       expect(titles).toContain('Infrastructure');
-      expect(titles).toContain('Metrics');
-      expect(titles).toContain('Workflow');
+      expect(titles).toContain('Observability');
+      expect(titles).toContain('Datastores');
+      expect(titles).toContain('Workflow and CI/CD');
+      expect(titles).toContain('Cloud Providers');
     });
 
     it('skill items have text (string) and level (number)', () => {
-      const contentCategories = ['Programming', 'Web', 'Infrastructure', 'Metrics', 'Workflow'];
+      const contentCategories = [
+        'Languages',
+        'Infrastructure',
+        'Observability',
+        'Datastores',
+        'Workflow and CI/CD',
+        'Cloud Providers',
+      ];
       const keyMap: Record<string, string> = {
-        Programming: 'programming',
-        Web: 'web',
+        Languages: 'languages',
         Infrastructure: 'infra',
-        Metrics: 'metrics',
-        Workflow: 'workflow',
+        Observability: 'observability',
+        Datastores: 'datastores',
+        'Workflow and CI/CD': 'workflow',
+        'Cloud Providers': 'cloud',
       };
       for (const cat of data.skills.filter((s) => contentCategories.includes(s.title))) {
         const key = keyMap[cat.title] as keyof typeof cat;

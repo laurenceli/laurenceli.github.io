@@ -17,9 +17,14 @@ describe('Education component', () => {
     expect(getByText('University of Ottawa')).toBeTruthy();
   });
 
-  it('renders program "Bachelor Science in Computer Science"', () => {
+  it('renders program "Bachelor of Science in Computer Science"', () => {
     const { getByText } = render(Education, { props: { education } });
-    expect(getByText('Bachelor Science in Computer Science')).toBeTruthy();
+    expect(getByText('Bachelor of Science in Computer Science')).toBeTruthy();
+  });
+
+  it('renders minor "Minor in Management"', () => {
+    const { getByText } = render(Education, { props: { education } });
+    expect(getByText('Minor in Management')).toBeTruthy();
   });
 
   it('renders date range', () => {
