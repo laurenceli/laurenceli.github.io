@@ -6,19 +6,12 @@
         {
           "text": "JavaScript / Node.js",
           "level": 0,
-          "experience": [
-            "Cherrypicker.io",
-            "Friendmap",
-            "vDM",
-            "Personal Website"
-          ]
+          "experience": ["Cherrypicker.io", "Friendmap", "vDM", "Personal Website"]
         },
         {
           "text": "Java",
           "level": 0,
-          "experience": [
-            "Academic exposure"
-          ]
+          "experience": ["Academic exposure"]
         }
       ]
     },
@@ -28,33 +21,22 @@
         {
           "text": "HTML/CSS/SASS",
           "level": 0,
-          "experience": [
-            "Cherrypicker.io",
-            "Personal Website"
-          ]
+          "experience": ["Cherrypicker.io", "Personal Website"]
         },
         {
           "text": "jQuery",
           "level": 0,
-          "experience": [
-            "Cherrypicker.io",
-            "vDM",
-            "Personal Website"
-          ]
+          "experience": ["Cherrypicker.io", "vDM", "Personal Website"]
         },
         {
           "text": "Nightmare.js",
           "level": 0,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         },
         {
           "text": "D3",
           "level": 10,
-          "experience": [
-            "Cherrypicker.io"
-          ]
+          "experience": ["Cherrypicker.io"]
         }
       ]
     },
@@ -64,31 +46,22 @@
         {
           "text": "AWS (ECS,EC2,SQS)",
           "level": 10,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         },
         {
           "text": "PostgreSQL",
           "level": 0,
-          "experience": [
-            "Academic Exposure",
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Academic Exposure", "Xero (Hubdoc)"]
         },
         {
           "text": "Docker",
           "level": 10,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         },
         {
           "text": "Redis",
           "level": 10,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         }
       ]
     },
@@ -98,23 +71,17 @@
         {
           "text": "Sumo Logic",
           "level": 5,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         },
         {
           "text": "Datadog",
           "level": 5,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         },
         {
           "text": "AWS CloudWatch",
           "level": 5,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         }
       ]
     },
@@ -124,16 +91,12 @@
         {
           "text": "Atlassian (Jira / Confluence)",
           "level": 5,
-          "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         },
         {
           "text": "Github / Git",
           "level": 5,
-           "experience": [
-            "Xero (Hubdoc)"
-          ]
+          "experience": ["Xero (Hubdoc)"]
         }
       ]
     },
@@ -166,22 +129,9 @@
         "modalSub": "Basketball Statistics Visualization",
         "date": "Live (but development ongoing)",
         "role": "Full-Stack",
-        "collabs": [
-          "Laurence Li",
-          "Victor Thibert"
-        ],
-        "collabsLinks": [
-          "laurenceli",
-          "VictorThibert"
-        ],
-        "tech": [
-          "JavaScript",
-          "jQuery",
-          "D3",
-          "HTML",
-          "CSS",
-          "PHP"
-        ],
+        "collabs": ["Laurence Li", "Victor Thibert"],
+        "collabsLinks": ["laurenceli", "VictorThibert"],
+        "tech": ["JavaScript", "jQuery", "D3", "HTML", "CSS", "PHP"],
         "description": "We take confusing NBA statistics data and visualize it into something fun, interesting and accessible.",
         "fullDescription": "We take confusing NBA statistics data and visualize it into something fun, interesting and accessible.",
         "client": "fun"
@@ -201,25 +151,9 @@
         "modalSub": "Reviews on a Map",
         "date": "Development Ongoing",
         "role": "Front-End",
-        "collabs": [
-          "Laurence Li",
-          "Victor Thibert",
-          "Ahmed Khan",
-          "Brandon Baksh"
-        ],
-        "collabsLinks": [
-          "laurenceli",
-          "VictorThibert",
-          "AhmedAKhan",
-          "bbaksh"
-        ],
-        "tech": [
-          "JavaScript",
-          "React Native",
-          "Objective-C",
-          "Python",
-          "Java"
-        ],
+        "collabs": ["Laurence Li", "Victor Thibert", "Ahmed Khan", "Brandon Baksh"],
+        "collabsLinks": ["laurenceli", "VictorThibert", "AhmedAKhan", "bbaksh"],
+        "tech": ["JavaScript", "React Native", "Objective-C", "Python", "Java"],
         "description": "Tag and review places you've been. Follow your friends to see where they've been and what they recommend.",
         "fullDescription": "Tag and review places you've been. Follow your friends to see where they've been and what they recommend.",
         "client": "Hack The North 2016"
@@ -239,18 +173,9 @@
         "modalSub": "Personal Portfolio",
         "date": "Development Ongoing",
         "role": "Full-stack",
-        "collabs": [
-          "Laurence Li"
-        ],
-        "collabsLinks": [
-          "laurenceli"
-        ],
-        "tech": [
-          "JavaScript",
-          "jQuery",
-          "HTML/CSS",
-          "SASS"
-        ],
+        "collabs": ["Laurence Li"],
+        "collabsLinks": ["laurenceli"],
+        "tech": ["JavaScript", "jQuery", "HTML/CSS", "SASS"],
         "description": "A personal website to showcase my work along with my creative and visual design skills.",
         "fullDescription": "A personal website to showcase my work along with my creative and visual design skills.",
         "client": "fun"
@@ -270,19 +195,9 @@
         "modalSub": "Enterprise Software",
         "date": "Development from May 2016 - August 2016",
         "role": "Front-End",
-        "collabs": [
-          "Laurence Li"
-        ],
-        "collabsLinks": [
-          "laurenceli"
-        ],
-        "tech": [
-          "JavaScript",
-          "jQuery",
-          "PHP",
-          "Java",
-          "CSS"
-        ],
+        "collabs": ["Laurence Li"],
+        "collabsLinks": ["laurenceli"],
+        "tech": ["JavaScript", "jQuery", "PHP", "Java", "CSS"],
         "description": "An enterprise software solution for managing physical media containing mobile desktop software. Keeps track of hundreds of devices; allowing for building, reassigning and editing of devices.",
         "fullDescription": "Web application for remotely managing hundreds of mobile-desktop devices. Could commission new devices, remotely delete images from existing devices.",
         "client": "DLS Technology"
@@ -302,19 +217,9 @@
         "modalSub": "Enterprise Software",
         "date": "Development from May 2016 - August 2016",
         "role": "Front-End",
-        "collabs": [
-          "Laurence Li"
-        ],
-        "collabsLinks": [
-          "laurenceli"
-        ],
-        "tech": [
-          "Java",
-          "PostgreSQL",
-          "React",
-          "Selenium",
-          "Docker"
-        ],
+        "collabs": ["Laurence Li"],
+        "collabsLinks": ["laurenceli"],
+        "tech": ["Java", "PostgreSQL", "React", "Selenium", "Docker"],
         "description": "A enterprise software solution for retailers, leveraging machine learning to display visualized comprehensive sales data, optimized forecasts and promotion recommendations.",
         "fullDescription": "Web application displaying data visualization of retailer sales and optimzed forecasts and promotions. Contained comprehensive user management tools.",
         "client": "Rubikloud"
@@ -334,19 +239,9 @@
         "modalSub": "Natural Language Processing + Graphs",
         "date": "Not Live",
         "role": "Front-End",
-        "collabs": [
-          "Laurence Li"
-        ],
-        "collabsLinks": [
-          "laurenceli"
-        ],
-        "tech": [
-          "JavaScript",
-          "jQuery",
-          "Chart.js",
-          "HTML",
-          "CSS"
-        ],
+        "collabs": ["Laurence Li"],
+        "collabsLinks": ["laurenceli"],
+        "tech": ["JavaScript", "jQuery", "Chart.js", "HTML", "CSS"],
         "description": "Web application built for mobile that uses NLP to convert speech or text inputs into queries to display business intelligence graphs.",
         "fullDescription": "Web application built for mobile that uses NLP to convert speech or text inputs into queries to display business intelligence graphs.",
         "client": "Decode Hackathon"
@@ -354,93 +249,75 @@
     }
   ],
   "experience": [
-  {
-    "company": "Xero (Hubdoc)",
-    "position": "Software Developer",
-    "startDate": "September 2018",
-    "endDate": "Present",
-    "location": "Toronto, Ontario",
-    "skills": [
-      "JavaScript",
-      "Node.js",
-      "PostgreSQL",
-      "AWS"
-    ],
-    "environment": "MacOS",
-    "summary": [
-      "Implemented features for scraping platform, built on AWS; improving reliability and robustness for 80000+ daily jobs.",
-      "Maintained 700+ Node.js web scrapers, improving success rate by 70%+ on average, for 50000+ end users.",
-      "Engineered rapid solutions for high priority connections, ensuring the fetch of 1000+ documents over several months.",
-      "Participated in on-call rotation, performed code reviews daily and monitored platform performance metrics dashboards.",
-      "Lead onboarding process improvements, reducing developer ramp-up time from roughly 3 weeks to 1 week.",
-      "Conducted interviews, 1-on-1s and provided direct mentorship and evaluations to software developer interns."
-    ]
-  },
-  {
-    "company": "Rubikloud",
-    "position": "Software Developer Intern",
-    "startDate": "May 2017",
-    "endDate": "August 2017",
-    "location": "Toronto, Ontario",
-    "skills": [
-      "Java",
-      "React",
-      "PostgreSQL",
-      "Selenium"
-    ],
-    "environment": "MacOS",
-    "summary": [
-      "Developed 50+ Selenium QA modules in Java for automated UI testing, improving coverage from 10% to over 85%.",
-      "Optimized SQL queries by up to 80%, satisfying strict performance thresholds.",
-      "Implemented feature enhancements such as email account activation and dynamic indicators.",
-      "Reported and fixed bugs in production; took part in user testing.",
-      "Modified code structure of front-end application in React to improve maintainability and facilitate future testing."
-    ]
-  },
-  {
-    "company": "DLS Technology Corporation",
-    "position": "Front-End Developer Intern",
-    "startDate": "May 2016",
-    "endDate": "August 2016",
-    "location": "Ottawa, Ontario",
-    "skills": [
-      "JavaScript",
-      "jQuery",
-      "CSS",
-      "PHP"
-    ],
-    "environment": "Linux",
-    "summary": [
-    "Refactored 10000+ lines of JavaScript in dozens of modules to improve platform scalability and readability.",
-    "Developed reusable web modules and built new application pages based on client specifications.",
-    "Designed, iterated and adapted UI wireframes into functioning front-end elements, emphasising modern design patterns.",
-    "Implemented a server-side user login permissions solutions using PHP and JavaScript."
-    ]
-  },
-  {
-    "company": "DLS Technology Corporation",
-    "position": "Technical Support Coordinator",
-    "startDate": "May 2014",
-    "endDate": "August 2014",
-    "location": "Ottawa, Ontario",
-    "skills": [
-      "JavaScript",
-      "Excel"
-    ],
-    "environment": "MacOS",
-    "summary": [
-      "Designed QA coverage workflows using Excel.",
-      "Implemented language localization for a web application using JavaScript.",
-      "Authored techical internal and client documentation."
-    ]
-  }
+    {
+      "company": "Xero (Hubdoc)",
+      "position": "Software Developer",
+      "startDate": "September 2018",
+      "endDate": "Present",
+      "location": "Toronto, Ontario",
+      "skills": ["JavaScript", "Node.js", "PostgreSQL", "AWS"],
+      "environment": "MacOS",
+      "summary": [
+        "Implemented features for scraping platform, built on AWS; improving reliability and robustness for 80000+ daily jobs.",
+        "Maintained 700+ Node.js web scrapers, improving success rate by 70%+ on average, for 50000+ end users.",
+        "Engineered rapid solutions for high priority connections, ensuring the fetch of 1000+ documents over several months.",
+        "Participated in on-call rotation, performed code reviews daily and monitored platform performance metrics dashboards.",
+        "Lead onboarding process improvements, reducing developer ramp-up time from roughly 3 weeks to 1 week.",
+        "Conducted interviews, 1-on-1s and provided direct mentorship and evaluations to software developer interns."
+      ]
+    },
+    {
+      "company": "Rubikloud",
+      "position": "Software Developer Intern",
+      "startDate": "May 2017",
+      "endDate": "August 2017",
+      "location": "Toronto, Ontario",
+      "skills": ["Java", "React", "PostgreSQL", "Selenium"],
+      "environment": "MacOS",
+      "summary": [
+        "Developed 50+ Selenium QA modules in Java for automated UI testing, improving coverage from 10% to over 85%.",
+        "Optimized SQL queries by up to 80%, satisfying strict performance thresholds.",
+        "Implemented feature enhancements such as email account activation and dynamic indicators.",
+        "Reported and fixed bugs in production; took part in user testing.",
+        "Modified code structure of front-end application in React to improve maintainability and facilitate future testing."
+      ]
+    },
+    {
+      "company": "DLS Technology Corporation",
+      "position": "Front-End Developer Intern",
+      "startDate": "May 2016",
+      "endDate": "August 2016",
+      "location": "Ottawa, Ontario",
+      "skills": ["JavaScript", "jQuery", "CSS", "PHP"],
+      "environment": "Linux",
+      "summary": [
+        "Refactored 10000+ lines of JavaScript in dozens of modules to improve platform scalability and readability.",
+        "Developed reusable web modules and built new application pages based on client specifications.",
+        "Designed, iterated and adapted UI wireframes into functioning front-end elements, emphasising modern design patterns.",
+        "Implemented a server-side user login permissions solutions using PHP and JavaScript."
+      ]
+    },
+    {
+      "company": "DLS Technology Corporation",
+      "position": "Technical Support Coordinator",
+      "startDate": "May 2014",
+      "endDate": "August 2014",
+      "location": "Ottawa, Ontario",
+      "skills": ["JavaScript", "Excel"],
+      "environment": "MacOS",
+      "summary": [
+        "Designed QA coverage workflows using Excel.",
+        "Implemented language localization for a web application using JavaScript.",
+        "Authored techical internal and client documentation."
+      ]
+    }
   ],
-  "education":[
-  {
-    "school": "UNIVERSITY OF OTTAWA",
-    "program": "Bachelor Science in Computer Science",
-    "startDate": "September 2014",
-    "endDate": "May 2018"
-  }
+  "education": [
+    {
+      "school": "UNIVERSITY OF OTTAWA",
+      "program": "Bachelor Science in Computer Science",
+      "startDate": "September 2014",
+      "endDate": "May 2018"
+    }
   ]
 }

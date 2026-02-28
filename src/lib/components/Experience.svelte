@@ -13,7 +13,7 @@
   <div class="container">
     <p class="section-label">Experience</p>
     <div class="timeline">
-      {#each experience as job, i}
+      {#each experience as job}
         <div class="entry fade-in" use:observe>
           <div class="entry-meta">
             <span class="dates">{job.startDate} — {job.endDate}</span>

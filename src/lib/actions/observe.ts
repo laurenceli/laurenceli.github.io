@@ -1,9 +1,9 @@
 import type { Action } from 'svelte/action';
 
-export const observe: Action<HTMLElement, { threshold?: number; rootMargin?: string } | undefined> = (
-  node,
-  options = {}
-) => {
+export const observe: Action<
+  HTMLElement,
+  { threshold?: number; rootMargin?: string } | undefined
+> = (node, options = {}) => {
   const { threshold = 0.1, rootMargin = '0px 0px -60px 0px' } = options;
 
   const observer = new IntersectionObserver(
@@ -23,6 +23,6 @@ export const observe: Action<HTMLElement, { threshold?: number; rootMargin?: str
   return {
     destroy() {
       observer.disconnect();
-    }
+    },
   };
 };

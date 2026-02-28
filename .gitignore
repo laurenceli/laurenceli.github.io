@@ -1,7 +1,3 @@
-js/backups.js
-css/base.css.map
-css/.sass-cache
-
 # Dependencies
 node_modules/
 
@@ -17,3 +13,11 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# Testing
+coverage/
+playwright-report/
+test-results/
+
+# Claude Code
+CLAUDE.md

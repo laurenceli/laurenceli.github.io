@@ -24,7 +24,11 @@
 <footer>
   <div class="container footer-inner">
     <span>Designed & built by Laurence Li</span>
-    <a href="https://github.com/laurenceli/laurenceli.github.io" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://github.com/laurenceli/laurenceli.github.io"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       View Source
     </a>
   </div>

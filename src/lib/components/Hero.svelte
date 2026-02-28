@@ -7,8 +7,8 @@
     <h1 class="name">Laurence Li.</h1>
     <h2 class="tagline">Software developer who loves building things.</h2>
     <p class="bio">
-      I'm a full-stack developer based in Toronto, specializing in building robust,
-      scalable systems and thoughtful user experiences.
+      I'm a full-stack developer based in Toronto, specializing in building robust, scalable systems
+      and thoughtful user experiences.
     </p>
     <div class="cta-group">
       <a
@@ -19,9 +19,7 @@
       >
         GitHub
       </a>
-      <a href="/docs/laurenceli_resume_v5.pdf" target="_blank" class="btn btn-outline">
-        Resume
-      </a>
+      <a href="/docs/laurenceli_resume_v5.pdf" target="_blank" class="btn btn-outline"> Resume </a>
     </div>
   </div>
 </section>

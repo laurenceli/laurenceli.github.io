@@ -122,10 +122,22 @@
     transform: translateY(0);
   }
 
-  :global(.fade-in:nth-child(1)) { transition-delay: 0ms; }
-  :global(.fade-in:nth-child(2)) { transition-delay: 60ms; }
-  :global(.fade-in:nth-child(3)) { transition-delay: 120ms; }
-  :global(.fade-in:nth-child(4)) { transition-delay: 180ms; }
-  :global(.fade-in:nth-child(5)) { transition-delay: 240ms; }
-  :global(.fade-in:nth-child(6)) { transition-delay: 300ms; }
+  :global(.fade-in:nth-child(1)) {
+    transition-delay: 0ms;
+  }
+  :global(.fade-in:nth-child(2)) {
+    transition-delay: 60ms;
+  }
+  :global(.fade-in:nth-child(3)) {
+    transition-delay: 120ms;
+  }
+  :global(.fade-in:nth-child(4)) {
+    transition-delay: 180ms;
+  }
+  :global(.fade-in:nth-child(5)) {
+    transition-delay: 240ms;
+  }
+  :global(.fade-in:nth-child(6)) {
+    transition-delay: 300ms;
+  }
 </style>

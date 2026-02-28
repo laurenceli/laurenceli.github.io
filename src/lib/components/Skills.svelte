@@ -14,7 +14,7 @@
     Web: 'web',
     Infrastructure: 'infra',
     Metrics: 'metrics',
-    Workflow: 'workflow'
+    Workflow: 'workflow',
   };
 
   type SkillItem = { text: string; level: number };

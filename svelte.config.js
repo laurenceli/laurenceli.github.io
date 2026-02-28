@@ -8,12 +8,12 @@ const config = {
       assets: 'build',
       fallback: '404.html',
       precompress: false,
-      strict: true
+      strict: true,
     }),
     paths: {
-      base: ''
-    }
-  }
+      base: '',
+    },
+  },
 };
 
 export default config;

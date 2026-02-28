@@ -6,7 +6,7 @@
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
     { label: 'Education', href: '#education' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Contact', href: '#contact' },
   ];
 
   let activeSection = $state('');
@@ -45,10 +45,7 @@
     <ul class="nav-links">
       {#each links as link}
         <li>
-          <a
-            href={link.href}
-            class:active={activeSection === link.href}
-          >{link.label}</a>
+          <a href={link.href} class:active={activeSection === link.href}>{link.label}</a>
         </li>
       {/each}
     </ul>
@@ -63,7 +60,10 @@
     right: 0;
     z-index: 100;
     padding: 20px 0;
-    transition: padding var(--transition), background var(--transition), border-color var(--transition);
+    transition:
+      padding var(--transition),
+      background var(--transition),
+      border-color var(--transition);
     border-bottom: 1px solid transparent;
   }
 
