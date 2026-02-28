@@ -1,3 +1,19 @@
 js/backups.js
 css/base.css.map
 css/.sass-cache
+
+# Dependencies
+node_modules/
+
+# SvelteKit
+.svelte-kit/
+build/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
