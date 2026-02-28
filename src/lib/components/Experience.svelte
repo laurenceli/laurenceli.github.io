@@ -7,13 +7,20 @@
   }
 
   let { experience }: Props = $props();
+
+  const isIntern = (job: Experience) => job.position.toLowerCase().includes('intern');
+
+  let expanded = $state<boolean[]>([]);
+  $effect(() => {
+    if (expanded.length === 0) expanded = experience.map(() => false);
+  });
 </script>
 
 <section id="experience" class="section">
   <div class="container">
     <p class="section-label">Experience</p>
     <div class="timeline">
-      {#each experience as job}
+      {#each experience as job, i}
         <div class="entry fade-in" use:observe>
           <div class="entry-meta">
             <span class="dates">{job.startDate} — {job.endDate}</span>
@@ -24,16 +31,23 @@
               <h3 class="position">{job.position}</h3>
               <span class="company">@ {job.company}</span>
             </div>
-            <ul class="summary">
-              {#each job.summary as point}
-                <li>{point}</li>
-              {/each}
-            </ul>
-            <div class="skill-chips">
-              {#each job.skills as skill}
-                <span class="chip">{skill}</span>
-              {/each}
-            </div>
+            {#if !isIntern(job) || expanded[i]}
+              <ul class="summary">
+                {#each job.summary as point}
+                  <li>{point}</li>
+                {/each}
+              </ul>
+              <div class="skill-chips">
+                {#each job.skills as skill}
+                  <span class="chip">{skill}</span>
+                {/each}
+              </div>
+            {/if}
+            {#if isIntern(job)}
+              <button class="toggle-btn" onclick={() => (expanded[i] = !expanded[i])}>
+                {expanded[i] ? '▾ less' : '▸ details'}
+              </button>
+            {/if}
           </div>
         </div>
       {/each}
@@ -131,6 +145,22 @@
     padding: 3px 10px;
     border-radius: 100px;
     border: 1px solid rgba(72, 229, 159, 0.2);
+  }
+
+  .toggle-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: var(--font);
+    cursor: pointer;
+    padding: 0;
+    transition: color var(--transition);
+  }
+
+  .toggle-btn:hover {
+    color: var(--text-secondary);
   }
 
   @media (max-width: 640px) {

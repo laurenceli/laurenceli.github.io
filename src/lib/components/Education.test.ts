@@ -12,9 +12,9 @@ describe('Education component', () => {
     expect(container.querySelector('#education')).not.toBeNull();
   });
 
-  it('renders school name "UNIVERSITY OF OTTAWA"', () => {
+  it('renders school name "University of Ottawa"', () => {
     const { getByText } = render(Education, { props: { education } });
-    expect(getByText('UNIVERSITY OF OTTAWA')).toBeTruthy();
+    expect(getByText('University of Ottawa')).toBeTruthy();
   });
 
   it('renders program "Bachelor Science in Computer Science"', () => {

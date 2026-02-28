@@ -186,20 +186,20 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 28px;
+    padding: 20px;
     text-align: left;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
     transition:
       border-color var(--transition),
       transform var(--transition),
@@ -220,7 +220,7 @@
   .card-icons {
     display: flex;
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     color: var(--text-secondary);
   }
 
@@ -233,7 +233,7 @@
   }
 
   .card-title {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 4px;
@@ -252,10 +252,15 @@
   }
 
   .card-desc {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .tech-chips {
@@ -432,6 +437,12 @@
     border-radius: var(--radius);
     border: 1px solid var(--border);
     margin-top: 8px;
+  }
+
+  @media (max-width: 860px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 640px) {
