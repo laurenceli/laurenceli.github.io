@@ -33,8 +33,8 @@
     --bg: #0d0d0d;
     --surface: #161616;
     --surface-2: #1e1e1e;
-    --accent: #48e59f;
-    --accent-dim: rgba(72, 229, 159, 0.12);
+    --accent: #3dd6f5;
+    --accent-dim: rgba(61, 214, 245, 0.12);
     --text-primary: #f0f0f0;
     --text-secondary: #888888;
     --text-muted: #555555;
