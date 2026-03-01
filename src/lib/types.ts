@@ -57,6 +57,7 @@ export interface Experience {
   skills: string[];
   environment: string;
   summary: string[];
+  collapse?: boolean;
 }
 
 export interface Education {
