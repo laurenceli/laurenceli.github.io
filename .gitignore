@@ -21,3 +21,10 @@ test-results/
 
 # Claude Code
 CLAUDE.md
+# Cloudflare Types
+/worker-configuration.d.ts
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
