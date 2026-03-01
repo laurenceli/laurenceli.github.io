@@ -8,8 +8,6 @@
 
   let { experience }: Props = $props();
 
-  const isIntern = (job: Experience) => job.position.toLowerCase().includes('intern');
-
   let expanded = $state<boolean[]>([]);
   $effect(() => {
     if (expanded.length === 0) expanded = experience.map(() => false);
@@ -31,7 +29,7 @@
               <h3 class="position">{job.position}</h3>
               <span class="company">@ {job.company}</span>
             </div>
-            {#if !isIntern(job) || expanded[i]}
+            {#if !job.collapse || expanded[i]}
               <ul class="summary">
                 {#each job.summary as point}
                   <li>{point}</li>
@@ -43,7 +41,7 @@
                 {/each}
               </div>
             {/if}
-            {#if isIntern(job)}
+            {#if job.collapse}
               <button class="toggle-btn" onclick={() => (expanded[i] = !expanded[i])}>
                 {expanded[i] ? '▾ less' : '▸ details'}
               </button>
@@ -64,8 +62,8 @@
 
   .entry {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 24px;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
   }
 
   .entry-meta {

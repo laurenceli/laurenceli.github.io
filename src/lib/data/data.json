@@ -226,6 +226,7 @@
       "location": "Toronto, Ontario",
       "skills": ["Java", "React", "PostgreSQL", "Selenium"],
       "environment": "MacOS",
+      "collapse": true,
       "summary": [
         "Developed 50+ Selenium QA modules in Java for automated UI testing, improving coverage from 10% to over 85%.",
         "Optimized SQL queries by up to 80%, satisfying strict performance thresholds.",
@@ -242,6 +243,7 @@
       "location": "Ottawa, Ontario",
       "skills": ["JavaScript", "jQuery", "CSS", "PHP"],
       "environment": "Linux",
+      "collapse": true,
       "summary": [
         "Refactored 10000+ lines of JavaScript in dozens of modules to improve platform scalability and readability.",
         "Developed reusable web modules and built new application pages based on client specifications.",
@@ -257,6 +259,7 @@
       "location": "Ottawa, Ontario",
       "skills": ["JavaScript", "Excel"],
       "environment": "MacOS",
+      "collapse": true,
       "summary": [
         "Designed QA coverage workflows using Excel.",
         "Implemented language localization for a web application using JavaScript.",
