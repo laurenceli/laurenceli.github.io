@@ -2,3 +2,4 @@ name = "laurenceli-portfolio"
 pages_build_output_dir = "build"
 
 [env.preview]
+# test comment — verifying Cloudflare Pages preview deployments
