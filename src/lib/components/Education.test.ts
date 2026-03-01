@@ -52,4 +52,17 @@ describe('Education component', () => {
     const { container } = render(Education, { props: { education: twoEntries } });
     expect(container.querySelectorAll('.entry')).toHaveLength(2);
   });
+
+  it('does not render minor element when minor is absent', () => {
+    const noMinor: EducationType[] = [
+      {
+        school: 'MIT',
+        program: 'Computer Science',
+        startDate: 'September 2020',
+        endDate: 'May 2024',
+      },
+    ];
+    const { container } = render(Education, { props: { education: noMinor } });
+    expect(container.querySelector('.minor')).toBeNull();
+  });
 });
