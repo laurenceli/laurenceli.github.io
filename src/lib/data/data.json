@@ -44,9 +44,7 @@
     },
     {
       "title": "Cloud Providers",
-      "cloud": [
-        { "text": "AWS", "level": 0, "experience": ["Xero"] }
-      ]
+      "cloud": [{ "text": "AWS", "level": 0, "experience": ["Xero"] }]
     }
   ],
   "projects": [
