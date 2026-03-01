@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 import Experience from './Experience.svelte';
 import data from '$lib/data/data.json';
 import type { Experience as ExperienceType } from '$lib/types';
@@ -58,5 +58,48 @@ describe('Experience component', () => {
     const firstEntry = container.querySelectorAll('.entry')[0];
     const bullets = firstEntry.querySelectorAll('.summary li');
     expect(bullets.length).toBeGreaterThan(0);
+  });
+
+  it('collapse entries start with summary and chips hidden', () => {
+    const { container } = render(Experience, { props: { experience } });
+    // entries 2, 3, 4 are collapse: true (Rubikloud intern, DLS intern, DLS coordinator)
+    for (const i of [2, 3, 4]) {
+      const entry = container.querySelectorAll('.entry')[i];
+      expect(entry.querySelector('.summary')).toBeNull();
+      expect(entry.querySelector('.skill-chips')).toBeNull();
+    }
+  });
+
+  it('collapse entries render a toggle button', () => {
+    const { container } = render(Experience, { props: { experience } });
+    for (const i of [2, 3, 4]) {
+      const entry = container.querySelectorAll('.entry')[i];
+      expect(entry.querySelector('.toggle-btn')).not.toBeNull();
+    }
+  });
+
+  it('non-collapse entries do not render a toggle button', () => {
+    const { container } = render(Experience, { props: { experience } });
+    // entries 0 and 1 are the two Xero roles (no collapse flag)
+    for (const i of [0, 1]) {
+      const entry = container.querySelectorAll('.entry')[i];
+      expect(entry.querySelector('.toggle-btn')).toBeNull();
+    }
+  });
+
+  it('clicking toggle reveals summary and chips', async () => {
+    const { container } = render(Experience, { props: { experience } });
+    const entry = container.querySelectorAll('.entry')[2]; // Rubikloud intern
+    const btn = entry.querySelector('.toggle-btn') as HTMLElement;
+    await fireEvent.click(btn);
+    expect(entry.querySelector('.summary')).not.toBeNull();
+    expect(entry.querySelector('.skill-chips')).not.toBeNull();
+  });
+
+  it('Technical Support Coordinator is collapsed by default', () => {
+    const { container } = render(Experience, { props: { experience } });
+    const entry = container.querySelectorAll('.entry')[4];
+    expect(entry.querySelector('.summary')).toBeNull();
+    expect(entry.querySelector('.toggle-btn')).not.toBeNull();
   });
 });
