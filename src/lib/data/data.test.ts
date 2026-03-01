@@ -21,6 +21,37 @@ describe('data.json shape', () => {
         expect(Array.isArray(entry.summary)).toBe(true);
       }
     });
+
+    it('collapse field, when present, is a boolean', () => {
+      for (const entry of data.experience) {
+        if ('collapse' in entry) {
+          expect(typeof (entry as { collapse: unknown }).collapse).toBe('boolean');
+        }
+      }
+    });
+
+    it('the three older entries are marked collapse: true', () => {
+      const find = (company: string, position: string) =>
+        data.experience.find((e) => e.company === company && e.position === position) as
+          | { collapse?: boolean }
+          | undefined;
+
+      expect(find('Rubikloud', 'Software Developer Intern')?.collapse).toBe(true);
+      expect(find('DLS Technology Corporation', 'Front-End Developer Intern')?.collapse).toBe(true);
+      expect(find('DLS Technology Corporation', 'Technical Support Coordinator')?.collapse).toBe(
+        true
+      );
+    });
+
+    it('main roles do not have collapse set', () => {
+      const find = (company: string, position: string) =>
+        data.experience.find((e) => e.company === company && e.position === position) as
+          | { collapse?: boolean }
+          | undefined;
+
+      expect(find('Xero', 'Infrastructure Engineer')?.collapse).toBeUndefined();
+      expect(find('Xero (Hubdoc)', 'Software Engineer')?.collapse).toBeUndefined();
+    });
   });
 
   describe('project entries', () => {
