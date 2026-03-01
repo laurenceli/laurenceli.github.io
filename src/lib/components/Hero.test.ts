@@ -16,7 +16,7 @@ describe('Hero component', () => {
   it('h2 contains the tagline', () => {
     const { container } = render(Hero);
     expect(container.querySelector('h2')?.textContent).toContain(
-      'Software developer who loves building things.'
+      'Infrastructure engineer who loves building reliable systems.'
     );
   });
 

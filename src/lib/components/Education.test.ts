@@ -12,14 +12,19 @@ describe('Education component', () => {
     expect(container.querySelector('#education')).not.toBeNull();
   });
 
-  it('renders school name "UNIVERSITY OF OTTAWA"', () => {
+  it('renders school name "University of Ottawa"', () => {
     const { getByText } = render(Education, { props: { education } });
-    expect(getByText('UNIVERSITY OF OTTAWA')).toBeTruthy();
+    expect(getByText('University of Ottawa')).toBeTruthy();
   });
 
-  it('renders program "Bachelor Science in Computer Science"', () => {
+  it('renders program "Bachelor of Science in Computer Science"', () => {
     const { getByText } = render(Education, { props: { education } });
-    expect(getByText('Bachelor Science in Computer Science')).toBeTruthy();
+    expect(getByText('Bachelor of Science in Computer Science')).toBeTruthy();
+  });
+
+  it('renders minor "Minor in Management"', () => {
+    const { getByText } = render(Education, { props: { education } });
+    expect(getByText('Minor in Management')).toBeTruthy();
   });
 
   it('renders date range', () => {

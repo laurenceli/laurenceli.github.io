@@ -5,10 +5,10 @@
   <div class="container hero-inner">
     <p class="greeting">Hi, my name is</p>
     <h1 class="name">Laurence Li.</h1>
-    <h2 class="tagline">Software developer who loves building things.</h2>
+    <h2 class="tagline">Infrastructure engineer who loves building reliable systems.</h2>
     <p class="bio">
-      I'm a full-stack developer based in Toronto, specializing in building robust, scalable systems
-      and thoughtful user experiences.
+      I'm an infrastructure engineer at Xero based in Toronto, specializing in Kubernetes, cloud
+      infrastructure, and platform reliability.
     </p>
     <div class="cta-group">
       <a
@@ -19,7 +19,7 @@
       >
         GitHub
       </a>
-      <a href="/docs/laurenceli_resume_v5.pdf" target="_blank" class="btn btn-outline"> Resume </a>
+      <a href="/docs/laurence-li-resume-v6.pdf" target="_blank" class="btn btn-outline"> Resume </a>
     </div>
   </div>
 </section>

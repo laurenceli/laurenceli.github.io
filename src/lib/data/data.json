@@ -1,117 +1,50 @@
 {
   "skills": [
     {
-      "title": "Programming",
-      "programming": [
-        {
-          "text": "JavaScript / Node.js",
-          "level": 0,
-          "experience": ["Cherrypicker.io", "Friendmap", "vDM", "Personal Website"]
-        },
-        {
-          "text": "Java",
-          "level": 0,
-          "experience": ["Academic exposure"]
-        }
-      ]
-    },
-    {
-      "title": "Web",
-      "web": [
-        {
-          "text": "HTML/CSS/SASS",
-          "level": 0,
-          "experience": ["Cherrypicker.io", "Personal Website"]
-        },
-        {
-          "text": "jQuery",
-          "level": 0,
-          "experience": ["Cherrypicker.io", "vDM", "Personal Website"]
-        },
-        {
-          "text": "Nightmare.js",
-          "level": 0,
-          "experience": ["Xero (Hubdoc)"]
-        },
-        {
-          "text": "D3",
-          "level": 10,
-          "experience": ["Cherrypicker.io"]
-        }
+      "title": "Languages",
+      "languages": [
+        { "text": "Node.js / TypeScript", "level": 0, "experience": ["Xero"] },
+        { "text": "Bash", "level": 0, "experience": ["Xero"] }
       ]
     },
     {
       "title": "Infrastructure",
       "infra": [
-        {
-          "text": "AWS (ECS,EC2,SQS)",
-          "level": 10,
-          "experience": ["Xero (Hubdoc)"]
-        },
-        {
-          "text": "PostgreSQL",
-          "level": 0,
-          "experience": ["Academic Exposure", "Xero (Hubdoc)"]
-        },
-        {
-          "text": "Docker",
-          "level": 10,
-          "experience": ["Xero (Hubdoc)"]
-        },
-        {
-          "text": "Redis",
-          "level": 10,
-          "experience": ["Xero (Hubdoc)"]
-        }
+        { "text": "Kubernetes", "level": 0, "experience": ["Xero"] },
+        { "text": "Docker", "level": 0, "experience": ["Xero"] },
+        { "text": "Terraform", "level": 0, "experience": ["Xero"] },
+        { "text": "Ansible", "level": 0, "experience": ["Xero"] },
+        { "text": "Helm", "level": 0, "experience": ["Xero"] }
       ]
     },
     {
-      "title": "Metrics",
-      "metrics": [
-        {
-          "text": "Sumo Logic",
-          "level": 5,
-          "experience": ["Xero (Hubdoc)"]
-        },
-        {
-          "text": "Datadog",
-          "level": 5,
-          "experience": ["Xero (Hubdoc)"]
-        },
-        {
-          "text": "AWS CloudWatch",
-          "level": 5,
-          "experience": ["Xero (Hubdoc)"]
-        }
+      "title": "Observability",
+      "observability": [
+        { "text": "New Relic", "level": 0, "experience": ["Xero"] },
+        { "text": "Sumologic", "level": 0, "experience": ["Xero"] },
+        { "text": "Datadog", "level": 0, "experience": ["Xero"] }
       ]
     },
     {
-      "title": "Workflow",
+      "title": "Datastores",
+      "datastores": [
+        { "text": "PostgreSQL", "level": 0, "experience": ["Xero"] },
+        { "text": "Redis", "level": 0, "experience": ["Xero"] },
+        { "text": "RDS", "level": 0, "experience": ["Xero"] },
+        { "text": "S3", "level": 0, "experience": ["Xero"] }
+      ]
+    },
+    {
+      "title": "Workflow and CI/CD",
       "workflow": [
-        {
-          "text": "Atlassian (Jira / Confluence)",
-          "level": 5,
-          "experience": ["Xero (Hubdoc)"]
-        },
-        {
-          "text": "Github / Git",
-          "level": 5,
-          "experience": ["Xero (Hubdoc)"]
-        }
+        { "text": "Git & GitHub Actions", "level": 0, "experience": ["Xero"] },
+        { "text": "TeamCity", "level": 0, "experience": ["Xero"] },
+        { "text": "Artifactory", "level": 0, "experience": ["Xero"] }
       ]
     },
     {
-      "title": "SKILLS",
-      "filters": [
-        {
-          "text": "PROFICIENT",
-          "level": 100
-        },
-        {
-          "text": "LEARNING",
-          "level": 100
-        }
-      ]
+      "title": "Cloud Providers",
+      "cloud": [{ "text": "AWS", "level": 0, "experience": ["Xero"] }]
     }
   ],
   "projects": [
@@ -250,20 +183,39 @@
   ],
   "experience": [
     {
-      "company": "Xero (Hubdoc)",
-      "position": "Software Developer",
-      "startDate": "September 2018",
+      "company": "Xero",
+      "position": "Infrastructure Engineer",
+      "startDate": "September 2022",
       "endDate": "Present",
       "location": "Toronto, Ontario",
-      "skills": ["JavaScript", "Node.js", "PostgreSQL", "AWS"],
+      "skills": ["Kubernetes", "Terraform", "AWS", "Docker"],
       "environment": "MacOS",
       "summary": [
-        "Implemented features for scraping platform, built on AWS; improving reliability and robustness for 80000+ daily jobs.",
-        "Maintained 700+ Node.js web scrapers, improving success rate by 70%+ on average, for 50000+ end users.",
-        "Engineered rapid solutions for high priority connections, ensuring the fetch of 1000+ documents over several months.",
-        "Participated in on-call rotation, performed code reviews daily and monitored platform performance metrics dashboards.",
-        "Lead onboarding process improvements, reducing developer ramp-up time from roughly 3 weeks to 1 week.",
-        "Conducted interviews, 1-on-1s and provided direct mentorship and evaluations to software developer interns."
+        "Lead and completed initiative to containerize legacy monorepo application, significantly improving reliability and reducing cloud costs by $50,000 annually.",
+        "Migrated 100+ components from EC2 to Kubernetes, reducing the number of full-time engineers required to maintain infrastructure from 4 to 1.",
+        "Rebuilt deployment pipelines; integrating artifact promotion, package scanning, and code quality analysis — also reduced deployment lead time by 15%.",
+        "Implemented tooling and lifecycle rules in S3 to comply with data retention policies while reducing cloud costs by roughly $200,000 annually.",
+        "Participated in on-call, resolving multiple production incidents by remediating infrastructure and application failures while coordinating teams across multiple time zones.",
+        "Led comprehensive post-incident reviews to determine root cause, improve monitoring/alerting and update playbooks.",
+        "Advocated for SOC, ISO and GDPR compliance as well as internal path-to-production standards; participated in remediation efforts when required.",
+        "Collaborated with software and data reliability engineers to maintain and optimize RDS database performance."
+      ]
+    },
+    {
+      "company": "Xero (Hubdoc)",
+      "position": "Software Engineer",
+      "startDate": "September 2018",
+      "endDate": "September 2022",
+      "location": "Toronto, Ontario",
+      "skills": ["Node.js", "TypeScript", "PostgreSQL", "AWS"],
+      "environment": "MacOS",
+      "summary": [
+        "Drove development of direct bank connections, resulting in 90%+ successful fetch rate from previous implementation.",
+        "Maintained 500+ unique Node.js web scrapers, improving success rates by up to 100%, resulting in the successful fetch of millions of additional documents.",
+        "Used Infrastructure-as-Code tooling to deploy, manage and scale applications serving tens of thousands of users and running 100,000+ jobs per day.",
+        "Participated in on-call; implemented production application solutions and providing domain specific technical expertise to assist external teams.",
+        "Conducted hundreds of resume screens and dozens of technical interviews for software engineer candidates.",
+        "Provided technical mentorship to teammates through onboarding, pair programming and design proposals."
       ]
     },
     {
@@ -314,8 +266,9 @@
   ],
   "education": [
     {
-      "school": "UNIVERSITY OF OTTAWA",
-      "program": "Bachelor Science in Computer Science",
+      "school": "University of Ottawa",
+      "program": "Bachelor of Science in Computer Science",
+      "minor": "Minor in Management",
       "startDate": "September 2014",
       "endDate": "May 2018"
     }

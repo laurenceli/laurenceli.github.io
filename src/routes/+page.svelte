@@ -16,9 +16,9 @@
 <main>
   <Hero />
   <Experience experience={data.experience} />
-  <Projects projects={data.projects} />
   <Skills skills={data.skills} />
   <Education education={data.education} />
+  <Projects projects={data.projects} />
   <Contact />
 </main>
 <footer>

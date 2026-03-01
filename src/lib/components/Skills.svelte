@@ -8,13 +8,21 @@
 
   let { skills }: Props = $props();
 
-  const contentCategories = ['Programming', 'Web', 'Infrastructure', 'Metrics', 'Workflow'];
+  const contentCategories = [
+    'Languages',
+    'Infrastructure',
+    'Observability',
+    'Datastores',
+    'Workflow and CI/CD',
+    'Cloud Providers',
+  ];
   const categoryKeyMap: Record<string, string> = {
-    Programming: 'programming',
-    Web: 'web',
+    Languages: 'languages',
     Infrastructure: 'infra',
-    Metrics: 'metrics',
-    Workflow: 'workflow',
+    Observability: 'observability',
+    Datastores: 'datastores',
+    'Workflow and CI/CD': 'workflow',
+    'Cloud Providers': 'cloud',
   };
 
   type SkillItem = { text: string; level: number };
